@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asquared AI - Dubai Real Estate Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .active-tab {
+            background-color: rgba(37, 99, 235, 0.2) !important;
+            color: #60a5fa !important;
+            font-weight: 600 !important;
+            border-left: 4px solid #3b82f6 !important;
+        }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden">
+
+    <!-- ─── SIDEBAR ───────────────────────────────────────────────────────────── -->
+    <aside class="w-64 glass-panel border-r border-gray-800 flex flex-col hidden md:flex shrink-0">
+        <div class="p-6 border-b border-gray-700">
+            <h1 class="text-xl font-bold tracking-wider text-blue-400">Asquared AI</h1>
+            <p class="text-xs text-gray-400 mt-0.5">Dubai Real Estate Intelligence</p>
+        </div>
+        <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
+            <button onclick="switchTab('dashboard')" id="nav-dashboard" class="w-full text-left block px-4 py-2.5 rounded active-tab transition text-sm">Dashboard</button>
+            <button onclick="switchTab('locations')" id="nav-locations" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Locations</button>
+            <button onclick="switchTab('apartments')" id="nav-apartments" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Apartments</button>
+            <button onclick="switchTab('villas')" id="nav-villas" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Villas</button>
+            <button onclick="switchTab('property-types')" id="nav-property-types" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Property Types</button>
+            <button onclick="switchTab('daily-velocity')" id="nav-daily-velocity" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Daily Velocity</button>
+            <button onclick="switchTab('voice-ai')" id="nav-voice-ai" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Voice AI Engine</button>
+            <button onclick="switchTab('crm')" id="nav-crm" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">CRM Transactions</button>
+        </nav>
+        <div class="p-4 border-t border-gray-800">
+            <div class="bg-gray-900/60 rounded p-3 text-xs text-gray-400">
+                <span class="text-green-400 font-semibold">● 17,651</span> Verified Deals<br>
+                Render 1-Click Deployment
+            </div>
+        </div>
+    </aside>
+
+    <!-- ─── MAIN CONTENT CONTAINER ────────────────────────────────────────────── -->
+    <div class="flex-1 flex flex-col h-screen overflow-y-auto">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-center px-8 py-5 border-b border-gray-800 bg-slate-900/60 backdrop-blur sticky top-0 z-20">
+            <div>
+                <h2 class="text-2xl font-semibold text-white" id="header-title">Overview</h2>
+                <p class="text-xs text-gray-400 mt-0.5">3 Months Transactional Residential Data | Dubai Land Department</p>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium border border-green-500/50">● System Live</span>
+                <button onclick="refreshAllData()" class="px-4 py-1.5 bg-gray-800 hover:bg-gray-700 rounded transition border border-gray-600 text-xs font-medium flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    Refresh Data
+                </button>
+            </div>
+        </header>
+
+        <!-- ─── PANEL: DASHBOARD ──────────────────────────────────────────────── -->
+        <main id="panel-dashboard" class="p-8 space-y-6">
+            
+            <!-- Top Stat Cards (Matches Asquared AI exact card styles) -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-5">
+                <div class="glass-panel p-5 rounded-xl shadow-lg border-l-4 border-emerald-500">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Total Volume</p>
+                    <p class="text-2xl font-bold text-white" id="stat-total-vol">AED 42.52B</p>
+                    <p class="text-xs text-emerald-400 mt-1" id="stat-total-deals">17,651 Closed Deals</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl shadow-lg">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Overall Avg Deal</p>
+                    <p class="text-2xl font-bold text-white" id="stat-avg-deal">AED 2.41M</p>
+                    <p class="text-xs text-blue-400 mt-1" id="stat-median-deal">Median: AED 1.23M</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl shadow-lg">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Apartment Average</p>
+                    <p class="text-2xl font-bold text-blue-400" id="stat-apt-avg">AED 1.67M</p>
+                    <p class="text-xs text-gray-400 mt-1" id="stat-apt-deals">14,102 Deals (79.9%)</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl shadow-lg">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Villa Average</p>
+                    <p class="text-2xl font-bold text-purple-400" id="stat-villa-avg">AED 3.72M</p>
+                    <p class="text-xs text-gray-400 mt-1" id="stat-villa-deals">1,513 Deals (8.6%)</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl shadow-lg">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Off-Plan Share</p>
+                    <p class="text-2xl font-bold text-yellow-400" id="stat-offplan-pct">52.1%</p>
+                    <p class="text-xs text-gray-400 mt-1" id="stat-offplan-vol">AED 16.51B Capital Inflow</p>
+                </div>
+            </div>
+
+            <!-- Pipeline Funnel (Matches exact Lead Pipeline Stages from screenshot) -->
+            <div class="glass-panel p-6 rounded-xl shadow-lg">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4 border-b border-gray-700 pb-2">Market Transaction Dynamics & Pipeline</h3>
+                <div class="flex flex-col md:flex-row justify-between items-center text-center gap-4">
+                    <div class="flex-1">
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Total Recorded Deals</p>
+                        <p class="text-xl font-bold text-blue-300" id="pipe-total">17,651</p>
+                    </div>
+                    <div class="hidden md:block w-8 border-t border-gray-700"></div>
+                    <div class="flex-1">
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Pure Sales</p>
+                        <p class="text-xl font-bold text-emerald-400" id="pipe-sales">13,001</p>
+                    </div>
+                    <div class="hidden md:block w-8 border-t border-gray-700"></div>
+                    <div class="flex-1">
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Mortgage Financed</p>
+                        <p class="text-xl font-bold text-indigo-300" id="pipe-mortgage">3,971</p>
+                    </div>
+                    <div class="hidden md:block w-8 border-t border-gray-700"></div>
+                    <div class="flex-1">
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Off-Plan Absorption</p>
+                        <p class="text-xl font-bold text-yellow-300" id="pipe-offplan">9,193</p>
+                    </div>
+                    <div class="hidden md:block w-8 border-t border-gray-700"></div>
+                    <div class="flex-1">
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Ready Possession</p>
+                        <p class="text-xl font-bold text-purple-300" id="pipe-ready">8,458</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts & Tables Row (Donut on left, Table on right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Property Type Chart -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg lg:col-span-1">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Property Asset Allocation</h3>
+                    <div class="relative h-56 w-full flex items-center justify-center">
+                        <canvas id="propTypeChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Top Projects Table -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg lg:col-span-2 overflow-hidden flex flex-col">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Top Investment Hotspots & Projects</h3>
+                    <div class="overflow-x-auto flex-1">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-gray-700 text-gray-400 text-xs uppercase tracking-wider">
+                                    <th class="pb-2.5">Project / Community</th>
+                                    <th class="pb-2.5">Master Location</th>
+                                    <th class="pb-2.5 text-center">Deals</th>
+                                    <th class="pb-2.5">Average Ticket</th>
+                                    <th class="pb-2.5">Total Inflow</th>
+                                    <th class="pb-2.5 text-right">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="top-projects-tbody" class="text-xs divide-y divide-gray-800">
+                                <!-- Loaded dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Transaction Feed (Matches Live Automation Log in screenshot) -->
+            <div class="glass-panel p-6 rounded-xl shadow-lg">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4 border-b border-gray-700 pb-2">Live Transaction Feed</h3>
+                <div id="live-stream-container" class="space-y-3 text-xs">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: LOCATIONS ──────────────────────────────────────────────── -->
+        <main id="panel-locations" class="p-8 space-y-6 hidden">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Location Intelligence</h3>
+                    <p class="text-xs text-gray-400">Deep-dive pricing, villa/apartment breakdown, and project rankings for all Dubai areas.</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <label class="text-xs text-gray-400">Select Neighborhood:</label>
+                    <select id="loc-select" onchange="loadLocationDetail()" class="bg-gray-800 border border-gray-700 text-white rounded px-3 py-1.5 text-xs">
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Location KPIs -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Area Total Volume</p>
+                    <p class="text-2xl font-bold text-white" id="loc-kpi-vol">-</p>
+                    <p class="text-xs text-blue-400 mt-1" id="loc-kpi-deals">-</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Overall Avg Price</p>
+                    <p class="text-2xl font-bold text-emerald-400" id="loc-kpi-avg">-</p>
+                    <p class="text-xs text-gray-400 mt-1" id="loc-kpi-med">-</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Villa Average</p>
+                    <p class="text-2xl font-bold text-purple-400" id="loc-kpi-villa">-</p>
+                    <p class="text-xs text-gray-400 mt-1" id="loc-kpi-villa-deals">-</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Apartment Average</p>
+                    <p class="text-2xl font-bold text-blue-400" id="loc-kpi-apt">-</p>
+                    <p class="text-xs text-gray-400 mt-1" id="loc-kpi-apt-deals">-</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- BHK Breakdown in Area -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg">
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Bedroom (BHK) Pricing Breakdown</h4>
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="border-b border-gray-700 text-gray-400">
+                                <th class="pb-2">BHK Type</th>
+                                <th class="pb-2 text-center">Deals</th>
+                                <th class="pb-2">Average Price</th>
+                                <th class="pb-2">Median Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="loc-bhk-tbody" class="divide-y divide-gray-800"></tbody>
+                    </table>
+                </div>
+
+                <!-- Top Projects in Area -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg">
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Top Active Projects</h4>
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="border-b border-gray-700 text-gray-400">
+                                <th class="pb-2">Project Name</th>
+                                <th class="pb-2 text-center">Transactions</th>
+                                <th class="pb-2">Total Inflow</th>
+                            </tr>
+                        </thead>
+                        <tbody id="loc-proj-tbody" class="divide-y divide-gray-800"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Master Location Table -->
+            <div class="glass-panel p-6 rounded-xl shadow-lg">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">All Dubai Neighborhoods Comparison</h4>
+                <div class="overflow-x-auto max-h-96">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead class="sticky top-0 bg-slate-900 z-10">
+                            <tr class="border-b border-gray-700 text-gray-400">
+                                <th class="py-2.5">Area / Community</th>
+                                <th class="py-2.5 text-center">Deals</th>
+                                <th class="py-2.5">Total Volume</th>
+                                <th class="py-2.5">Overall Avg</th>
+                                <th class="py-2.5">Villa Avg</th>
+                                <th class="py-2.5">Apartment Avg</th>
+                                <th class="py-2.5">Rate / Sq.Ft</th>
+                                <th class="py-2.5 text-right">Off-Plan %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="master-loc-tbody" class="divide-y divide-gray-800"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: APARTMENTS ─────────────────────────────────────────────── -->
+        <main id="panel-apartments" class="p-8 space-y-6 hidden">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Apartments Deep-Dive</h3>
+                    <p class="text-xs text-gray-400">Detailed analytics for 14,102 apartment deals across Dubai.</p>
+                </div>
+                <div class="flex gap-3">
+                    <select id="apt-bhk-select" onchange="filterApartments()" class="bg-gray-800 border border-gray-700 text-white rounded px-3 py-1.5 text-xs">
+                        <option value="All">All Bedrooms</option>
+                        <option value="Studio">Studio</option>
+                        <option value="1 B/R">1 B/R</option>
+                        <option value="2 B/R">2 B/R</option>
+                        <option value="3 B/R">3 B/R</option>
+                        <option value="4 B/R">4 B/R</option>
+                    </select>
+                    <select id="apt-stage-select" onchange="filterApartments()" class="bg-gray-800 border border-gray-700 text-white rounded px-3 py-1.5 text-xs">
+                        <option value="All">All Stages</option>
+                        <option value="Off-Plan">Off-Plan</option>
+                        <option value="Ready">Ready</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Filtered Volume</p>
+                    <p class="text-2xl font-bold text-white" id="apt-dyn-vol">AED 23.54B</p>
+                    <p class="text-xs text-blue-400 mt-1" id="apt-dyn-deals">14,102 Deals</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Average Ticket</p>
+                    <p class="text-2xl font-bold text-emerald-400" id="apt-dyn-avg">AED 1.67M</p>
+                    <p class="text-xs text-gray-400 mt-1" id="apt-dyn-med">Median: AED 1.06M</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Median Price / Sq.Ft</p>
+                    <p class="text-2xl font-bold text-blue-400">AED 1,624</p>
+                    <p class="text-xs text-gray-400 mt-1">Verified Space</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Median Floor Space</p>
+                    <p class="text-2xl font-bold text-purple-400">1,020 sq.ft</p>
+                    <p class="text-xs text-gray-400 mt-1">Typical Living Unit</p>
+                </div>
+            </div>
+
+            <!-- Top 10 Apartment Areas -->
+            <div class="glass-panel p-6 rounded-xl shadow-lg">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Top 10 Apartment Locations</h4>
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="border-b border-gray-700 text-gray-400">
+                            <th class="pb-2">Location</th>
+                            <th class="pb-2 text-center">Apartments Sold</th>
+                            <th class="pb-2">Average Price</th>
+                            <th class="pb-2">Total Capital Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody id="apt-top-locs-tbody" class="divide-y divide-gray-800"></tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: VILLAS ────────────────────────────────────────────────── -->
+        <main id="panel-villas" class="p-8 space-y-6 hidden">
+            <div>
+                <h3 class="text-xl font-bold text-white">Villas & Townhouses Deep-Dive</h3>
+                <p class="text-xs text-gray-400">Complete analysis of 1,513 villa transactions totaling AED 5.62B.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Total Villa Capital</p>
+                    <p class="text-2xl font-bold text-white">AED 5.62B</p>
+                    <p class="text-xs text-purple-400 mt-1">1,513 Luxury & Family Deals</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Average Villa Price</p>
+                    <p class="text-2xl font-bold text-emerald-400">AED 3.72M</p>
+                    <p class="text-xs text-gray-400 mt-1">Median: AED 2.94M</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Median Rate / Sq.Ft</p>
+                    <p class="text-2xl font-bold text-blue-400">AED 1,343</p>
+                    <p class="text-xs text-gray-400 mt-1">Built-up Living Area</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl">
+                    <p class="text-gray-400 text-xs mb-1 uppercase">Median Villa Space</p>
+                    <p class="text-2xl font-bold text-yellow-400">2,750 sq.ft</p>
+                    <p class="text-xs text-gray-400 mt-1">Substantial Floorplans</p>
+                </div>
+            </div>
+
+            <!-- Top Villa Communities -->
+            <div class="glass-panel p-6 rounded-xl shadow-lg">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Top 15 Villa Communities in Dubai</h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="border-b border-gray-700 text-gray-400">
+                                <th class="pb-2.5">Community</th>
+                                <th class="pb-2.5 text-center">Villas Sold</th>
+                                <th class="pb-2.5">Average Price</th>
+                                <th class="pb-2.5">Median Price</th>
+                                <th class="pb-2.5">Total Inflow</th>
+                            </tr>
+                        </thead>
+                        <tbody id="villa-top-comms-tbody" class="divide-y divide-gray-800"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: PROPERTY TYPES ────────────────────────────────────────── -->
+        <main id="panel-property-types" class="p-8 space-y-6 hidden">
+            <div>
+                <h3 class="text-xl font-bold text-white">Property Types Comparison & Majority</h3>
+                <p class="text-xs text-gray-400">Side-by-side asset allocation comparing Apartments, Villas, Land, and Commercial.</p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl shadow-lg">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Cross-Asset Class Performance Matrix</h4>
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="border-b border-gray-700 text-gray-400">
+                            <th class="pb-2.5">Asset Class</th>
+                            <th class="pb-2.5 text-center">Deals Closed</th>
+                            <th class="pb-2.5">Total Capital</th>
+                            <th class="pb-2.5">Average Ticket</th>
+                            <th class="pb-2.5">Market Share %</th>
+                        </tr>
+                    </thead>
+                    <tbody id="prop-matrix-tbody" class="divide-y divide-gray-800"></tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: DAILY VELOCITY ────────────────────────────────────────── -->
+        <main id="panel-daily-velocity" class="p-8 space-y-6 hidden">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Market Velocity & Capital Pace</h3>
+                    <p class="text-xs text-gray-400">Day-by-day progression, weekly absorption trends, and institutional closing patterns.</p>
+                </div>
+                <!-- View Granularity Switcher -->
+                <div class="flex items-center bg-gray-900/80 p-1 rounded-lg border border-gray-700 text-xs">
+                    <button onclick="setDailyView('weekly')" id="btn-view-weekly" class="px-3 py-1.5 rounded-md font-medium text-white bg-blue-600 shadow transition">Weekly (Clean)</button>
+                    <button onclick="setDailyView('last14')" id="btn-view-last14" class="px-3 py-1.5 rounded-md font-medium text-gray-400 hover:text-white transition">Last 14 Days</button>
+                    <button onclick="setDailyView('all')" id="btn-view-all" class="px-3 py-1.5 rounded-md font-medium text-gray-400 hover:text-white transition">Full Month</button>
+                </div>
+            </div>
+
+            <!-- Top Velocity Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+                <div class="glass-panel p-5 rounded-xl border-l-4 border-blue-500">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Average Daily Pace</p>
+                    <p class="text-2xl font-bold text-white" id="vel-stat-daily">AED 1.25B<span class="text-xs text-gray-400 font-normal">/day</span></p>
+                    <p class="text-xs text-blue-400 mt-1">Avg 519 Deals Closed Daily</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-l-4 border-emerald-500">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Peak Capital Day</p>
+                    <p class="text-2xl font-bold text-emerald-400" id="vel-stat-peak-vol">AED 3.41B</p>
+                    <p class="text-xs text-gray-400 mt-1" id="vel-stat-peak-vol-date">Aug 27, 2026</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-l-4 border-purple-500">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Peak Deal Frequency</p>
+                    <p class="text-2xl font-bold text-purple-400" id="vel-stat-peak-deals">963 Deals</p>
+                    <p class="text-xs text-gray-400 mt-1" id="vel-stat-peak-deals-date">Aug 04, 2026</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-l-4 border-yellow-500">
+                    <p class="text-gray-400 text-xs mb-1 uppercase tracking-wide">Weekday vs Weekend</p>
+                    <p class="text-2xl font-bold text-yellow-400" id="vel-stat-weekday">AED 1.62B</p>
+                    <p class="text-xs text-gray-400 mt-1">Weekend Avg: AED 110M</p>
+                </div>
+            </div>
+
+            <!-- Balanced Charts Row (65% / 35%) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Main Velocity Trend (Clean, uncrowded) -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg lg:col-span-2">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300" id="velocity-chart-title">Weekly Capital Flow & Transactions</h4>
+                        <span class="text-xs text-gray-400" id="velocity-chart-subtitle">Grouped by 7-Day Cycle</span>
+                    </div>
+                    <div class="relative h-64 w-full">
+                        <canvas id="dailyVelocityChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Day of Week Distribution -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg lg:col-span-1 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-1">Day-of-Week Distribution</h4>
+                        <p class="text-xs text-gray-400 mb-3">Institutional closings surge mid-week.</p>
+                        <div class="relative h-56 w-full">
+                            <canvas id="dowChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Top Days Table + Trading Insights -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Top 5 Trading Days Table -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg">
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-3">Top 5 Highest Volume Trading Days</h4>
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="border-b border-gray-700 text-gray-400 uppercase">
+                                <th class="pb-2">Date</th>
+                                <th class="pb-2 text-center">Deals Closed</th>
+                                <th class="pb-2">Average Ticket</th>
+                                <th class="pb-2 text-right">Total Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody id="top-days-tbody" class="divide-y divide-gray-800">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Trading Insights Card -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg flex flex-col justify-between">
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-3">Institutional Closing Insights</h4>
+                    <div class="space-y-2.5 text-xs text-gray-300">
+                        <div class="p-3 bg-gray-900/60 rounded border border-gray-800 flex items-start gap-3">
+                            <span class="text-blue-400 text-base">📊</span>
+                            <div>
+                                <p class="font-semibold text-white">Mid-Week Liquidity Concentration</p>
+                                <p class="text-gray-400 text-[11px] mt-0.5">Tuesdays and Wednesdays account for <b>48.2% of total transaction volume</b>, as developers and conveyancers batch contract registrations before Friday.</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-gray-900/60 rounded border border-gray-800 flex items-start gap-3">
+                            <span class="text-yellow-400 text-base">⏳</span>
+                            <div>
+                                <p class="font-semibold text-white">Weekend Registration Pause</p>
+                                <p class="text-gray-400 text-[11px] mt-0.5">Saturday and Sunday record only minimal off-plan pre-registrations (averaging AED 110M vs AED 1.62B on active business days).</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-gray-900/60 rounded border border-gray-800 flex items-start gap-3">
+                            <span class="text-emerald-400 text-base">🚀</span>
+                            <div>
+                                <p class="font-semibold text-white">Month-End Absorption Spikes</p>
+                                <p class="text-gray-400 text-[11px] mt-0.5">The final week of August generated over AED 8.7 Billion as developers pushed targets with limited-time payment plan promotions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: VOICE AI ENGINE ───────────────────────────────────────── -->
+        <main id="panel-voice-ai" class="p-8 space-y-6 hidden">
+            <div>
+                <h3 class="text-xl font-bold text-white">🎙️ Voice AI Mid-Call Engine</h3>
+                <p class="text-xs text-gray-400">Instant verbal script generation for live Retell AI calls, Bland, Vapi, and brokers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Query Simulator -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg space-y-4">
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300">Live Call Query Simulator</h4>
+                    <div>
+                        <label class="text-xs text-gray-400 block mb-1">Target Community / Area:</label>
+                        <select id="voice-area-select" class="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-xs text-white">
+                            <option value="Jumeirah Village Circle">Jumeirah Village Circle (JVC)</option>
+                            <option value="Business Bay">Business Bay</option>
+                            <option value="Downtown Dubai">Downtown Dubai / Burj Khalifa</option>
+                            <option value="Dubai Marina">Dubai Marina</option>
+                            <option value="Madinat Al Mataar">Madinat Al Mataar (Dubai South)</option>
+                            <option value="Palm Jumeirah">Palm Jumeirah</option>
+                            <option value="Al Hebiah Sixth">Al Hebiah Sixth</option>
+                            <option value="Al Yelayiss 1">Al Yelayiss 1</option>
+                        </select>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="text-xs text-gray-400 block mb-1">Property Class:</label>
+                            <select id="voice-type-select" class="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-xs text-white">
+                                <option value="Apartment">Apartment</option>
+                                <option value="Villa">Villa</option>
+                                <option value="All">All Types</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-400 block mb-1">Configuration:</label>
+                            <select id="voice-bhk-select" class="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-xs text-white">
+                                <option value="Studio">Studio</option>
+                                <option value="1 B/R" selected>1 B/R</option>
+                                <option value="2 B/R">2 B/R</option>
+                                <option value="3 B/R">3 B/R</option>
+                                <option value="4 B/R">4 B/R</option>
+                                <option value="Any BHK">Any BHK</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button onclick="testVoiceLookup()" class="w-full py-2 bg-blue-600 hover:bg-blue-500 rounded text-xs font-semibold text-white transition">Generate Speech Answer</button>
+
+                    <!-- Speech output -->
+                    <div class="mt-4 pt-4 border-t border-gray-700 space-y-2">
+                        <div class="p-3 bg-blue-900/30 border border-blue-500/40 rounded text-xs text-blue-300" id="voice-caller-bubble">
+                            🗣️ <b>Caller:</b> "What is the average price of a 1 B/R apartment in Jumeirah Village Circle?"
+                        </div>
+                        <div class="p-4 bg-gray-900/80 border-l-4 border-blue-400 rounded text-xs text-gray-200 leading-relaxed" id="voice-agent-answer">
+                            🤖 <b>Voice Agent Speech:</b> "In Jumeirah Village Circle, based on 643 recent transactions, the average price for a 1 B/R apartment is approximately AED 935,099, with median pricing around AED 972,000. 30% of deals were Off-Plan."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top 5 Cheat Sheet -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg space-y-4">
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300">Client Call Quick Cheat Sheet</h4>
+                    <div class="space-y-2.5 text-xs">
+                        <div class="p-3 bg-gray-800/60 rounded border border-gray-700">
+                            <p class="font-semibold text-blue-400 mb-1">Q: Average Villa Price across Dubai?</p>
+                            <p class="text-gray-300">Across 1,513 deals, the average is <b>AED 3.72M</b> (Median: <b>AED 2.94M</b>). Top hotspots are Al Hebiah Sixth (AED 2.91M) and Dubai South (AED 4.60M).</p>
+                        </div>
+                        <div class="p-3 bg-gray-800/60 rounded border border-gray-700">
+                            <p class="font-semibold text-blue-400 mb-1">Q: Where did the most investments happen?</p>
+                            <p class="text-gray-300">#1 is <b>Madinat Al Mataar (Dubai South)</b> with <b>AED 2.74B</b>, followed by <b>Burj Khalifa / Downtown</b> (AED 2.44B) and <b>Business Bay</b> (AED 2.33B).</p>
+                        </div>
+                        <div class="p-3 bg-gray-800/60 rounded border border-gray-700">
+                            <p class="font-semibold text-blue-400 mb-1">Q: Most popular bedroom configuration?</p>
+                            <p class="text-gray-300"><b>1 B/R</b> leads with <b>5,405 deals</b> (Avg AED 1.23M), followed by <b>Studios</b> (4,554 deals, Avg AED 663K) and <b>2 B/R</b> (3,234 deals, Avg AED 2.21M).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: CRM TRANSACTIONS ───────────────────────────────────────── -->
+        <main id="panel-crm" class="p-8 space-y-6 hidden">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-bold text-white">CRM Transaction Ledger</h3>
+                    <p class="text-xs text-gray-400">Streamlined ledger of live transactional records.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl shadow-lg">
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="border-b border-gray-700 text-gray-400 uppercase">
+                            <th class="pb-2.5">Time</th>
+                            <th class="pb-2.5">Tx ID</th>
+                            <th class="pb-2.5">Location</th>
+                            <th class="pb-2.5">Type</th>
+                            <th class="pb-2.5">BHK</th>
+                            <th class="pb-2.5">Stage</th>
+                            <th class="pb-2.5 text-right">Value (AED)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crm-tbody" class="divide-y divide-gray-800"></tbody>
+                </table>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ─── JAVASCRIPT ENGINE ─────────────────────────────────────────────────── -->
+    <script>
+        let propChartInstance = null;
+        let dailyChartInstance = null;
+
+        function switchTab(tabId) {
+            // Update sidebar active buttons
+            const navIds = ['dashboard', 'locations', 'apartments', 'villas', 'property-types', 'daily-velocity', 'voice-ai', 'crm'];
+            navIds.forEach(id => {
+                const btn = document.getElementById(`nav-${id}`);
+                const panel = document.getElementById(`panel-${id}`);
+                if (btn) btn.classList.remove('active-tab');
+                if (panel) panel.classList.add('hidden');
+            });
+
+            const activeBtn = document.getElementById(`nav-${tabId}`);
+            const activePanel = document.getElementById(`panel-${tabId}`);
+            if (activeBtn) activeBtn.classList.add('active-tab');
+            if (activePanel) activePanel.classList.remove('hidden');
+
+            const titles = {
+                'dashboard': 'Overview',
+                'locations': 'Locations Intelligence',
+                'apartments': 'Apartments Analysis',
+                'villas': 'Villas & Townhouses',
+                'property-types': 'Property Types & Majority',
+                'daily-velocity': 'Daily Velocity',
+                'voice-ai': 'Voice AI Mid-Call Engine',
+                'crm': 'CRM Transactions Ledger'
+            };
+            document.getElementById('header-title').innerText = titles[tabId] || 'Overview';
+
+            if (tabId === 'locations') loadLocationsList();
+            if (tabId === 'apartments') filterApartments();
+            if (tabId === 'villas') loadVillasData();
+            if (tabId === 'property-types') loadPropertyTypesData();
+            if (tabId === 'daily-velocity') loadDailyVelocity();
+            if (tabId === 'crm') loadCRMTransactions();
+        }
+
+        async function fetchDashboardStats() {
+            try {
+                const res = await fetch('/api/stats');
+                const data = await res.json();
+
+                document.getElementById('stat-total-vol').innerText = data.total_volume_formatted;
+                document.getElementById('stat-total-deals').innerText = `${data.total_deals.toLocaleString()} Closed Deals`;
+                document.getElementById('stat-avg-deal').innerText = data.overall_avg_formatted;
+                document.getElementById('stat-median-deal').innerText = `Median: ${data.overall_median_formatted}`;
+                document.getElementById('stat-apt-avg').innerText = data.apartment.avg_price_formatted;
+                document.getElementById('stat-apt-deals').innerText = `${data.apartment.deals.toLocaleString()} Deals (79.9%)`;
+                document.getElementById('stat-villa-avg').innerText = data.villa.avg_price_formatted;
+                document.getElementById('stat-villa-deals').innerText = `${data.villa.deals.toLocaleString()} Deals (8.6%)`;
+                document.getElementById('stat-offplan-pct').innerText = `${data.market_stage.offplan_pct}%`;
+                document.getElementById('stat-offplan-vol').innerText = `${data.market_stage.offplan_volume_formatted} Inflow`;
+            } catch (e) {
+                console.error('Error fetching stats:', e);
+            }
+        }
+
+        async function fetchPipeline() {
+            try {
+                const res = await fetch('/api/pipeline');
+                const data = await res.json();
+                document.getElementById('pipe-total').innerText = data.total_deals.toLocaleString();
+                document.getElementById('pipe-sales').innerText = data.pure_sales.toLocaleString();
+                document.getElementById('pipe-mortgage').innerText = data.mortgages.toLocaleString();
+                document.getElementById('pipe-offplan').innerText = data.offplan_deals.toLocaleString();
+                document.getElementById('pipe-ready').innerText = data.ready_deals.toLocaleString();
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function fetchPropertyChart() {
+            try {
+                const res = await fetch('/api/property-types');
+                const data = await res.json();
+
+                const ctx = document.getElementById('propTypeChart').getContext('2d');
+                if (propChartInstance) propChartInstance.destroy();
+
+                propChartInstance = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: data.labels,
+                        datasets: [{
+                            data: data.counts,
+                            backgroundColor: ['#38bdf8', '#a855f7', '#10b981', '#f59e0b', '#64748b'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: { color: '#94a3b8', font: { size: 11 } }
+                            }
+                        },
+                        cutout: '70%'
+                    }
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function fetchTopProjects() {
+            try {
+                const res = await fetch('/api/top-hotspots');
+                const list = await res.json();
+                const tbody = document.getElementById('top-projects-tbody');
+                tbody.innerHTML = list.map(item => `
+                    <tr class="hover:bg-slate-800/40 transition">
+                        <td class="py-2.5 font-medium text-white">${item.project}</td>
+                        <td class="py-2.5 text-gray-400">${item.location}</td>
+                        <td class="py-2.5 text-center text-blue-300 font-semibold">${item.deals}</td>
+                        <td class="py-2.5 text-gray-300">${item.avg_price_formatted}</td>
+                        <td class="py-2.5 text-emerald-400 font-medium">${item.volume_formatted}</td>
+                        <td class="py-2.5 text-right">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.status === 'HOT' ? 'bg-red-500/20 text-red-400 border border-red-500/40' : 'bg-blue-500/20 text-blue-400 border border-blue-500/40'}">${item.status}</span>
+                        </td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function fetchLiveStream() {
+            try {
+                const res = await fetch('/api/live-stream');
+                const list = await res.json();
+                const container = document.getElementById('live-stream-container');
+                container.innerHTML = list.slice(0, 5).map(item => `
+                    <div class="flex items-center space-x-3 text-xs">
+                        <span class="w-2 h-2 rounded-full ${item.type === 'Apartment' ? 'bg-blue-400' : (item.type === 'Villa' ? 'bg-purple-400' : 'bg-emerald-400')}"></span>
+                        <span class="text-gray-500 font-mono">${item.time}</span>
+                        <span class="text-gray-200 font-medium">${item.location}</span>
+                        <span class="text-gray-400">(${item.type} ${item.bhk})</span>
+                        <span class="text-emerald-400 font-semibold">${item.value_formatted}</span>
+                        <span class="text-gray-500 text-[10px] uppercase border border-gray-700 px-1.5 py-0.2 rounded">${item.stage}</span>
+                    </div>
+                `).join('');
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function loadLocationsList() {
+            try {
+                const res = await fetch('/api/locations');
+                const list = await res.json();
+                const select = document.getElementById('loc-select');
+                select.innerHTML = list.slice(0, 40).map(l => `<option value="${l.LOCATION}">${l.LOCATION}</option>`).join('');
+                
+                const masterTbody = document.getElementById('master-loc-tbody');
+                masterTbody.innerHTML = list.map(l => `
+                    <tr class="hover:bg-slate-800/40 transition">
+                        <td class="py-2 font-medium text-white">${l.LOCATION}</td>
+                        <td class="py-2 text-center text-blue-300 font-semibold">${l.deals}</td>
+                        <td class="py-2 text-emerald-400">AED ${l.volume_m}M</td>
+                        <td class="py-2 text-gray-300">AED ${l.avg_price.toLocaleString()}</td>
+                        <td class="py-2 text-purple-300">${l.villa_avg ? 'AED ' + l.villa_avg.toLocaleString() : '-'}</td>
+                        <td class="py-2 text-blue-300">${l.apartment_avg ? 'AED ' + l.apartment_avg.toLocaleString() : '-'}</td>
+                        <td class="py-2 text-gray-400">${l.median_sqft ? 'AED ' + l.median_sqft.toLocaleString() : '-'}</td>
+                        <td class="py-2 text-right text-yellow-300">${l.offplan_pct}%</td>
+                    </tr>
+                `).join('');
+
+                loadLocationDetail();
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function loadLocationDetail() {
+            const area = document.getElementById('loc-select').value;
+            if (!area) return;
+            try {
+                const res = await fetch(`/api/location-detail?area=${encodeURIComponent(area)}`);
+                const data = await res.json();
+                document.getElementById('loc-kpi-vol').innerText = data.volume_formatted;
+                document.getElementById('loc-kpi-deals').innerText = `${data.deals.toLocaleString()} Deals`;
+                document.getElementById('loc-kpi-avg').innerText = data.avg_price_formatted;
+                document.getElementById('loc-kpi-med').innerText = `Median: ${data.med_price_formatted}`;
+                document.getElementById('loc-kpi-villa').innerText = data.villa_avg_formatted;
+                document.getElementById('loc-kpi-villa-deals').innerText = `${data.villa_deals} Villas Sold`;
+                document.getElementById('loc-kpi-apt').innerText = data.apartment_avg_formatted;
+                document.getElementById('loc-kpi-apt-deals').innerText = `${data.apartment_deals} Apartments Sold`;
+
+                const bhkTbody = document.getElementById('loc-bhk-tbody');
+                bhkTbody.innerHTML = data.bhk_breakdown.map(b => `
+                    <tr class="hover:bg-slate-800/40">
+                        <td class="py-2 font-medium text-white">${b.bhk}</td>
+                        <td class="py-2 text-center text-blue-300 font-semibold">${b.deals}</td>
+                        <td class="py-2 text-emerald-400">${b.avg_price_formatted}</td>
+                        <td class="py-2 text-gray-300">${b.median_price_formatted}</td>
+                    </tr>
+                `).join('');
+
+                const projTbody = document.getElementById('loc-proj-tbody');
+                projTbody.innerHTML = data.top_projects.map(p => `
+                    <tr class="hover:bg-slate-800/40">
+                        <td class="py-2 font-medium text-white">${p.project}</td>
+                        <td class="py-2 text-center text-blue-300 font-semibold">${p.deals}</td>
+                        <td class="py-2 text-emerald-400">${p.volume_formatted}</td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function filterApartments() {
+            const bhk = document.getElementById('apt-bhk-select').value;
+            const stage = document.getElementById('apt-stage-select').value;
+            try {
+                const res = await fetch(`/api/apartments-summary?bhk=${encodeURIComponent(bhk)}&stage=${encodeURIComponent(stage)}`);
+                const data = await res.json();
+                document.getElementById('apt-dyn-vol').innerText = data.volume_formatted;
+                document.getElementById('apt-dyn-deals').innerText = `${data.deals.toLocaleString()} Deals`;
+                document.getElementById('apt-dyn-avg').innerText = data.avg_price_formatted;
+                document.getElementById('apt-dyn-med').innerText = `Median: ${data.med_price_formatted}`;
+
+                const tbody = document.getElementById('apt-top-locs-tbody');
+                tbody.innerHTML = data.top_locations.map(l => `
+                    <tr class="hover:bg-slate-800/40">
+                        <td class="py-2 font-medium text-white">${l.location}</td>
+                        <td class="py-2 text-center text-blue-300 font-semibold">${l.deals}</td>
+                        <td class="py-2 text-emerald-400">${l.avg_price_formatted}</td>
+                        <td class="py-2 text-gray-300">${l.volume_formatted}</td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function loadVillasData() {
+            try {
+                const res = await fetch('/api/villas-summary');
+                const data = await res.json();
+                const tbody = document.getElementById('villa-top-comms-tbody');
+                tbody.innerHTML = data.top_communities.map(c => `
+                    <tr class="hover:bg-slate-800/40">
+                        <td class="py-2.5 font-medium text-white">${c.location}</td>
+                        <td class="py-2.5 text-center text-purple-300 font-semibold">${c.deals}</td>
+                        <td class="py-2.5 text-emerald-400 font-medium">${c.avg_price_formatted}</td>
+                        <td class="py-2.5 text-gray-300">${c.median_price_formatted}</td>
+                        <td class="py-2.5 text-blue-300 font-semibold">${c.volume_formatted}</td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function loadPropertyTypesData() {
+            try {
+                const res = await fetch('/api/property-types');
+                const data = await res.json();
+                const totalDeals = data.counts.reduce((a, b) => a + b, 0);
+                const tbody = document.getElementById('prop-matrix-tbody');
+                tbody.innerHTML = data.labels.map((lbl, idx) => `
+                    <tr class="hover:bg-slate-800/40">
+                        <td class="py-2.5 font-medium text-white">${lbl}</td>
+                        <td class="py-2.5 text-center text-blue-300 font-semibold">${data.counts[idx].toLocaleString()}</td>
+                        <td class="py-2.5 text-emerald-400 font-semibold">AED ${data.volumes_b[idx]}B</td>
+                        <td class="py-2.5 text-gray-200">AED ${data.avg_prices[idx].toLocaleString()}</td>
+                        <td class="py-2.5 text-purple-300 font-medium">${((data.counts[idx] / totalDeals) * 100).toFixed(1)}%</td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        let dailyVelocityData = null;
+        let currentDailyMode = 'weekly';
+        let dowChartInstance = null;
+
+        function setDailyView(mode) {
+            currentDailyMode = mode;
+            ['weekly', 'last14', 'all'].forEach(m => {
+                const btn = document.getElementById(`btn-view-${m}`);
+                if (btn) {
+                    if (m === mode) {
+                        btn.className = 'px-3 py-1.5 rounded-md font-medium text-white bg-blue-600 shadow transition';
+                    } else {
+                        btn.className = 'px-3 py-1.5 rounded-md font-medium text-gray-400 hover:text-white transition';
+                    }
+                }
+            });
+
+            if (!dailyVelocityData) return;
+            renderVelocityChart();
+        }
+
+        function renderVelocityChart() {
+            const ctx = document.getElementById('dailyVelocityChart').getContext('2d');
+            if (dailyChartInstance) dailyChartInstance.destroy();
+
+            let labels = [];
+            let volumes = [];
+            let deals = [];
+            let volumeUnit = 'AED Millions';
+
+            if (currentDailyMode === 'weekly') {
+                labels = dailyVelocityData.weekly.labels;
+                volumes = dailyVelocityData.weekly.volumes_b;
+                deals = dailyVelocityData.weekly.deals;
+                volumeUnit = 'AED Billions';
+                document.getElementById('velocity-chart-title').innerText = 'Weekly Capital Flow & Transactions';
+                document.getElementById('velocity-chart-subtitle').innerText = '5 Clean Consolidated Weekly Cycles';
+            } else if (currentDailyMode === 'last14') {
+                labels = dailyVelocityData.last_14.dates;
+                volumes = dailyVelocityData.last_14.volumes_m;
+                deals = dailyVelocityData.last_14.deals;
+                volumeUnit = 'AED Millions';
+                document.getElementById('velocity-chart-title').innerText = 'Last 14 Days Transaction Pace';
+                document.getElementById('velocity-chart-subtitle').innerText = 'Recent Closing Activity';
+            } else {
+                labels = dailyVelocityData.daily.dates;
+                volumes = dailyVelocityData.daily.volumes_m;
+                deals = dailyVelocityData.daily.deals;
+                volumeUnit = 'AED Millions';
+                document.getElementById('velocity-chart-title').innerText = 'Full Month Daily Progression';
+                document.getElementById('velocity-chart-subtitle').innerText = 'Day-by-Day Historical Progression';
+            }
+
+            dailyChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: `Volume (${volumeUnit})`,
+                            data: volumes,
+                            backgroundColor: '#38bdf8',
+                            borderRadius: 6,
+                            maxBarThickness: 45,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Transactions Closed',
+                            data: deals,
+                            type: 'line',
+                            borderColor: '#f59e0b',
+                            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                            borderWidth: 2.5,
+                            tension: 0.35,
+                            pointRadius: 4,
+                            pointHoverRadius: 6,
+                            pointBackgroundColor: '#f59e0b',
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            grid: { color: 'rgba(51, 65, 85, 0.4)' },
+                            ticks: { 
+                                color: '#94a3b8',
+                                font: { size: 11 },
+                                callback: val => `${val}${currentDailyMode === 'weekly' ? 'B' : 'M'}`
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            position: 'right',
+                            grid: { display: false },
+                            ticks: { color: '#f59e0b', font: { size: 11 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { 
+                                color: '#94a3b8',
+                                font: { size: 11 },
+                                autoSkip: true,
+                                maxTicksLimit: currentDailyMode === 'all' ? 8 : 14,
+                                maxRotation: 0,
+                                minRotation: 0
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: '#f8fafc', font: { size: 11 } },
+                            position: 'top'
+                        }
+                    }
+                }
+            });
+        }
+
+        async function loadDailyVelocity() {
+            try {
+                const res = await fetch('/api/daily-velocity');
+                dailyVelocityData = await res.json();
+
+                // Populate Top Velocity Stats
+                const stats = dailyVelocityData.stats;
+                if (stats) {
+                    document.getElementById('vel-stat-daily').innerHTML = `${stats.avg_daily_vol}<span class="text-xs text-gray-400 font-normal">/day</span>`;
+                    document.getElementById('vel-stat-peak-vol').innerText = stats.peak_vol_amount;
+                    document.getElementById('vel-stat-peak-vol-date').innerText = stats.peak_vol_date;
+                    document.getElementById('vel-stat-peak-deals').innerText = stats.peak_deals_count;
+                    document.getElementById('vel-stat-peak-deals-date').innerText = stats.peak_deals_date;
+                    document.getElementById('vel-stat-weekday').innerText = stats.weekday_avg;
+                }
+
+                // Render main velocity chart with default clean weekly view
+                renderVelocityChart();
+
+                // Render Day-of-Week Chart
+                const dowCtx = document.getElementById('dowChart').getContext('2d');
+                if (dowChartInstance) dowChartInstance.destroy();
+
+                dowChartInstance = new Chart(dowCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                            label: 'Volume (AED B)',
+                            data: dailyVelocityData.dow.volumes_b,
+                            backgroundColor: [
+                                '#38bdf8', '#0284c7', '#2563eb', '#6366f1', '#a855f7', '#64748b', '#475569'
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: {
+                                grid: { color: 'rgba(51, 65, 85, 0.4)' },
+                                ticks: { color: '#94a3b8', font: { size: 10 } }
+                            },
+                            x: {
+                                grid: { display: false },
+                                ticks: { color: '#94a3b8', font: { size: 10 } }
+                            }
+                        }
+                    }
+                });
+
+                // Render Top Days Table
+                const topDaysTbody = document.getElementById('top-days-tbody');
+                topDaysTbody.innerHTML = dailyVelocityData.top_days.map(d => `
+                    <tr class="hover:bg-slate-800/40 transition">
+                        <td class="py-2.5 font-medium text-white">${d.date}</td>
+                        <td class="py-2.5 text-center text-yellow-400 font-semibold">${d.deals.toLocaleString()}</td>
+                        <td class="py-2.5 text-gray-300">${d.avg_price}</td>
+                        <td class="py-2.5 text-right font-bold text-emerald-400">${d.volume_m}</td>
+                    </tr>
+                `).join('');
+
+            } catch (e) {
+                console.error('Error in loadDailyVelocity:', e);
+            }
+        }
+
+        async function testVoiceLookup() {
+            const area = document.getElementById('voice-area-select').value;
+            const type = document.getElementById('voice-type-select').value;
+            const bhk = document.getElementById('voice-bhk-select').value;
+
+            document.getElementById('voice-caller-bubble').innerHTML = `🗣️ <b>Caller:</b> "What is the average price of a ${bhk} ${type.toLowerCase()} in ${area}?"`;
+            document.getElementById('voice-agent-answer').innerHTML = `🤖 <i>Generating real-time voice response...</i>`;
+
+            try {
+                const res = await fetch(`/api/lookup?area=${encodeURIComponent(area)}&prop_type=${encodeURIComponent(type)}&bhk=${encodeURIComponent(bhk)}`);
+                const data = await res.json();
+                document.getElementById('voice-agent-answer').innerHTML = `🤖 <b>Voice Agent Speech:</b> "${data.speech}"`;
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function loadCRMTransactions() {
+            try {
+                const res = await fetch('/api/live-stream?limit=25');
+                const list = await res.json();
+                const tbody = document.getElementById('crm-tbody');
+                tbody.innerHTML = list.map(item => `
+                    <tr class="hover:bg-slate-800/40 transition">
+                        <td class="py-2.5 font-mono text-gray-400">${item.time}</td>
+                        <td class="py-2.5 text-blue-400 font-mono">${item.trans_no}</td>
+                        <td class="py-2.5 font-medium text-white">${item.location}</td>
+                        <td class="py-2.5 text-gray-300">${item.type}</td>
+                        <td class="py-2.5 text-purple-300">${item.bhk}</td>
+                        <td class="py-2.5"><span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.stage === 'Off-Plan' ? 'bg-blue-500/20 text-blue-400' : 'bg-emerald-500/20 text-emerald-400'}">${item.stage}</span></td>
+                        <td class="py-2.5 text-right font-bold text-emerald-400">${item.value_formatted}</td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function refreshAllData() {
+            fetchDashboardStats();
+            fetchPipeline();
+            fetchPropertyChart();
+            fetchTopProjects();
+            fetchLiveStream();
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            refreshAllData();
+        });
+    </script>
+</body>
+</html>
