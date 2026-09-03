@@ -1,0 +1,42 @@
+{
+  "total_volume_aed": 42522782620.52,
+  "total_volume_formatted": "AED 42.52B",
+  "total_deals": 17651,
+  "total_deals_formatted": "17,651",
+  "overall_avg_aed": 2409086,
+  "overall_avg_formatted": "AED 2,409,086",
+  "overall_median_aed": 1227732,
+  "overall_median_formatted": "AED 1,227,732",
+  "max_deal_aed": 725000000.0,
+  "max_deal_formatted": "AED 725.0M",
+  "apartment": {
+    "deals": 14102,
+    "volume_aed": 23544638911.84,
+    "avg_price": 1669596,
+    "median_price": 1058588,
+    "avg_price_formatted": "AED 1,669,596",
+    "median_price_formatted": "AED 1,058,588"
+  },
+  "villa": {
+    "deals": 1513,
+    "volume_aed": 5623213348.38,
+    "avg_price": 3716598,
+    "median_price": 2940000,
+    "avg_price_formatted": "AED 3,716,598",
+    "median_price_formatted": "AED 2,940,000"
+  },
+  "market_stage": {
+    "offplan_deals": 9193,
+    "ready_deals": 8458,
+    "offplan_pct": 52.1,
+    "ready_pct": 47.9,
+    "offplan_volume_formatted": "AED 16.51B",
+    "ready_volume_formatted": "AED 26.01B"
+  },
+  "velocity": {
+    "daily_volume_formatted": "AED 1251M/day",
+    "daily_deals_avg": 519,
+    "days_active": 34
+  },
+  "median_sqft": 1578
+}

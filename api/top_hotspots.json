@@ -1,0 +1,66 @@
+[
+  {
+    "project": "Greenz By Danube",
+    "location": "Al Rowaiyah First",
+    "deals": 127,
+    "volume_formatted": "AED 1949.9M",
+    "avg_price_formatted": "AED 15,353,297",
+    "status": "HOT"
+  },
+  {
+    "project": "Palm Central Private Residences - Frond N",
+    "location": "Palm Jabal Ali",
+    "deals": 126,
+    "volume_formatted": "AED 642.8M",
+    "avg_price_formatted": "AED 5,101,976",
+    "status": "HOT"
+  },
+  {
+    "project": "EOME",
+    "location": "Palm Jumeirah",
+    "deals": 3,
+    "volume_formatted": "AED 522.0M",
+    "avg_price_formatted": "AED 174,000,079",
+    "status": "ACTIVE"
+  },
+  {
+    "project": "Hayat 6",
+    "location": "Madinat Al Mataar",
+    "deals": 66,
+    "volume_formatted": "AED 370.9M",
+    "avg_price_formatted": "AED 5,619,091",
+    "status": "HOT"
+  },
+  {
+    "project": "Azizi Venice 15",
+    "location": "Madinat Al Mataar",
+    "deals": 422,
+    "volume_formatted": "AED 354.5M",
+    "avg_price_formatted": "AED 839,938",
+    "status": "HOT"
+  },
+  {
+    "project": "Golf Fields",
+    "location": "Madinat Al Mataar",
+    "deals": 181,
+    "volume_formatted": "AED 346.8M",
+    "avg_price_formatted": "AED 1,916,031",
+    "status": "HOT"
+  },
+  {
+    "project": "Lumena Alta by Omniyat",
+    "location": "Business Bay",
+    "deals": 13,
+    "volume_formatted": "AED 343.8M",
+    "avg_price_formatted": "AED 26,448,812",
+    "status": "ACTIVE"
+  },
+  {
+    "project": "Bugatti Residences by Binghatti",
+    "location": "Business Bay",
+    "deals": 10,
+    "volume_formatted": "AED 296.5M",
+    "avg_price_formatted": "AED 29,649,010",
+    "status": "ACTIVE"
+  }
+]

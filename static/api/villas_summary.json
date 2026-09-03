@@ -1,0 +1,140 @@
+{
+  "total_deals": 1513,
+  "total_volume_formatted": "AED 5.62B",
+  "avg_price_formatted": "AED 3,716,598",
+  "median_price_formatted": "AED 2,940,000",
+  "top_communities": [
+    {
+      "location": "Madinat Al Mataar",
+      "deals": 127,
+      "avg_price_formatted": "AED 4,599,330",
+      "median_price_formatted": "AED 4,850,000",
+      "volume_formatted": "AED 584.1M"
+    },
+    {
+      "location": "Al Hebiah Sixth",
+      "deals": 127,
+      "avg_price_formatted": "AED 2,910,495",
+      "median_price_formatted": "AED 2,999,500",
+      "volume_formatted": "AED 369.6M"
+    },
+    {
+      "location": "Al Yelayiss 1",
+      "deals": 125,
+      "avg_price_formatted": "AED 3,167,943",
+      "median_price_formatted": "AED 2,874,240",
+      "volume_formatted": "AED 396.0M"
+    },
+    {
+      "location": "Al Yufrah 1",
+      "deals": 95,
+      "avg_price_formatted": "AED 2,584,443",
+      "median_price_formatted": "AED 2,480,000",
+      "volume_formatted": "AED 245.5M"
+    },
+    {
+      "location": "Dubai Investment Park First",
+      "deals": 93,
+      "avg_price_formatted": "AED 1,943,494",
+      "median_price_formatted": "AED 1,614,050",
+      "volume_formatted": "AED 180.7M"
+    },
+    {
+      "location": "Emirate Living",
+      "deals": 80,
+      "avg_price_formatted": "AED 3,592,911",
+      "median_price_formatted": "AED 3,598,500",
+      "volume_formatted": "AED 287.4M"
+    },
+    {
+      "location": "Wadi Al Safa 5",
+      "deals": 63,
+      "avg_price_formatted": "AED 3,416,524",
+      "median_price_formatted": "AED 3,320,000",
+      "volume_formatted": "AED 215.2M"
+    },
+    {
+      "location": "Al Rowaiyah First",
+      "deals": 63,
+      "avg_price_formatted": "AED 4,575,408",
+      "median_price_formatted": "AED 4,400,000",
+      "volume_formatted": "AED 288.3M"
+    },
+    {
+      "location": "Villanova",
+      "deals": 62,
+      "avg_price_formatted": "AED 2,523,967",
+      "median_price_formatted": "AED 2,450,000",
+      "volume_formatted": "AED 156.5M"
+    },
+    {
+      "location": "Mira",
+      "deals": 61,
+      "avg_price_formatted": "AED 2,536,849",
+      "median_price_formatted": "AED 2,700,000",
+      "volume_formatted": "AED 154.7M"
+    },
+    {
+      "location": "The Field",
+      "deals": 37,
+      "avg_price_formatted": "AED 3,116,139",
+      "median_price_formatted": "AED 2,900,000",
+      "volume_formatted": "AED 115.3M"
+    },
+    {
+      "location": "Arabian Ranches I",
+      "deals": 37,
+      "avg_price_formatted": "AED 3,610,262",
+      "median_price_formatted": "AED 3,760,000",
+      "volume_formatted": "AED 133.6M"
+    },
+    {
+      "location": "Town Square",
+      "deals": 32,
+      "avg_price_formatted": "AED 2,263,907",
+      "median_price_formatted": "AED 2,360,000",
+      "volume_formatted": "AED 72.4M"
+    },
+    {
+      "location": "Dubai Hills",
+      "deals": 28,
+      "avg_price_formatted": "AED 4,004,841",
+      "median_price_formatted": "AED 3,984,250",
+      "volume_formatted": "AED 112.1M"
+    },
+    {
+      "location": "Al Yelayiss 2",
+      "deals": 28,
+      "avg_price_formatted": "AED 2,450,321",
+      "median_price_formatted": "AED 2,445,000",
+      "volume_formatted": "AED 68.6M"
+    }
+  ],
+  "bhk_summary": [
+    {
+      "bhk": "4 B/R",
+      "deals": 584,
+      "avg_price_formatted": "AED 3,542,351"
+    },
+    {
+      "bhk": "3 B/R",
+      "deals": 576,
+      "avg_price_formatted": "AED 2,789,546"
+    },
+    {
+      "bhk": "5 B/R",
+      "deals": 125,
+      "avg_price_formatted": "AED 5,652,295"
+    },
+    {
+      "bhk": "2 B/R",
+      "deals": 98,
+      "avg_price_formatted": "AED 2,460,533"
+    },
+    {
+      "bhk": "1 B/R",
+      "deals": 6,
+      "avg_price_formatted": "AED 775,667"
+    }
+  ]
+}

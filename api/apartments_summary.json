@@ -1,0 +1,68 @@
+{
+  "deals": 14102,
+  "volume_formatted": "AED 23.54B",
+  "avg_price_formatted": "AED 1,669,596",
+  "med_price_formatted": "AED 1,058,588",
+  "top_locations": [
+    {
+      "location": "Madinat Al Mataar",
+      "deals": 1893,
+      "avg_price_formatted": "AED 996,341",
+      "volume_formatted": "AED 1886.1M"
+    },
+    {
+      "location": "Jumeirah Village Circle",
+      "deals": 1166,
+      "avg_price_formatted": "AED 982,320",
+      "volume_formatted": "AED 1145.4M"
+    },
+    {
+      "location": "City Of Arabia",
+      "deals": 828,
+      "avg_price_formatted": "AED 954,757",
+      "volume_formatted": "AED 790.5M"
+    },
+    {
+      "location": "Business Bay",
+      "deals": 583,
+      "avg_price_formatted": "AED 2,580,712",
+      "volume_formatted": "AED 1504.6M"
+    },
+    {
+      "location": "Majan",
+      "deals": 422,
+      "avg_price_formatted": "AED 878,048",
+      "volume_formatted": "AED 370.5M"
+    },
+    {
+      "location": "Dubai Land Residence Complex",
+      "deals": 398,
+      "avg_price_formatted": "AED 944,209",
+      "volume_formatted": "AED 375.8M"
+    },
+    {
+      "location": "Dubai Marina",
+      "deals": 385,
+      "avg_price_formatted": "AED 3,381,857",
+      "volume_formatted": "AED 1302.0M"
+    },
+    {
+      "location": "Jabal Ali Industrial Second",
+      "deals": 359,
+      "avg_price_formatted": "AED 850,073",
+      "volume_formatted": "AED 305.2M"
+    },
+    {
+      "location": "Down Town Jabal Ali",
+      "deals": 356,
+      "avg_price_formatted": "AED 805,253",
+      "volume_formatted": "AED 286.7M"
+    },
+    {
+      "location": "Burj Khalifa",
+      "deals": 331,
+      "avg_price_formatted": "AED 3,703,772",
+      "volume_formatted": "AED 1225.9M"
+    }
+  ]
+}
