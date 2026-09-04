@@ -637,6 +637,7 @@
         let cachedLocationsDetail = null;
         async function smartFetch(url) {
             const isStaticMode = window.location.hostname.includes('github.io') || window.location.protocol === 'file:';
+            let resultData;
             if (isStaticMode) {
                 let basePath = window.location.pathname;
                 if (!basePath.endsWith('/')) {
@@ -653,36 +654,47 @@
                     }
                     const params = new URLSearchParams(url.split('?')[1] || '');
                     const area = (params.get('area') || '').toLowerCase();
-                    return cachedLocationsDetail[area] || cachedLocationsDetail[Object.keys(cachedLocationsDetail)[0]];
-                }
-                if (cleanUrl === '/api/lookup') {
+                    resultData = cachedLocationsDetail[area] || cachedLocationsDetail[Object.keys(cachedLocationsDetail)[0]];
+                } else if (cleanUrl === '/api/lookup') {
                     const params = new URLSearchParams(url.split('?')[1] || '');
                     const area = params.get('area') || 'Dubai';
                     const propType = params.get('prop_type') || 'residential units';
                     const bhk = params.get('bhk') || '';
-                    return {
+                    resultData = {
                         found: true,
                         speech: `In ${area}, based on recent transactions, average price for ${bhk} ${propType.toLowerCase()} is approximately AED 1.25 Million with median pricing around AED 1.15 Million.`
                     };
+                } else {
+                    const map = {
+                        '/api/stats': 'api/stats.json',
+                        '/api/pipeline': 'api/pipeline.json',
+                        '/api/property-types': 'api/property_types.json',
+                        '/api/top-hotspots': 'api/top_hotspots.json',
+                        '/api/locations': 'api/locations.json',
+                        '/api/apartments-summary': 'api/apartments_summary.json',
+                        '/api/villas-summary': 'api/villas_summary.json',
+                        '/api/daily-velocity': 'api/daily_velocity.json',
+                        '/api/live-stream': 'api/live_stream.json'
+                    };
+                    const targetRel = map[cleanUrl] || (cleanUrl.startsWith('/') ? cleanUrl.substring(1) : cleanUrl);
+                    const res = await window.fetch(resolveStatic(targetRel));
+                    resultData = await res.json();
                 }
-                const map = {
-                    '/api/stats': 'api/stats.json',
-                    '/api/pipeline': 'api/pipeline.json',
-                    '/api/property-types': 'api/property_types.json',
-                    '/api/top-hotspots': 'api/top_hotspots.json',
-                    '/api/locations': 'api/locations.json',
-                    '/api/apartments-summary': 'api/apartments_summary.json',
-                    '/api/villas-summary': 'api/villas_summary.json',
-                    '/api/daily-velocity': 'api/daily_velocity.json',
-                    '/api/live-stream': 'api/live_stream.json'
-                };
-                const targetRel = map[cleanUrl] || (cleanUrl.startsWith('/') ? cleanUrl.substring(1) : cleanUrl);
-                const res = await window.fetch(resolveStatic(targetRel));
-                return await res.json();
             } else {
                 const res = await window.fetch(url);
-                return await res.json();
+                resultData = await res.json();
             }
+
+            if (resultData && typeof resultData === 'object') {
+                try {
+                    Object.defineProperty(resultData, 'json', {
+                        value: async function() { return this; },
+                        enumerable: false,
+                        configurable: true
+                    });
+                } catch (err) {}
+            }
+            return resultData;
         }
 
         let propChartInstance = null;
@@ -881,8 +893,7 @@
             const area = document.getElementById('loc-select').value;
             if (!area) return;
             try {
-                const res = await smartFetch(`/api/location-detail?area=${encodeURIComponent(area)}`);
-                const data = await res.json();
+                const data = await smartFetch(`/api/location-detail?area=${encodeURIComponent(area)}`);
                 document.getElementById('loc-kpi-vol').innerText = data.volume_formatted;
                 document.getElementById('loc-kpi-deals').innerText = `${data.deals.toLocaleString()} Deals`;
                 document.getElementById('loc-kpi-avg').innerText = data.avg_price_formatted;
@@ -919,8 +930,7 @@
             const bhk = document.getElementById('apt-bhk-select').value;
             const stage = document.getElementById('apt-stage-select').value;
             try {
-                const res = await smartFetch(`/api/apartments-summary?bhk=${encodeURIComponent(bhk)}&stage=${encodeURIComponent(stage)}`);
-                const data = await res.json();
+                const data = await smartFetch(`/api/apartments-summary?bhk=${encodeURIComponent(bhk)}&stage=${encodeURIComponent(stage)}`);
                 document.getElementById('apt-dyn-vol').innerText = data.volume_formatted;
                 document.getElementById('apt-dyn-deals').innerText = `${data.deals.toLocaleString()} Deals`;
                 document.getElementById('apt-dyn-avg').innerText = data.avg_price_formatted;
@@ -1183,8 +1193,7 @@
             document.getElementById('voice-agent-answer').innerHTML = `🤖 <i>Generating real-time voice response...</i>`;
 
             try {
-                const res = await smartFetch(`/api/lookup?area=${encodeURIComponent(area)}&prop_type=${encodeURIComponent(type)}&bhk=${encodeURIComponent(bhk)}`);
-                const data = await res.json();
+                const data = await smartFetch(`/api/lookup?area=${encodeURIComponent(area)}&prop_type=${encodeURIComponent(type)}&bhk=${encodeURIComponent(bhk)}`);
                 document.getElementById('voice-agent-answer').innerHTML = `🤖 <b>Voice Agent Speech:</b> "${data.speech}"`;
             } catch (e) {
                 console.error(e);
