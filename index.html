@@ -637,10 +637,17 @@
         async function smartFetch(url) {
             const isStaticMode = window.location.hostname.includes('github.io') || window.location.protocol === 'file:';
             if (isStaticMode) {
+                let basePath = window.location.pathname;
+                if (!basePath.endsWith('/')) {
+                    const lastSlash = basePath.lastIndexOf('/');
+                    basePath = basePath.substring(0, lastSlash + 1);
+                }
+                const resolveStatic = (rel) => basePath + rel;
+
                 const cleanUrl = url.split('?')[0];
                 if (cleanUrl === '/api/location-detail') {
                     if (!cachedLocationsDetail) {
-                        const res = await window.fetch('api/locations_detail.json');
+                        const res = await window.fetch(resolveStatic('api/locations_detail.json'));
                         cachedLocationsDetail = await res.json();
                     }
                     const params = new URLSearchParams(url.split('?')[1] || '');
@@ -654,7 +661,7 @@
                     const bhk = params.get('bhk') || '';
                     return {
                         found: true,
-                        speech: In , based on recent transactions, average price for   is approximately AED 1.25 Million with median pricing around AED 1.15 Million.
+                        speech: `In ${area}, based on recent transactions, average price for ${bhk} ${propType.toLowerCase()} is approximately AED 1.25 Million with median pricing around AED 1.15 Million.`
                     };
                 }
                 const map = {
@@ -668,8 +675,8 @@
                     '/api/daily-velocity': 'api/daily_velocity.json',
                     '/api/live-stream': 'api/live_stream.json'
                 };
-                const target = map[cleanUrl] || cleanUrl;
-                const res = await window.fetch(target);
+                const targetRel = map[cleanUrl] || (cleanUrl.startsWith('/') ? cleanUrl.substring(1) : cleanUrl);
+                const res = await window.fetch(resolveStatic(targetRel));
                 return await res.json();
             } else {
                 const res = await window.fetch(url);
