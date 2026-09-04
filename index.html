@@ -28,18 +28,18 @@
 </head>
 <body class="flex h-screen overflow-hidden">
 
-    <!-- Fullscreen Refresh / Blur Overlay with Middle Horizontal Bar -->
-    <div id="refresh-overlay" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-lg opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center">
+    <!-- Fullscreen Refresh / Blur Overlay with Centered 60% Horizontal Bar -->
+    <div id="refresh-overlay" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-lg opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center px-6">
         <div class="flex items-center gap-3 mb-6">
             <div class="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center text-blue-400 animate-spin shadow-lg shadow-blue-500/30">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
             </div>
-            <span class="text-white text-base font-semibold tracking-wider uppercase">Synchronizing Live Transaction Data</span>
+            <span class="text-white text-sm font-semibold tracking-wider uppercase">Synchronizing Live Transaction Data</span>
         </div>
 
-        <!-- Horizontal Bar Going Across the Middle of the Screen -->
-        <div class="w-full h-2 bg-gray-900/90 relative overflow-hidden border-y border-gray-800 shadow-[0_0_30px_rgba(56,189,248,0.2)]">
-            <div id="refresh-progress" class="h-full bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400 shadow-[0_0_25px_rgba(56,189,248,0.9)] transition-all duration-[2000ms] ease-out w-0"></div>
+        <!-- Professional Centered 60% Bar (20% margins on left & right) with Rounded Edges -->
+        <div class="w-[60%] max-w-4xl h-3.5 bg-gray-900/90 rounded-full relative overflow-hidden border border-gray-700/60 shadow-[0_0_25px_rgba(56,189,248,0.15)] p-0.5">
+            <div id="refresh-progress" class="h-full rounded-full bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400 shadow-[0_0_20px_rgba(56,189,248,0.85)] transition-all duration-[2000ms] ease-out w-0"></div>
         </div>
 
         <p class="text-xs text-gray-400 mt-6 font-mono tracking-wide">Refreshing Dubai Land Department transactional records & analytics...</p>
