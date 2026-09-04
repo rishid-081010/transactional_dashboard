@@ -470,6 +470,13 @@ def lookup_market_data(
         "speech": speech
     }
 
+@app.get("/api/all-transactions")
+def get_all_transactions():
+    json_path = os.path.join(BASE_DIR, "api", "all_transactions.json")
+    if os.path.exists(json_path):
+        return FileResponse(json_path, media_type="application/json")
+    return []
+
 # ─── SERVE FRONTEND ──────────────────────────────────────────────────────────
 @app.get("/")
 async def read_index():

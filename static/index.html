@@ -59,7 +59,7 @@
             <button onclick="switchTab('property-types')" id="nav-property-types" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Property Types</button>
             <button onclick="switchTab('daily-velocity')" id="nav-daily-velocity" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Daily Velocity</button>
             <button onclick="switchTab('voice-ai')" id="nav-voice-ai" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Voice AI Engine</button>
-            <button onclick="switchTab('crm')" id="nav-crm" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">CRM Transactions</button>
+            <button onclick="switchTab('crm')" id="nav-crm" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">All Transactions</button>
         </nav>
         <div class="p-4 border-t border-gray-800 text-[11px] text-gray-400 flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -616,30 +616,126 @@
             </div>
         </main>
 
-        <!-- ─── PANEL: CRM TRANSACTIONS ───────────────────────────────────────── -->
+        <!-- ─── PANEL: ALL TRANSACTIONS ───────────────────────────────────────── -->
         <main id="panel-crm" class="p-8 space-y-6 hidden">
-            <div class="flex justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
-                    <h3 class="text-xl font-bold text-white">CRM Transaction Ledger</h3>
-                    <p class="text-xs text-gray-400">Streamlined ledger of live transactional records.</p>
+                    <h3 class="text-xl font-bold text-white">All Transactions</h3>
+                    <p class="text-xs text-gray-400">Master ledger of all 17,651 recorded Dubai residential transactions with multi-stage filters.</p>
+                </div>
+                <!-- Top Summary Pill -->
+                <div class="flex flex-wrap items-center gap-3 text-xs">
+                    <span class="px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 text-blue-400 rounded-lg font-medium" id="tx-summary-count">17,651 Deals</span>
+                    <span class="px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-lg font-medium" id="tx-summary-vol">AED 42.52B Volume</span>
+                    <span class="px-3 py-1.5 bg-purple-500/10 border border-purple-500/30 text-purple-400 rounded-lg font-medium" id="tx-summary-avg">Avg: AED 2.41M</span>
                 </div>
             </div>
 
+            <!-- Niche Multi-Stage Filter & Sorting Controls -->
+            <div class="glass-panel p-5 rounded-xl shadow-lg space-y-4">
+                <!-- Row 1: Category Filter Buttons & Live Search -->
+                <div class="flex flex-wrap items-center justify-between gap-3 border-b border-gray-800 pb-4">
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <button onclick="setTxCategory('All')" id="btn-tx-cat-All" class="px-3.5 py-1.5 rounded-lg font-semibold text-white bg-blue-600 shadow transition">All (17,651)</button>
+                        <button onclick="setTxCategory('Apartment')" id="btn-tx-cat-Apartment" class="px-3.5 py-1.5 rounded-lg font-medium text-gray-300 hover:text-white bg-gray-800/80 hover:bg-gray-700/80 transition">🏢 Apartments (14,102)</button>
+                        <button onclick="setTxCategory('Villa')" id="btn-tx-cat-Villa" class="px-3.5 py-1.5 rounded-lg font-medium text-gray-300 hover:text-white bg-gray-800/80 hover:bg-gray-700/80 transition">🏡 Villas (1,513)</button>
+                        <button onclick="setTxCategory('Commercial')" id="btn-tx-cat-Commercial" class="px-3.5 py-1.5 rounded-lg font-medium text-gray-300 hover:text-white bg-gray-800/80 hover:bg-gray-700/80 transition">💼 Commercial (630)</button>
+                        <button onclick="setTxCategory('Land')" id="btn-tx-cat-Land" class="px-3.5 py-1.5 rounded-lg font-medium text-gray-300 hover:text-white bg-gray-800/80 hover:bg-gray-700/80 transition">🏞️ Land (1,403)</button>
+                    </div>
+                    <!-- Live Search -->
+                    <div class="relative w-full md:w-72">
+                        <input type="text" id="tx-search-input" oninput="onTxFilterChange()" placeholder="Search project, area, TX ID..." class="w-full bg-gray-900 border border-gray-700 rounded-lg pl-9 pr-3 py-1.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                        <svg class="w-4 h-4 text-gray-400 absolute left-2.5 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                </div>
+
+                <!-- Row 2: Niche Dynamic Sub-Filters & Sort -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                    <!-- Dynamic BHK Filter -->
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium" id="tx-bhk-label">Bedroom Configuration (BHK):</label>
+                        <select id="tx-bhk-select" onchange="onTxFilterChange()" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white">
+                            <option value="All">All Bedrooms</option>
+                        </select>
+                    </div>
+
+                    <!-- Market Stage Filter -->
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium">Market Stage:</label>
+                        <select id="tx-stage-select" onchange="onTxFilterChange()" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white">
+                            <option value="All">All Stages (Off-Plan & Ready)</option>
+                            <option value="Off-Plan">Off-Plan Under Construction</option>
+                            <option value="Ready">Ready Possession</option>
+                        </select>
+                    </div>
+
+                    <!-- Sort Order -->
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium">Sort Order:</label>
+                        <select id="tx-sort-select" onchange="onTxFilterChange()" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white">
+                            <option value="time-desc">Date & Time: Most Recent</option>
+                            <option value="time-asc">Date & Time: Oldest First</option>
+                            <option value="price-desc">Price: Highest to Lowest</option>
+                            <option value="price-asc">Price: Lowest to Highest</option>
+                            <option value="loc-asc">Location: A to Z</option>
+                        </select>
+                    </div>
+
+                    <!-- Price Tier Filter -->
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium">Price Range Tier:</label>
+                        <select id="tx-price-tier" onchange="onTxFilterChange()" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white">
+                            <option value="All">All Ticket Sizes</option>
+                            <option value="under-1m">Under AED 1,000,000</option>
+                            <option value="1m-2.5m">AED 1M - AED 2.5M</option>
+                            <option value="2.5m-5m">AED 2.5M - AED 5M</option>
+                            <option value="5m-plus">Above AED 5,000,000 (Luxury)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Master Transactions Table -->
             <div class="glass-panel p-6 rounded-xl shadow-lg">
-                <table class="w-full text-left text-xs border-collapse">
-                    <thead>
-                        <tr class="border-b border-gray-700 text-gray-400 uppercase">
-                            <th class="pb-2.5">Time</th>
-                            <th class="pb-2.5">Tx ID</th>
-                            <th class="pb-2.5">Location</th>
-                            <th class="pb-2.5">Type</th>
-                            <th class="pb-2.5">BHK</th>
-                            <th class="pb-2.5">Stage</th>
-                            <th class="pb-2.5 text-right">Value (AED)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="crm-tbody" class="divide-y divide-gray-800"></tbody>
-                </table>
+                <div class="flex justify-between items-center mb-4 text-xs text-gray-400">
+                    <span id="tx-pagination-info">Showing 1 - 50 of 17,651 transactions</span>
+                    <div class="flex items-center gap-2">
+                        <span>Show:</span>
+                        <select id="tx-page-size" onchange="onPageSizeChange()" class="bg-gray-800 border border-gray-700 rounded px-2 py-1 text-white">
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="border-b border-gray-700 text-gray-400 uppercase">
+                                <th class="pb-2.5">Date & Time</th>
+                                <th class="pb-2.5">Tx ID</th>
+                                <th class="pb-2.5">Community</th>
+                                <th class="pb-2.5">Project / Building</th>
+                                <th class="pb-2.5">Type</th>
+                                <th class="pb-2.5">BHK</th>
+                                <th class="pb-2.5">Stage</th>
+                                <th class="pb-2.5 text-right">Value (AED)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crm-tbody" class="divide-y divide-gray-800">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination Footer -->
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3 mt-4 pt-4 border-t border-gray-800 text-xs">
+                    <span class="text-gray-400" id="tx-page-counter">Page 1 of 354</span>
+                    <div class="flex items-center space-x-1.5" id="tx-pagination-controls">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -699,7 +795,8 @@
                         '/api/apartments-summary': 'api/apartments_summary.json',
                         '/api/villas-summary': 'api/villas_summary.json',
                         '/api/daily-velocity': 'api/daily_velocity.json',
-                        '/api/live-stream': 'api/live_stream.json'
+                        '/api/live-stream': 'api/live_stream.json',
+                        '/api/all-transactions': 'api/all_transactions.json'
                     };
                     const targetRel = map[cleanUrl] || (cleanUrl.startsWith('/') ? cleanUrl.substring(1) : cleanUrl);
                     const res = await window.fetch(resolveStatic(targetRel));
@@ -748,7 +845,7 @@
                 'property-types': 'Property Types & Majority',
                 'daily-velocity': 'Daily Velocity',
                 'voice-ai': 'Voice AI Mid-Call Engine',
-                'crm': 'CRM Transactions Ledger'
+                'crm': 'All Transactions'
             };
             document.getElementById('header-title').innerText = titles[tabId] || 'Overview';
 
@@ -1225,23 +1322,214 @@
             }
         }
 
+        let allTransactionsData = null;
+        let filteredTransactions = [];
+        let currentTxCategory = 'All';
+        let currentTxPage = 1;
+        let currentTxPageSize = 50;
+
+        const BHK_OPTIONS = {
+            'All': ['All Bedrooms', 'Studio', '1 B/R', '2 B/R', '3 B/R', '4 B/R', '5+ B/R'],
+            'Apartment': ['All Bedrooms', 'Studio', '1 B/R', '2 B/R', '3 B/R', '4+ B/R'],
+            'Villa': ['All Bedrooms', '2 B/R', '3 B/R', '4 B/R', '5 B/R', '6+ B/R'],
+            'Commercial': ['All Units', 'Office', 'Shop', 'Commercial Unit'],
+            'Land': ['All Plots', 'Residential Land', 'Commercial Land']
+        };
+
+        function setTxCategory(cat) {
+            currentTxCategory = cat;
+
+            ['All', 'Apartment', 'Villa', 'Commercial', 'Land'].forEach(c => {
+                const btn = document.getElementById(`btn-tx-cat-${c}`);
+                if (btn) {
+                    if (c === cat) {
+                        btn.className = 'px-3.5 py-1.5 rounded-lg font-semibold text-white bg-blue-600 shadow transition';
+                    } else {
+                        btn.className = 'px-3.5 py-1.5 rounded-lg font-medium text-gray-300 hover:text-white bg-gray-800/80 hover:bg-gray-700/80 transition';
+                    }
+                }
+            });
+
+            const bhkSelect = document.getElementById('tx-bhk-select');
+            const bhkLabel = document.getElementById('tx-bhk-label');
+            const options = BHK_OPTIONS[cat] || BHK_OPTIONS['All'];
+            
+            if (cat === 'Commercial') {
+                bhkLabel.innerText = 'Commercial Unit Type:';
+            } else if (cat === 'Land') {
+                bhkLabel.innerText = 'Plot Classification:';
+            } else if (cat === 'Villa') {
+                bhkLabel.innerText = 'Villa Bedrooms (BHK):';
+            } else if (cat === 'Apartment') {
+                bhkLabel.innerText = 'Apartment Bedrooms (BHK):';
+            } else {
+                bhkLabel.innerText = 'Bedroom Configuration (BHK):';
+            }
+
+            bhkSelect.innerHTML = options.map(opt => `<option value="${opt.startsWith('All') ? 'All' : opt}">${opt}</option>`).join('');
+
+            onTxFilterChange();
+        }
+
+        function onTxFilterChange() {
+            currentTxPage = 1;
+            applyTxFilters();
+        }
+
+        function onPageSizeChange() {
+            currentTxPageSize = parseInt(document.getElementById('tx-page-size').value) || 50;
+            currentTxPage = 1;
+            renderTxTablePage();
+        }
+
+        function applyTxFilters() {
+            if (!allTransactionsData || allTransactionsData.length === 0) return;
+
+            const searchQuery = (document.getElementById('tx-search-input').value || '').trim().toLowerCase();
+            const bhk = document.getElementById('tx-bhk-select').value;
+            const stage = document.getElementById('tx-stage-select').value;
+            const sortMode = document.getElementById('tx-sort-select').value;
+            const priceTier = document.getElementById('tx-price-tier').value;
+
+            filteredTransactions = allTransactionsData.filter(tx => {
+                const catMatch = currentTxCategory === 'All' || tx[5] === currentTxCategory;
+                if (!catMatch) return false;
+
+                if (bhk !== 'All') {
+                    if (bhk === '4+ B/R') {
+                        if (!['4 B/R', '5 B/R', '6+ B/R'].includes(tx[6])) return false;
+                    } else if (bhk === '5+ B/R') {
+                        if (!['5 B/R', '6+ B/R'].includes(tx[6])) return false;
+                    } else if (tx[6] !== bhk) {
+                        return false;
+                    }
+                }
+
+                if (stage !== 'All' && tx[7] !== stage) return false;
+
+                const val = tx[8];
+                if (priceTier === 'under-1m' && val >= 1000000) return false;
+                if (priceTier === '1m-2.5m' && (val < 1000000 || val >= 2500000)) return false;
+                if (priceTier === '2.5m-5m' && (val < 2500000 || val >= 5000000)) return false;
+                if (priceTier === '5m-plus' && val < 5000000) return false;
+
+                if (searchQuery) {
+                    const textContent = `${tx[0]} ${tx[2]} ${tx[3]} ${tx[4]}`.toLowerCase();
+                    if (!textContent.includes(searchQuery)) return false;
+                }
+
+                return true;
+            });
+
+            if (sortMode === 'time-desc') {
+            } else if (sortMode === 'time-asc') {
+                filteredTransactions = filteredTransactions.slice().reverse();
+            } else if (sortMode === 'price-desc') {
+                filteredTransactions.sort((a, b) => b[8] - a[8]);
+            } else if (sortMode === 'price-asc') {
+                filteredTransactions.sort((a, b) => a[8] - b[8]);
+            } else if (sortMode === 'loc-asc') {
+                filteredTransactions.sort((a, b) => a[3].localeCompare(b[3]));
+            }
+
+            const totalCount = filteredTransactions.length;
+            let totalVolume = 0;
+            for (let i = 0; i < totalCount; i++) {
+                totalVolume += filteredTransactions[i][8];
+            }
+            const avgVal = totalCount > 0 ? Math.round(totalVolume / totalCount) : 0;
+            const volStr = totalVolume >= 1e9 ? `AED ${(totalVolume / 1e9).toFixed(2)}B Volume` : `AED ${(totalVolume / 1e6).toFixed(1)}M Volume`;
+
+            document.getElementById('tx-summary-count').innerText = `${totalCount.toLocaleString()} Deals`;
+            document.getElementById('tx-summary-vol').innerText = volStr;
+            document.getElementById('tx-summary-avg').innerText = `Avg: AED ${avgVal.toLocaleString()}`;
+
+            renderTxTablePage();
+        }
+
+        function renderTxTablePage() {
+            const tbody = document.getElementById('crm-tbody');
+            const total = filteredTransactions.length;
+            const totalPages = Math.max(1, Math.ceil(total / currentTxPageSize));
+            if (currentTxPage > totalPages) currentTxPage = totalPages;
+
+            const startIndex = (currentTxPage - 1) * currentTxPageSize;
+            const endIndex = Math.min(startIndex + currentTxPageSize, total);
+            const pageData = filteredTransactions.slice(startIndex, endIndex);
+
+            document.getElementById('tx-pagination-info').innerText = total > 0 
+                ? `Showing ${(startIndex + 1).toLocaleString()} - ${endIndex.toLocaleString()} of ${total.toLocaleString()} transactions`
+                : 'No matching transactions found';
+
+            document.getElementById('tx-page-counter').innerText = `Page ${currentTxPage} of ${totalPages}`;
+
+            if (pageData.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="8" class="py-8 text-center text-gray-400">No transactions match your current multi-stage filter criteria.</td></tr>`;
+            } else {
+                tbody.innerHTML = pageData.map(tx => {
+                    const badgeColor = tx[5] === 'Apartment' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
+                                      (tx[5] === 'Villa' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
+                                      (tx[5] === 'Commercial' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'));
+                    const stageColor = tx[7] === 'Off-Plan' ? 'bg-blue-500/10 text-blue-400 border border-blue-500/30' : 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30';
+                    return `
+                        <tr class="hover:bg-slate-800/50 transition">
+                            <td class="py-2.5 font-mono text-gray-300 text-[11px] whitespace-nowrap">
+                                <span class="text-white">${tx[0]}</span> <span class="text-gray-500">${tx[1]}</span>
+                            </td>
+                            <td class="py-2.5 text-blue-400 font-mono text-[11px] whitespace-nowrap font-medium">${tx[2]}</td>
+                            <td class="py-2.5 font-medium text-white">${tx[3]}</td>
+                            <td class="py-2.5 text-gray-400">${tx[4]}</td>
+                            <td class="py-2.5"><span class="px-2 py-0.5 rounded text-[10px] font-semibold ${badgeColor}">${tx[5]}</span></td>
+                            <td class="py-2.5 text-purple-300 font-medium">${tx[6]}</td>
+                            <td class="py-2.5"><span class="px-2 py-0.5 rounded text-[10px] font-bold ${stageColor}">${tx[7]}</span></td>
+                            <td class="py-2.5 text-right font-bold text-emerald-400 whitespace-nowrap">AED ${tx[8].toLocaleString()}</td>
+                        </tr>
+                    `;
+                }).join('');
+            }
+
+            renderPaginationControls(totalPages);
+        }
+
+        function renderPaginationControls(totalPages) {
+            const container = document.getElementById('tx-pagination-controls');
+            if (!container) return;
+
+            let html = `
+                <button onclick="goToTxPage(1)" ${currentTxPage === 1 ? 'disabled class="px-2.5 py-1 rounded bg-gray-800/40 text-gray-600 cursor-not-allowed"' : 'class="px-2.5 py-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 transition"'}>« First</button>
+                <button onclick="goToTxPage(${currentTxPage - 1})" ${currentTxPage === 1 ? 'disabled class="px-2.5 py-1 rounded bg-gray-800/40 text-gray-600 cursor-not-allowed"' : 'class="px-2.5 py-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 transition"'}>‹ Prev</button>
+            `;
+
+            html += `<span class="px-3 py-1 rounded bg-blue-600 font-bold text-white shadow">${currentTxPage}</span>`;
+
+            html += `
+                <button onclick="goToTxPage(${currentTxPage + 1})" ${currentTxPage === totalPages ? 'disabled class="px-2.5 py-1 rounded bg-gray-800/40 text-gray-600 cursor-not-allowed"' : 'class="px-2.5 py-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 transition"'}>Next ›</button>
+                <button onclick="goToTxPage(${totalPages})" ${currentTxPage === totalPages ? 'disabled class="px-2.5 py-1 rounded bg-gray-800/40 text-gray-600 cursor-not-allowed"' : 'class="px-2.5 py-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 transition"'}>Last »</button>
+            `;
+
+            container.innerHTML = html;
+        }
+
+        function goToTxPage(page) {
+            const totalPages = Math.max(1, Math.ceil(filteredTransactions.length / currentTxPageSize));
+            if (page < 1) page = 1;
+            if (page > totalPages) page = totalPages;
+            currentTxPage = page;
+            renderTxTablePage();
+            const panel = document.getElementById('panel-crm');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
         async function loadCRMTransactions() {
             try {
-                const list = await smartFetch('/api/live-stream?limit=25');
-                const tbody = document.getElementById('crm-tbody');
-                tbody.innerHTML = list.map(item => `
-                    <tr class="hover:bg-slate-800/40 transition">
-                        <td class="py-2.5 font-mono text-gray-400">${item.time}</td>
-                        <td class="py-2.5 text-blue-400 font-mono">${item.trans_no}</td>
-                        <td class="py-2.5 font-medium text-white">${item.location}</td>
-                        <td class="py-2.5 text-gray-300">${item.type}</td>
-                        <td class="py-2.5 text-purple-300">${item.bhk}</td>
-                        <td class="py-2.5"><span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.stage === 'Off-Plan' ? 'bg-blue-500/20 text-blue-400' : 'bg-emerald-500/20 text-emerald-400'}">${item.stage}</span></td>
-                        <td class="py-2.5 text-right font-bold text-emerald-400">${item.value_formatted}</td>
-                    </tr>
-                `).join('');
+                if (!allTransactionsData) {
+                    const tbody = document.getElementById('crm-tbody');
+                    tbody.innerHTML = `<tr><td colspan="8" class="py-8 text-center text-blue-400 font-medium">⚡ Loading all 17,651 transactions into high-performance memory...</td></tr>`;
+                    allTransactionsData = await smartFetch('/api/all-transactions');
+                }
+                setTxCategory(currentTxCategory || 'All');
             } catch (e) {
-                console.error(e);
+                console.error('Error in loadCRMTransactions:', e);
             }
         }
 
