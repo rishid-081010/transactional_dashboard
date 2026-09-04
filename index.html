@@ -28,8 +28,22 @@
 </head>
 <body class="flex h-screen overflow-hidden">
 
-    <!-- Top Loading / Refresh Progress Bar -->
-    <div id="refresh-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400 z-50 transition-all duration-[2000ms] ease-out w-0 pointer-events-none"></div>
+    <!-- Fullscreen Refresh / Blur Overlay with Middle Horizontal Bar -->
+    <div id="refresh-overlay" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-lg opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center text-blue-400 animate-spin shadow-lg shadow-blue-500/30">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            </div>
+            <span class="text-white text-base font-semibold tracking-wider uppercase">Synchronizing Live Transaction Data</span>
+        </div>
+
+        <!-- Horizontal Bar Going Across the Middle of the Screen -->
+        <div class="w-full h-2 bg-gray-900/90 relative overflow-hidden border-y border-gray-800 shadow-[0_0_30px_rgba(56,189,248,0.2)]">
+            <div id="refresh-progress" class="h-full bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400 shadow-[0_0_25px_rgba(56,189,248,0.9)] transition-all duration-[2000ms] ease-out w-0"></div>
+        </div>
+
+        <p class="text-xs text-gray-400 mt-6 font-mono tracking-wide">Refreshing Dubai Land Department transactional records & analytics...</p>
+    </div>
 
     <!-- ─── SIDEBAR ───────────────────────────────────────────────────────────── -->
     <aside class="w-64 glass-panel border-r border-gray-800 flex flex-col hidden md:flex shrink-0">
@@ -1239,6 +1253,7 @@
             const btn = document.getElementById('btn-refresh-data');
             const icon = document.getElementById('refresh-icon');
             const text = document.getElementById('refresh-text');
+            const overlay = document.getElementById('refresh-overlay');
             const progress = document.getElementById('refresh-progress');
 
             // 1. Button active state with continuous spin
@@ -1249,12 +1264,20 @@
             }
             if (text) text.innerText = 'Refreshing...';
 
-            // 2. Animate top loading progress bar across 2 seconds
-            if (progress) {
-                progress.style.width = '100%';
+            // 2. Blur the entire page with backdrop-blur overlay
+            if (overlay) {
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
             }
 
-            // 3. After 2 seconds, reload the actual page
+            // 3. Animate glowing bar across the middle of the screen
+            setTimeout(() => {
+                if (progress) {
+                    progress.style.width = '100%';
+                }
+            }, 60);
+
+            // 4. After 2 seconds, reload the actual page
             setTimeout(() => {
                 window.location.reload();
             }, 2000);
