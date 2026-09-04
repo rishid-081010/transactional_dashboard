@@ -635,6 +635,7 @@
     <script>
         
         let cachedLocationsDetail = null;
+        let cachedApartmentsSummary = null;
         async function smartFetch(url) {
             const isStaticMode = window.location.hostname.includes('github.io') || window.location.protocol === 'file:';
             let resultData;
@@ -655,6 +656,16 @@
                     const params = new URLSearchParams(url.split('?')[1] || '');
                     const area = (params.get('area') || '').toLowerCase();
                     resultData = cachedLocationsDetail[area] || cachedLocationsDetail[Object.keys(cachedLocationsDetail)[0]];
+                } else if (cleanUrl === '/api/apartments-summary') {
+                    if (!cachedApartmentsSummary) {
+                        const res = await window.fetch(resolveStatic('api/apartments_summary.json'));
+                        cachedApartmentsSummary = await res.json();
+                    }
+                    const params = new URLSearchParams(url.split('?')[1] || '');
+                    const bhk = params.get('bhk') || 'All';
+                    const stage = params.get('stage') || 'All';
+                    const key = `${bhk}_${stage}`;
+                    resultData = (cachedApartmentsSummary.combinations && cachedApartmentsSummary.combinations[key]) || cachedApartmentsSummary;
                 } else if (cleanUrl === '/api/lookup') {
                     const params = new URLSearchParams(url.split('?')[1] || '');
                     const area = params.get('area') || 'Dubai';

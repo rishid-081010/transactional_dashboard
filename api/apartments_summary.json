@@ -64,5 +64,1330 @@
       "avg_price_formatted": "AED 3,703,772",
       "volume_formatted": "AED 1225.9M"
     }
-  ]
+  ],
+  "combinations": {
+    "All_All": {
+      "deals": 14102,
+      "volume_formatted": "AED 23.54B",
+      "avg_price_formatted": "AED 1,669,596",
+      "med_price_formatted": "AED 1,058,588",
+      "top_locations": [
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 1893,
+          "avg_price_formatted": "AED 996,341",
+          "volume_formatted": "AED 1886.1M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 1166,
+          "avg_price_formatted": "AED 982,320",
+          "volume_formatted": "AED 1145.4M"
+        },
+        {
+          "location": "City Of Arabia",
+          "deals": 828,
+          "avg_price_formatted": "AED 954,757",
+          "volume_formatted": "AED 790.5M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 583,
+          "avg_price_formatted": "AED 2,580,712",
+          "volume_formatted": "AED 1504.6M"
+        },
+        {
+          "location": "Majan",
+          "deals": 422,
+          "avg_price_formatted": "AED 878,048",
+          "volume_formatted": "AED 370.5M"
+        },
+        {
+          "location": "Dubai Land Residence Complex",
+          "deals": 398,
+          "avg_price_formatted": "AED 944,209",
+          "volume_formatted": "AED 375.8M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 385,
+          "avg_price_formatted": "AED 3,381,857",
+          "volume_formatted": "AED 1302.0M"
+        },
+        {
+          "location": "Jabal Ali Industrial Second",
+          "deals": 359,
+          "avg_price_formatted": "AED 850,073",
+          "volume_formatted": "AED 305.2M"
+        },
+        {
+          "location": "Down Town Jabal Ali",
+          "deals": 356,
+          "avg_price_formatted": "AED 805,253",
+          "volume_formatted": "AED 286.7M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 331,
+          "avg_price_formatted": "AED 3,703,772",
+          "volume_formatted": "AED 1225.9M"
+        }
+      ]
+    },
+    "All_Off-Plan": {
+      "deals": 8406,
+      "volume_formatted": "AED 13.29B",
+      "avg_price_formatted": "AED 1,580,750",
+      "med_price_formatted": "AED 1,050,000",
+      "top_locations": [
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 1893,
+          "avg_price_formatted": "AED 996,341",
+          "volume_formatted": "AED 1886.1M"
+        },
+        {
+          "location": "City Of Arabia",
+          "deals": 811,
+          "avg_price_formatted": "AED 943,040",
+          "volume_formatted": "AED 764.8M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 408,
+          "avg_price_formatted": "AED 1,113,052",
+          "volume_formatted": "AED 454.1M"
+        },
+        {
+          "location": "Jabal Ali Industrial Second",
+          "deals": 359,
+          "avg_price_formatted": "AED 850,073",
+          "volume_formatted": "AED 305.2M"
+        },
+        {
+          "location": "Majan",
+          "deals": 344,
+          "avg_price_formatted": "AED 839,311",
+          "volume_formatted": "AED 288.7M"
+        },
+        {
+          "location": "Down Town Jabal Ali",
+          "deals": 335,
+          "avg_price_formatted": "AED 816,479",
+          "volume_formatted": "AED 273.5M"
+        },
+        {
+          "location": "Dubai Land Residence Complex",
+          "deals": 303,
+          "avg_price_formatted": "AED 1,014,847",
+          "volume_formatted": "AED 307.5M"
+        },
+        {
+          "location": "Jabal Ali First",
+          "deals": 197,
+          "avg_price_formatted": "AED 1,807,187",
+          "volume_formatted": "AED 356.0M"
+        },
+        {
+          "location": "Al Hebiah Fifth",
+          "deals": 193,
+          "avg_price_formatted": "AED 1,131,369",
+          "volume_formatted": "AED 218.4M"
+        },
+        {
+          "location": "Al Khairan First",
+          "deals": 163,
+          "avg_price_formatted": "AED 3,077,995",
+          "volume_formatted": "AED 501.7M"
+        }
+      ]
+    },
+    "All_Ready": {
+      "deals": 5696,
+      "volume_formatted": "AED 10.26B",
+      "avg_price_formatted": "AED 1,800,712",
+      "med_price_formatted": "AED 1,080,000",
+      "top_locations": [
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 758,
+          "avg_price_formatted": "AED 911,952",
+          "volume_formatted": "AED 691.3M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 420,
+          "avg_price_formatted": "AED 1,687,074",
+          "volume_formatted": "AED 708.6M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 375,
+          "avg_price_formatted": "AED 2,823,050",
+          "volume_formatted": "AED 1058.6M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 292,
+          "avg_price_formatted": "AED 3,204,129",
+          "volume_formatted": "AED 935.6M"
+        },
+        {
+          "location": "Al Furjan",
+          "deals": 204,
+          "avg_price_formatted": "AED 1,024,149",
+          "volume_formatted": "AED 208.9M"
+        },
+        {
+          "location": "Arjan",
+          "deals": 188,
+          "avg_price_formatted": "AED 926,427",
+          "volume_formatted": "AED 174.2M"
+        },
+        {
+          "location": "Dubai Creek Harbour",
+          "deals": 180,
+          "avg_price_formatted": "AED 2,384,024",
+          "volume_formatted": "AED 429.1M"
+        },
+        {
+          "location": "Dubai Hills",
+          "deals": 179,
+          "avg_price_formatted": "AED 6,340,272",
+          "volume_formatted": "AED 1134.9M"
+        },
+        {
+          "location": "Silicon Oasis",
+          "deals": 174,
+          "avg_price_formatted": "AED 850,112",
+          "volume_formatted": "AED 147.9M"
+        },
+        {
+          "location": "Sobha Heartland",
+          "deals": 172,
+          "avg_price_formatted": "AED 1,655,704",
+          "volume_formatted": "AED 284.8M"
+        }
+      ]
+    },
+    "Studio_All": {
+      "deals": 4554,
+      "volume_formatted": "AED 3.02B",
+      "avg_price_formatted": "AED 663,096",
+      "med_price_formatted": "AED 641,900",
+      "top_locations": [
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 1171,
+          "avg_price_formatted": "AED 667,412",
+          "volume_formatted": "AED 781.5M"
+        },
+        {
+          "location": "City Of Arabia",
+          "deals": 463,
+          "avg_price_formatted": "AED 596,864",
+          "volume_formatted": "AED 276.3M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 293,
+          "avg_price_formatted": "AED 649,033",
+          "volume_formatted": "AED 190.2M"
+        },
+        {
+          "location": "Jabal Ali Industrial Second",
+          "deals": 239,
+          "avg_price_formatted": "AED 676,677",
+          "volume_formatted": "AED 161.7M"
+        },
+        {
+          "location": "Majan",
+          "deals": 239,
+          "avg_price_formatted": "AED 632,220",
+          "volume_formatted": "AED 151.1M"
+        },
+        {
+          "location": "Down Town Jabal Ali",
+          "deals": 234,
+          "avg_price_formatted": "AED 624,237",
+          "volume_formatted": "AED 146.1M"
+        },
+        {
+          "location": "Dubai Land Residence Complex",
+          "deals": 141,
+          "avg_price_formatted": "AED 637,197",
+          "volume_formatted": "AED 89.8M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 131,
+          "avg_price_formatted": "AED 933,566",
+          "volume_formatted": "AED 122.3M"
+        },
+        {
+          "location": "Arjan",
+          "deals": 120,
+          "avg_price_formatted": "AED 645,053",
+          "volume_formatted": "AED 77.4M"
+        },
+        {
+          "location": "Dubai Production City",
+          "deals": 94,
+          "avg_price_formatted": "AED 590,660",
+          "volume_formatted": "AED 55.5M"
+        }
+      ]
+    },
+    "Studio_Off-Plan": {
+      "deals": 3578,
+      "volume_formatted": "AED 2.45B",
+      "avg_price_formatted": "AED 684,662",
+      "med_price_formatted": "AED 655,000",
+      "top_locations": [
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 1171,
+          "avg_price_formatted": "AED 667,412",
+          "volume_formatted": "AED 781.5M"
+        },
+        {
+          "location": "City Of Arabia",
+          "deals": 462,
+          "avg_price_formatted": "AED 596,627",
+          "volume_formatted": "AED 275.6M"
+        },
+        {
+          "location": "Jabal Ali Industrial Second",
+          "deals": 239,
+          "avg_price_formatted": "AED 676,677",
+          "volume_formatted": "AED 161.7M"
+        },
+        {
+          "location": "Down Town Jabal Ali",
+          "deals": 232,
+          "avg_price_formatted": "AED 625,507",
+          "volume_formatted": "AED 145.1M"
+        },
+        {
+          "location": "Majan",
+          "deals": 226,
+          "avg_price_formatted": "AED 628,945",
+          "volume_formatted": "AED 142.1M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 149,
+          "avg_price_formatted": "AED 742,272",
+          "volume_formatted": "AED 110.6M"
+        },
+        {
+          "location": "Dubai Land Residence Complex",
+          "deals": 119,
+          "avg_price_formatted": "AED 678,109",
+          "volume_formatted": "AED 80.7M"
+        },
+        {
+          "location": "Al Hebiah First",
+          "deals": 89,
+          "avg_price_formatted": "AED 805,188",
+          "volume_formatted": "AED 71.7M"
+        },
+        {
+          "location": "Al Hebiah Fifth",
+          "deals": 75,
+          "avg_price_formatted": "AED 725,309",
+          "volume_formatted": "AED 54.4M"
+        },
+        {
+          "location": "Dubai Production City",
+          "deals": 64,
+          "avg_price_formatted": "AED 672,246",
+          "volume_formatted": "AED 43.0M"
+        }
+      ]
+    },
+    "Studio_Ready": {
+      "deals": 976,
+      "volume_formatted": "AED 0.57B",
+      "avg_price_formatted": "AED 584,031",
+      "med_price_formatted": "AED 530,000",
+      "top_locations": [
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 144,
+          "avg_price_formatted": "AED 552,557",
+          "volume_formatted": "AED 79.6M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 107,
+          "avg_price_formatted": "AED 877,685",
+          "volume_formatted": "AED 93.9M"
+        },
+        {
+          "location": "Arjan",
+          "deals": 66,
+          "avg_price_formatted": "AED 538,086",
+          "volume_formatted": "AED 35.5M"
+        },
+        {
+          "location": "International City Ph 2 & 3",
+          "deals": 56,
+          "avg_price_formatted": "AED 409,778",
+          "volume_formatted": "AED 22.9M"
+        },
+        {
+          "location": "Meydan One",
+          "deals": 52,
+          "avg_price_formatted": "AED 634,361",
+          "volume_formatted": "AED 33.0M"
+        },
+        {
+          "location": "Al Khail Heights",
+          "deals": 51,
+          "avg_price_formatted": "AED 673,324",
+          "volume_formatted": "AED 34.3M"
+        },
+        {
+          "location": "International City Ph 1",
+          "deals": 46,
+          "avg_price_formatted": "AED 325,689",
+          "volume_formatted": "AED 15.0M"
+        },
+        {
+          "location": "Al Furjan",
+          "deals": 43,
+          "avg_price_formatted": "AED 451,391",
+          "volume_formatted": "AED 19.4M"
+        },
+        {
+          "location": "Discovery Gardens",
+          "deals": 40,
+          "avg_price_formatted": "AED 462,696",
+          "volume_formatted": "AED 18.5M"
+        },
+        {
+          "location": "Silicon Oasis",
+          "deals": 40,
+          "avg_price_formatted": "AED 453,211",
+          "volume_formatted": "AED 18.1M"
+        }
+      ]
+    },
+    "1 B/R_All": {
+      "deals": 5399,
+      "volume_formatted": "AED 6.67B",
+      "avg_price_formatted": "AED 1,235,189",
+      "med_price_formatted": "AED 1,150,000",
+      "top_locations": [
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 643,
+          "avg_price_formatted": "AED 935,099",
+          "volume_formatted": "AED 601.3M"
+        },
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 510,
+          "avg_price_formatted": "AED 1,234,207",
+          "volume_formatted": "AED 629.4M"
+        },
+        {
+          "location": "City Of Arabia",
+          "deals": 291,
+          "avg_price_formatted": "AED 1,185,196",
+          "volume_formatted": "AED 344.9M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 258,
+          "avg_price_formatted": "AED 1,527,846",
+          "volume_formatted": "AED 394.2M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 158,
+          "avg_price_formatted": "AED 1,519,069",
+          "volume_formatted": "AED 240.0M"
+        },
+        {
+          "location": "Dubai Land Residence Complex",
+          "deals": 151,
+          "avg_price_formatted": "AED 978,295",
+          "volume_formatted": "AED 147.7M"
+        },
+        {
+          "location": "Majan",
+          "deals": 142,
+          "avg_price_formatted": "AED 1,066,789",
+          "volume_formatted": "AED 151.5M"
+        },
+        {
+          "location": "Dubai Production City",
+          "deals": 135,
+          "avg_price_formatted": "AED 846,405",
+          "volume_formatted": "AED 114.3M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 114,
+          "avg_price_formatted": "AED 1,961,956",
+          "volume_formatted": "AED 223.7M"
+        },
+        {
+          "location": "Jumeirah Village Triangle",
+          "deals": 111,
+          "avg_price_formatted": "AED 1,072,159",
+          "volume_formatted": "AED 119.0M"
+        }
+      ]
+    },
+    "1 B/R_Off-Plan": {
+      "deals": 3055,
+      "volume_formatted": "AED 4.21B",
+      "avg_price_formatted": "AED 1,379,367",
+      "med_price_formatted": "AED 1,232,413",
+      "top_locations": [
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 510,
+          "avg_price_formatted": "AED 1,234,207",
+          "volume_formatted": "AED 629.4M"
+        },
+        {
+          "location": "City Of Arabia",
+          "deals": 288,
+          "avg_price_formatted": "AED 1,188,862",
+          "volume_formatted": "AED 342.4M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 196,
+          "avg_price_formatted": "AED 1,149,030",
+          "volume_formatted": "AED 225.2M"
+        },
+        {
+          "location": "Dubai Land Residence Complex",
+          "deals": 122,
+          "avg_price_formatted": "AED 1,064,149",
+          "volume_formatted": "AED 129.8M"
+        },
+        {
+          "location": "Jabal Ali Industrial Second",
+          "deals": 99,
+          "avg_price_formatted": "AED 1,078,049",
+          "volume_formatted": "AED 106.7M"
+        },
+        {
+          "location": "Majan",
+          "deals": 98,
+          "avg_price_formatted": "AED 1,108,453",
+          "volume_formatted": "AED 108.6M"
+        },
+        {
+          "location": "Al Yufrah 1",
+          "deals": 93,
+          "avg_price_formatted": "AED 1,024,165",
+          "volume_formatted": "AED 95.2M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 90,
+          "avg_price_formatted": "AED 1,913,000",
+          "volume_formatted": "AED 172.2M"
+        },
+        {
+          "location": "Jabal Ali First",
+          "deals": 83,
+          "avg_price_formatted": "AED 1,528,574",
+          "volume_formatted": "AED 126.9M"
+        },
+        {
+          "location": "Al Hebiah Fifth",
+          "deals": 81,
+          "avg_price_formatted": "AED 1,220,353",
+          "volume_formatted": "AED 98.8M"
+        }
+      ]
+    },
+    "1 B/R_Ready": {
+      "deals": 2344,
+      "volume_formatted": "AED 2.45B",
+      "avg_price_formatted": "AED 1,047,277",
+      "med_price_formatted": "AED 915,000",
+      "top_locations": [
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 447,
+          "avg_price_formatted": "AED 841,295",
+          "volume_formatted": "AED 376.1M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 168,
+          "avg_price_formatted": "AED 1,321,514",
+          "volume_formatted": "AED 222.0M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 158,
+          "avg_price_formatted": "AED 1,519,069",
+          "volume_formatted": "AED 240.0M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 102,
+          "avg_price_formatted": "AED 1,862,922",
+          "volume_formatted": "AED 190.0M"
+        },
+        {
+          "location": "Silicon Oasis",
+          "deals": 82,
+          "avg_price_formatted": "AED 749,205",
+          "volume_formatted": "AED 61.4M"
+        },
+        {
+          "location": "Dubai Sports City",
+          "deals": 75,
+          "avg_price_formatted": "AED 666,211",
+          "volume_formatted": "AED 50.0M"
+        },
+        {
+          "location": "Dubai Production City",
+          "deals": 73,
+          "avg_price_formatted": "AED 628,284",
+          "volume_formatted": "AED 45.9M"
+        },
+        {
+          "location": "Sobha Heartland",
+          "deals": 72,
+          "avg_price_formatted": "AED 1,068,800",
+          "volume_formatted": "AED 77.0M"
+        },
+        {
+          "location": "International City Ph 1",
+          "deals": 65,
+          "avg_price_formatted": "AED 469,647",
+          "volume_formatted": "AED 30.5M"
+        },
+        {
+          "location": "Arjan",
+          "deals": 64,
+          "avg_price_formatted": "AED 845,973",
+          "volume_formatted": "AED 54.1M"
+        }
+      ]
+    },
+    "2 B/R_All": {
+      "deals": 3136,
+      "volume_formatted": "AED 6.92B",
+      "avg_price_formatted": "AED 2,206,031",
+      "med_price_formatted": "AED 1,868,314",
+      "top_locations": [
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 195,
+          "avg_price_formatted": "AED 1,438,632",
+          "volume_formatted": "AED 280.5M"
+        },
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 178,
+          "avg_price_formatted": "AED 2,021,009",
+          "volume_formatted": "AED 359.7M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 143,
+          "avg_price_formatted": "AED 3,360,076",
+          "volume_formatted": "AED 480.5M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 129,
+          "avg_price_formatted": "AED 2,551,958",
+          "volume_formatted": "AED 329.2M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 117,
+          "avg_price_formatted": "AED 2,281,238",
+          "volume_formatted": "AED 266.9M"
+        },
+        {
+          "location": "Al Furjan",
+          "deals": 101,
+          "avg_price_formatted": "AED 1,340,563",
+          "volume_formatted": "AED 135.4M"
+        },
+        {
+          "location": "Dubai Creek Harbour",
+          "deals": 100,
+          "avg_price_formatted": "AED 2,331,838",
+          "volume_formatted": "AED 233.2M"
+        },
+        {
+          "location": "Dubai Land Residence Complex",
+          "deals": 99,
+          "avg_price_formatted": "AED 1,245,706",
+          "volume_formatted": "AED 123.3M"
+        },
+        {
+          "location": "Jabal Ali First",
+          "deals": 85,
+          "avg_price_formatted": "AED 2,192,380",
+          "volume_formatted": "AED 186.4M"
+        },
+        {
+          "location": "Dubai Hills",
+          "deals": 80,
+          "avg_price_formatted": "AED 2,128,984",
+          "volume_formatted": "AED 170.3M"
+        }
+      ]
+    },
+    "2 B/R_Off-Plan": {
+      "deals": 1404,
+      "volume_formatted": "AED 3.65B",
+      "avg_price_formatted": "AED 2,598,313",
+      "med_price_formatted": "AED 2,160,000",
+      "top_locations": [
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 178,
+          "avg_price_formatted": "AED 2,021,009",
+          "volume_formatted": "AED 359.7M"
+        },
+        {
+          "location": "Jabal Ali First",
+          "deals": 84,
+          "avg_price_formatted": "AED 2,205,365",
+          "volume_formatted": "AED 185.3M"
+        },
+        {
+          "location": "Al Khairan First",
+          "deals": 79,
+          "avg_price_formatted": "AED 3,465,859",
+          "volume_formatted": "AED 273.8M"
+        },
+        {
+          "location": "City Of Arabia",
+          "deals": 56,
+          "avg_price_formatted": "AED 2,315,534",
+          "volume_formatted": "AED 129.7M"
+        },
+        {
+          "location": "Dubai Land Residence Complex",
+          "deals": 56,
+          "avg_price_formatted": "AED 1,502,229",
+          "volume_formatted": "AED 84.1M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 55,
+          "avg_price_formatted": "AED 1,791,021",
+          "volume_formatted": "AED 98.5M"
+        },
+        {
+          "location": "Palm Deira",
+          "deals": 54,
+          "avg_price_formatted": "AED 3,698,156",
+          "volume_formatted": "AED 199.7M"
+        },
+        {
+          "location": "Wadi Al Safa 4",
+          "deals": 43,
+          "avg_price_formatted": "AED 2,148,364",
+          "volume_formatted": "AED 92.4M"
+        },
+        {
+          "location": "Palm Jabal Ali",
+          "deals": 42,
+          "avg_price_formatted": "AED 5,033,738",
+          "volume_formatted": "AED 211.4M"
+        },
+        {
+          "location": "Al Hebiah Fifth",
+          "deals": 37,
+          "avg_price_formatted": "AED 1,759,657",
+          "volume_formatted": "AED 65.1M"
+        }
+      ]
+    },
+    "2 B/R_Ready": {
+      "deals": 1732,
+      "volume_formatted": "AED 3.27B",
+      "avg_price_formatted": "AED 1,888,037",
+      "med_price_formatted": "AED 1,600,000",
+      "top_locations": [
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 140,
+          "avg_price_formatted": "AED 1,300,193",
+          "volume_formatted": "AED 182.0M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 131,
+          "avg_price_formatted": "AED 3,077,708",
+          "volume_formatted": "AED 403.2M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 115,
+          "avg_price_formatted": "AED 2,230,504",
+          "volume_formatted": "AED 256.5M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 99,
+          "avg_price_formatted": "AED 1,858,509",
+          "volume_formatted": "AED 184.0M"
+        },
+        {
+          "location": "Dubai Creek Harbour",
+          "deals": 93,
+          "avg_price_formatted": "AED 2,292,540",
+          "volume_formatted": "AED 213.2M"
+        },
+        {
+          "location": "Al Furjan",
+          "deals": 83,
+          "avg_price_formatted": "AED 1,260,969",
+          "volume_formatted": "AED 104.7M"
+        },
+        {
+          "location": "Dubai Hills",
+          "deals": 77,
+          "avg_price_formatted": "AED 2,114,454",
+          "volume_formatted": "AED 162.8M"
+        },
+        {
+          "location": "Sobha Heartland",
+          "deals": 70,
+          "avg_price_formatted": "AED 2,021,345",
+          "volume_formatted": "AED 141.5M"
+        },
+        {
+          "location": "Jumeirah Lakes Towers",
+          "deals": 61,
+          "avg_price_formatted": "AED 1,645,815",
+          "volume_formatted": "AED 100.4M"
+        },
+        {
+          "location": "Palm Jumeirah",
+          "deals": 48,
+          "avg_price_formatted": "AED 4,438,533",
+          "volume_formatted": "AED 213.0M"
+        }
+      ]
+    },
+    "3 B/R_All": {
+      "deals": 860,
+      "volume_formatted": "AED 3.76B",
+      "avg_price_formatted": "AED 4,372,480",
+      "med_price_formatted": "AED 3,069,972",
+      "top_locations": [
+        {
+          "location": "Dubai Marina",
+          "deals": 60,
+          "avg_price_formatted": "AED 3,443,940",
+          "volume_formatted": "AED 206.6M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 52,
+          "avg_price_formatted": "AED 8,030,478",
+          "volume_formatted": "AED 417.6M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 50,
+          "avg_price_formatted": "AED 6,231,733",
+          "volume_formatted": "AED 311.6M"
+        },
+        {
+          "location": "Palm Jumeirah",
+          "deals": 41,
+          "avg_price_formatted": "AED 9,272,805",
+          "volume_formatted": "AED 380.2M"
+        },
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 34,
+          "avg_price_formatted": "AED 3,392,595",
+          "volume_formatted": "AED 115.3M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 33,
+          "avg_price_formatted": "AED 1,974,732",
+          "volume_formatted": "AED 65.2M"
+        },
+        {
+          "location": "Jumeirah Beach Residence",
+          "deals": 33,
+          "avg_price_formatted": "AED 2,580,637",
+          "volume_formatted": "AED 85.2M"
+        },
+        {
+          "location": "Dubai Creek Harbour",
+          "deals": 31,
+          "avg_price_formatted": "AED 3,787,983",
+          "volume_formatted": "AED 117.4M"
+        },
+        {
+          "location": "Al Furjan",
+          "deals": 31,
+          "avg_price_formatted": "AED 1,770,864",
+          "volume_formatted": "AED 54.9M"
+        },
+        {
+          "location": "Dubai Hills",
+          "deals": 29,
+          "avg_price_formatted": "AED 3,361,915",
+          "volume_formatted": "AED 97.5M"
+        }
+      ]
+    },
+    "3 B/R_Off-Plan": {
+      "deals": 319,
+      "volume_formatted": "AED 1.93B",
+      "avg_price_formatted": "AED 6,050,116",
+      "med_price_formatted": "AED 3,801,888",
+      "top_locations": [
+        {
+          "location": "Madinat Al Mataar",
+          "deals": 34,
+          "avg_price_formatted": "AED 3,392,595",
+          "volume_formatted": "AED 115.3M"
+        },
+        {
+          "location": "Palm Deira",
+          "deals": 21,
+          "avg_price_formatted": "AED 4,598,020",
+          "volume_formatted": "AED 96.6M"
+        },
+        {
+          "location": "Al Khairan First",
+          "deals": 18,
+          "avg_price_formatted": "AED 4,726,031",
+          "volume_formatted": "AED 85.1M"
+        },
+        {
+          "location": "Palm Jabal Ali",
+          "deals": 18,
+          "avg_price_formatted": "AED 7,748,056",
+          "volume_formatted": "AED 139.5M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 15,
+          "avg_price_formatted": "AED 19,289,986",
+          "volume_formatted": "AED 289.3M"
+        },
+        {
+          "location": "Dubai Production City",
+          "deals": 12,
+          "avg_price_formatted": "AED 2,168,281",
+          "volume_formatted": "AED 26.0M"
+        },
+        {
+          "location": "Jabal Ali First",
+          "deals": 10,
+          "avg_price_formatted": "AED 3,079,778",
+          "volume_formatted": "AED 30.8M"
+        },
+        {
+          "location": "Wadi Al Safa 5",
+          "deals": 10,
+          "avg_price_formatted": "AED 3,196,124",
+          "volume_formatted": "AED 32.0M"
+        },
+        {
+          "location": "Palm Jumeirah",
+          "deals": 10,
+          "avg_price_formatted": "AED 16,341,407",
+          "volume_formatted": "AED 163.4M"
+        },
+        {
+          "location": "Al Wasl",
+          "deals": 9,
+          "avg_price_formatted": "AED 10,062,758",
+          "volume_formatted": "AED 90.6M"
+        }
+      ]
+    },
+    "3 B/R_Ready": {
+      "deals": 541,
+      "volume_formatted": "AED 1.83B",
+      "avg_price_formatted": "AED 3,383,264",
+      "med_price_formatted": "AED 2,700,000",
+      "top_locations": [
+        {
+          "location": "Dubai Marina",
+          "deals": 57,
+          "avg_price_formatted": "AED 3,260,413",
+          "volume_formatted": "AED 185.8M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 43,
+          "avg_price_formatted": "AED 5,282,717",
+          "volume_formatted": "AED 227.2M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 37,
+          "avg_price_formatted": "AED 3,465,812",
+          "volume_formatted": "AED 128.2M"
+        },
+        {
+          "location": "Jumeirah Beach Residence",
+          "deals": 33,
+          "avg_price_formatted": "AED 2,580,637",
+          "volume_formatted": "AED 85.2M"
+        },
+        {
+          "location": "Palm Jumeirah",
+          "deals": 31,
+          "avg_price_formatted": "AED 6,992,611",
+          "volume_formatted": "AED 216.8M"
+        },
+        {
+          "location": "Dubai Creek Harbour",
+          "deals": 29,
+          "avg_price_formatted": "AED 3,723,576",
+          "volume_formatted": "AED 108.0M"
+        },
+        {
+          "location": "Dubai Hills",
+          "deals": 28,
+          "avg_price_formatted": "AED 3,346,202",
+          "volume_formatted": "AED 93.7M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 25,
+          "avg_price_formatted": "AED 1,814,226",
+          "volume_formatted": "AED 45.4M"
+        },
+        {
+          "location": "Al Furjan",
+          "deals": 24,
+          "avg_price_formatted": "AED 1,730,462",
+          "volume_formatted": "AED 41.5M"
+        },
+        {
+          "location": "Motor City",
+          "deals": 16,
+          "avg_price_formatted": "AED 1,960,754",
+          "volume_formatted": "AED 31.4M"
+        }
+      ]
+    },
+    "4+ B/R_All": {
+      "deals": 0,
+      "volume_formatted": "AED 0.00B",
+      "avg_price_formatted": "AED 0",
+      "med_price_formatted": "AED 0",
+      "top_locations": []
+    },
+    "4+ B/R_Off-Plan": {
+      "deals": 0,
+      "volume_formatted": "AED 0.00B",
+      "avg_price_formatted": "AED 0",
+      "med_price_formatted": "AED 0",
+      "top_locations": []
+    },
+    "4+ B/R_Ready": {
+      "deals": 0,
+      "volume_formatted": "AED 0.00B",
+      "avg_price_formatted": "AED 0",
+      "med_price_formatted": "AED 0",
+      "top_locations": []
+    },
+    "4 B/R_All": {
+      "deals": 103,
+      "volume_formatted": "AED 1.35B",
+      "avg_price_formatted": "AED 13,149,469",
+      "med_price_formatted": "AED 9,800,000",
+      "top_locations": [
+        {
+          "location": "Business Bay",
+          "deals": 10,
+          "avg_price_formatted": "AED 16,278,608",
+          "volume_formatted": "AED 162.8M"
+        },
+        {
+          "location": "Palm Jabal Ali",
+          "deals": 10,
+          "avg_price_formatted": "AED 13,750,700",
+          "volume_formatted": "AED 137.5M"
+        },
+        {
+          "location": "Palm Jumeirah",
+          "deals": 10,
+          "avg_price_formatted": "AED 20,729,869",
+          "volume_formatted": "AED 207.3M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 9,
+          "avg_price_formatted": "AED 21,431,246",
+          "volume_formatted": "AED 192.9M"
+        },
+        {
+          "location": "Jumeirah Beach Residence",
+          "deals": 8,
+          "avg_price_formatted": "AED 3,525,154",
+          "volume_formatted": "AED 28.2M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 8,
+          "avg_price_formatted": "AED 14,702,265",
+          "volume_formatted": "AED 117.6M"
+        },
+        {
+          "location": "Al Thanyah Fifth",
+          "deals": 5,
+          "avg_price_formatted": "AED 10,853,931",
+          "volume_formatted": "AED 54.3M"
+        },
+        {
+          "location": "Sobha Heartland",
+          "deals": 5,
+          "avg_price_formatted": "AED 3,956,800",
+          "volume_formatted": "AED 19.8M"
+        },
+        {
+          "location": "Dubai Creek Harbour",
+          "deals": 3,
+          "avg_price_formatted": "AED 7,666,666",
+          "volume_formatted": "AED 23.0M"
+        },
+        {
+          "location": "Ras Al Khor Industrial First",
+          "deals": 3,
+          "avg_price_formatted": "AED 7,679,084",
+          "volume_formatted": "AED 23.0M"
+        }
+      ]
+    },
+    "4 B/R_Off-Plan": {
+      "deals": 45,
+      "volume_formatted": "AED 0.81B",
+      "avg_price_formatted": "AED 18,022,148",
+      "med_price_formatted": "AED 13,037,000",
+      "top_locations": [
+        {
+          "location": "Palm Jabal Ali",
+          "deals": 10,
+          "avg_price_formatted": "AED 13,750,700",
+          "volume_formatted": "AED 137.5M"
+        },
+        {
+          "location": "Al Thanyah Fifth",
+          "deals": 5,
+          "avg_price_formatted": "AED 10,853,931",
+          "volume_formatted": "AED 54.3M"
+        },
+        {
+          "location": "Palm Jumeirah",
+          "deals": 4,
+          "avg_price_formatted": "AED 32,012,511",
+          "volume_formatted": "AED 128.1M"
+        },
+        {
+          "location": "Ras Al Khor Industrial First",
+          "deals": 3,
+          "avg_price_formatted": "AED 7,679,084",
+          "volume_formatted": "AED 23.0M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 3,
+          "avg_price_formatted": "AED 41,622,999",
+          "volume_formatted": "AED 124.9M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 3,
+          "avg_price_formatted": "AED 29,500,000",
+          "volume_formatted": "AED 88.5M"
+        },
+        {
+          "location": "Palm Deira",
+          "deals": 3,
+          "avg_price_formatted": "AED 8,823,683",
+          "volume_formatted": "AED 26.5M"
+        },
+        {
+          "location": "Motor City",
+          "deals": 2,
+          "avg_price_formatted": "AED 8,404,925",
+          "volume_formatted": "AED 16.8M"
+        },
+        {
+          "location": "Al Wasl",
+          "deals": 2,
+          "avg_price_formatted": "AED 13,293,000",
+          "volume_formatted": "AED 26.6M"
+        },
+        {
+          "location": "Marsa Dubai",
+          "deals": 2,
+          "avg_price_formatted": "AED 20,168,725",
+          "volume_formatted": "AED 40.3M"
+        }
+      ]
+    },
+    "4 B/R_Ready": {
+      "deals": 58,
+      "volume_formatted": "AED 0.54B",
+      "avg_price_formatted": "AED 9,368,942",
+      "med_price_formatted": "AED 5,575,000",
+      "top_locations": [
+        {
+          "location": "Jumeirah Beach Residence",
+          "deals": 8,
+          "avg_price_formatted": "AED 3,525,154",
+          "volume_formatted": "AED 28.2M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 7,
+          "avg_price_formatted": "AED 10,753,150",
+          "volume_formatted": "AED 75.3M"
+        },
+        {
+          "location": "Business Bay",
+          "deals": 7,
+          "avg_price_formatted": "AED 5,416,726",
+          "volume_formatted": "AED 37.9M"
+        },
+        {
+          "location": "Palm Jumeirah",
+          "deals": 6,
+          "avg_price_formatted": "AED 13,208,109",
+          "volume_formatted": "AED 79.2M"
+        },
+        {
+          "location": "Burj Khalifa",
+          "deals": 6,
+          "avg_price_formatted": "AED 17,396,869",
+          "volume_formatted": "AED 104.4M"
+        },
+        {
+          "location": "Sobha Heartland",
+          "deals": 5,
+          "avg_price_formatted": "AED 3,956,800",
+          "volume_formatted": "AED 19.8M"
+        },
+        {
+          "location": "Dubai Creek Harbour",
+          "deals": 3,
+          "avg_price_formatted": "AED 7,666,666",
+          "volume_formatted": "AED 23.0M"
+        },
+        {
+          "location": "The Greens",
+          "deals": 2,
+          "avg_price_formatted": "AED 1,312,852",
+          "volume_formatted": "AED 2.6M"
+        },
+        {
+          "location": "Jumeirah Village Circle",
+          "deals": 2,
+          "avg_price_formatted": "AED 4,125,000",
+          "volume_formatted": "AED 8.2M"
+        },
+        {
+          "location": "Jumeirah Lakes Towers",
+          "deals": 2,
+          "avg_price_formatted": "AED 4,180,013",
+          "volume_formatted": "AED 8.4M"
+        }
+      ]
+    },
+    "5 B/R_All": {
+      "deals": 9,
+      "volume_formatted": "AED 0.34B",
+      "avg_price_formatted": "AED 37,798,008",
+      "med_price_formatted": "AED 34,325,031",
+      "top_locations": [
+        {
+          "location": "Dubai Marina",
+          "deals": 4,
+          "avg_price_formatted": "AED 43,128,856",
+          "volume_formatted": "AED 172.5M"
+        },
+        {
+          "location": "Palm Jumeirah",
+          "deals": 3,
+          "avg_price_formatted": "AED 20,506,667",
+          "volume_formatted": "AED 61.5M"
+        },
+        {
+          "location": "Jumeirah Beach Residence",
+          "deals": 1,
+          "avg_price_formatted": "AED 86,000,000",
+          "volume_formatted": "AED 86.0M"
+        },
+        {
+          "location": "Jumeirah Lakes Towers",
+          "deals": 1,
+          "avg_price_formatted": "AED 20,146,645",
+          "volume_formatted": "AED 20.1M"
+        }
+      ]
+    },
+    "5 B/R_Off-Plan": {
+      "deals": 3,
+      "volume_formatted": "AED 0.17B",
+      "avg_price_formatted": "AED 56,111,808",
+      "med_price_formatted": "AED 34,940,386",
+      "top_locations": [
+        {
+          "location": "Dubai Marina",
+          "deals": 3,
+          "avg_price_formatted": "AED 56,111,808",
+          "volume_formatted": "AED 168.3M"
+        }
+      ]
+    },
+    "5 B/R_Ready": {
+      "deals": 6,
+      "volume_formatted": "AED 0.17B",
+      "avg_price_formatted": "AED 28,641,108",
+      "med_price_formatted": "AED 16,673,322",
+      "top_locations": [
+        {
+          "location": "Palm Jumeirah",
+          "deals": 3,
+          "avg_price_formatted": "AED 20,506,667",
+          "volume_formatted": "AED 61.5M"
+        },
+        {
+          "location": "Dubai Marina",
+          "deals": 1,
+          "avg_price_formatted": "AED 4,180,000",
+          "volume_formatted": "AED 4.2M"
+        },
+        {
+          "location": "Jumeirah Beach Residence",
+          "deals": 1,
+          "avg_price_formatted": "AED 86,000,000",
+          "volume_formatted": "AED 86.0M"
+        },
+        {
+          "location": "Jumeirah Lakes Towers",
+          "deals": 1,
+          "avg_price_formatted": "AED 20,146,645",
+          "volume_formatted": "AED 20.1M"
+        }
+      ]
+    }
+  }
 }
