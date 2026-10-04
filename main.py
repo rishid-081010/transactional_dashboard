@@ -1,11 +1,19 @@
 import os
+import uuid
+import threading
+import logging
 import pandas as pd
 import numpy as np
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, BackgroundTasks, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Optional
+from pydantic import BaseModel
+from typing import Optional, Dict, Any
+from dotenv import load_dotenv
+
+load_dotenv()
+logger = logging.getLogger("DXB_API")
 
 app = FastAPI(
     title="Asquared AI - Dubai Real Estate Analytics",
@@ -427,6 +435,14 @@ def get_live_stream(limit: int = 15):
         })
     return logs
 
+@app.get("/api/scraper-status")
+def get_scraper_status():
+    status_file = "data/scraper_status.json"
+    if os.path.exists(status_file):
+        with open(status_file, "r") as f:
+            return json.load(f)
+    return {"status": "Offline", "latest_sale": [], "latest_rental": []}
+
 @app.get("/api/lookup")
 def lookup_market_data(
     area: Optional[str] = Query(None),
@@ -477,6 +493,93 @@ def get_all_transactions():
         return FileResponse(json_path, media_type="application/json")
     return []
 
+# ─── AI DATA ANALYST (LOCAL LLAMA 3) ─────────────────────────────────────────
+
+class ChatRequest(BaseModel):
+    question: str
+
+@app.post("/api/chat/ask")
+def ask_ai(request: ChatRequest):
+    try:
+        from scripts.ai_analyst import process_chat_query
+        # We pass df_cache which contains all cleaned transactions loaded at startup
+        result = process_chat_query(request.question, df_cache)
+        return result
+    except Exception as e:
+        logger.error(f"Chat API Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# ─── DXB INTERACT REPORT AUTOMATION ──────────────────────────────────────────
+
+REPORT_DOWNLOAD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "scratch", "downloads"))
+os.makedirs(REPORT_DOWNLOAD_DIR, exist_ok=True)
+
+jobs_db: Dict[str, Dict[str, Any]] = {}
+
+class FilterRequest(BaseModel):
+    area: Optional[str] = None
+    beds: Optional[str] = None
+    sales_rental: Optional[str] = None
+    status: Optional[str] = None
+    sold_by: Optional[str] = None
+    date_from: Optional[str] = None
+    date_to: Optional[str] = None
+
+def run_scraper_task(job_id: str, filters: dict):
+    logger.info(f"Starting background job {job_id} with filters: {filters}")
+    jobs_db[job_id]["status"] = "processing"
+    try:
+        from scripts.dxb_scraper_core import scrape_and_download
+        result = scrape_and_download(filters=filters, download_dir=REPORT_DOWNLOAD_DIR, timeout=90)
+    except Exception as e:
+        logger.error(f"Scraper import/run error: {e}")
+        result = {"status": "error", "message": str(e)}
+
+    if result.get("status") == "success":
+        file_path = result.get("file")
+        filename = os.path.basename(file_path)
+        jobs_db[job_id]["status"] = "completed"
+        jobs_db[job_id]["file_name"] = filename
+        jobs_db[job_id]["download_url"] = f"/api/download_file/{filename}"
+        logger.info(f"Job {job_id} completed. File: {filename}")
+    else:
+        jobs_db[job_id]["status"] = "failed"
+        jobs_db[job_id]["error"] = result.get("message", "Scraper execution failed.")
+        logger.error(f"Job {job_id} failed: {jobs_db[job_id]['error']}")
+
+@app.post("/api/download_report")
+def request_report(filters: FilterRequest, background_tasks: BackgroundTasks):
+    job_id = str(uuid.uuid4())
+    filter_dict = filters.dict(exclude_none=True)
+    jobs_db[job_id] = {
+        "job_id": job_id,
+        "filters": filter_dict,
+        "status": "pending",
+        "error": None,
+        "download_url": None,
+        "file_name": None
+    }
+    background_tasks.add_task(run_scraper_task, job_id, filter_dict)
+    return {
+        "job_id": job_id,
+        "status": "pending",
+        "message": "Report generation request received.",
+        "check_status_url": f"/api/job_status/{job_id}"
+    }
+
+@app.get("/api/job_status/{job_id}")
+def get_job_status(job_id: str):
+    if job_id not in jobs_db:
+        raise HTTPException(status_code=404, detail="Job ID not found")
+    return jobs_db[job_id]
+
+@app.get("/api/download_file/{filename}")
+def download_file(filename: str):
+    file_path = os.path.join(REPORT_DOWNLOAD_DIR, filename)
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="File not found")
+    return FileResponse(path=file_path, filename=filename, media_type='application/octet-stream')
+
 # ─── SERVE FRONTEND ──────────────────────────────────────────────────────────
 @app.get("/")
 async def read_index():
@@ -486,4 +589,4 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=3000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

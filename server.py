@@ -399,9 +399,12 @@ async def handle_vapi_query(payload: VapiRequest):
                 responses.append({"toolCallId": call_id, "result": "Error: Missing sql_query argument."})
                 continue
             
+            print(f"\n[VAPI INTERCEPT] AI asked SQL Query: {sql_query}")
+            
             try:
                 result_df = conn.execute(sql_query).df()
                 json_result = result_df.to_dict(orient="records")
+                print(f"[VAPI INTERCEPT] Database returned: {json_result}\n")
                 responses.append({"toolCallId": call_id, "result": str(json_result)})
             except Exception as sql_err:
                 responses.append({"toolCallId": call_id, "result": f"Database Error: {str(sql_err)}"})

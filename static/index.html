@@ -125,6 +125,9 @@
             <button onclick="switchTab('daily-velocity')" id="nav-daily-velocity" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Daily Velocity</button>
             <button onclick="switchTab('voice-ai')" id="nav-voice-ai" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Voice Agent</button>
             <button onclick="switchTab('crm')" id="nav-crm" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">All Transactions</button>
+            <button onclick="switchTab('ai-analyst')" id="nav-ai-analyst" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">AI Analyst</button>
+            <button onclick="switchTab('reports')" id="nav-reports" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Reports</button>
+            <button onclick="switchTab('live-data')" id="nav-live-data" class="w-full text-left block px-4 py-2.5 rounded hover:bg-gray-800 text-gray-400 transition text-sm">Live Data</button>
         </nav>
         <div class="p-4 border-t border-gray-800 text-[11px] text-gray-400 flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -983,6 +986,196 @@
             </div>
         </main>
 
+        <!-- ─── PANEL: AI ANALYST ──────────────────────────────────────────────── -->
+        <main id="panel-ai-analyst" class="p-8 space-y-6 hidden h-[calc(100vh-120px)] flex flex-col">
+            <div>
+                <h3 class="text-xl font-bold text-white">Llama 3 Local AI Analyst</h3>
+                <p class="text-xs text-gray-400">Ask complex questions in natural language. Powered by 100% local, secure Llama 3.1.</p>
+            </div>
+            
+            <div class="glass-panel flex-1 flex flex-col overflow-hidden rounded-xl shadow-lg border border-gray-700/60">
+                <div id="ai-chat-history" class="flex-1 overflow-y-auto p-6 space-y-6">
+                    <div class="mr-auto max-w-[85%] bg-blue-900/30 border border-blue-500/40 text-blue-200 rounded-xl rounded-tl-sm p-4 text-sm shadow-md">
+                        Hello! I am your Llama 3 powered real estate data analyst. I have direct access to your entire transactional database. What would you like to know today?
+                    </div>
+                </div>
+                <div class="p-4 border-t border-gray-800 bg-gray-900/50 relative">
+                    <input type="text" id="ai-chat-input" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 pr-12">
+                    <button id="ai-chat-submit" class="absolute right-6 top-6 text-blue-400 hover:text-blue-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: REPORTS ───────────────────────────────────────────────── -->
+        <main id="panel-reports" class="p-8 space-y-6 hidden">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">DXB Interact Report Generator</h3>
+                    <p class="text-xs text-gray-400">AI-powered automated report generation from Dubai Land Department via DXB Interact</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        Agent Ready
+                    </span>
+                </div>
+            </div>
+
+            <!-- Filter Card -->
+            <div class="glass-panel p-6 rounded-xl shadow-lg border border-gray-700/60">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium text-xs">Area</label>
+                        <select id="report-area" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
+                            <option value="Downtown Dubai">Downtown Dubai</option>
+                            <option value="Dubai Marina">Dubai Marina</option>
+                            <option value="Palm Jumeirah">Palm Jumeirah</option>
+                            <option value="Business Bay">Business Bay</option>
+                            <option value="Dubai Hills Estate">Dubai Hills Estate</option>
+                            <option value="Jumeirah Village Circle">Jumeirah Village Circle</option>
+                            <option value="Al Barsha">Al Barsha</option>
+                            <option value="DIFC">DIFC</option>
+                            <option value="Dubai Creek Harbour">Dubai Creek Harbour</option>
+                            <option value="Sobha Hartland">Sobha Hartland</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium text-xs">Beds</label>
+                        <select id="report-beds" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
+                            <option value="all">All Bedrooms</option>
+                            <option value="Studio">Studio</option>
+                            <option value="1">1 Bed</option>
+                            <option value="2">2 Beds</option>
+                            <option value="3">3 Beds</option>
+                            <option value="4+">4+ Beds</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium text-xs">Transaction Type</label>
+                        <select id="report-type" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
+                            <option value="Sales">Sales</option>
+                            <option value="Rental">Rental</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium text-xs">Status</label>
+                        <select id="report-status" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
+                            <option value="all">All Statuses</option>
+                            <option value="Off-Plan">Off-Plan</option>
+                            <option value="Ready">Ready</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-400 mb-1 font-medium text-xs">Sold By</label>
+                        <select id="report-sold-by" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
+                            <option value="all">All</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Broker">Broker</option>
+                            <option value="Individual">Individual</option>
+                        </select>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="flex-1">
+                            <label class="block text-gray-400 mb-1 font-medium text-xs">Date From</label>
+                            <input type="date" id="report-date-from" value="2026-01-01" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="flex-1">
+                            <label class="block text-gray-400 mb-1 font-medium text-xs">Date To</label>
+                            <input type="date" id="report-date-to" value="2026-09-17" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                </div>
+                <button id="btn-generate-report" onclick="generateReport()" class="w-full py-3 rounded-lg font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition shadow-lg flex items-center justify-center gap-2">
+                    ⚡ Generate & Download Report
+                </button>
+            </div>
+
+            <!-- Loading/Status Card -->
+            <div id="report-status-card" class="glass-panel p-6 rounded-xl shadow-lg border border-gray-700/60 hidden">
+                <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
+                    <div class="flex-1 flex flex-col gap-4 w-full pl-2 border-l border-gray-800">
+                        <!-- Pipeline UI -->
+                        <div id="report-step-1" class="flex items-center gap-4 text-gray-600 transition-colors">
+                            <div class="step-dot w-3 h-3 rounded-full bg-gray-600 shadow-[0_0_8px_rgba(0,0,0,0.5)]"></div>
+                            <span class="text-sm font-semibold tracking-wide">Launching Agent</span>
+                        </div>
+                        <div id="report-step-2" class="flex items-center gap-4 text-gray-600 transition-colors">
+                            <div class="step-dot w-3 h-3 rounded-full bg-gray-600 shadow-[0_0_8px_rgba(0,0,0,0.5)]"></div>
+                            <span class="text-sm font-semibold tracking-wide">Bypassing Security</span>
+                        </div>
+                        <div id="report-step-3" class="flex items-center gap-4 text-gray-600 transition-colors">
+                            <div class="step-dot w-3 h-3 rounded-full bg-gray-600 shadow-[0_0_8px_rgba(0,0,0,0.5)]"></div>
+                            <span class="text-sm font-semibold tracking-wide">Applying Filters</span>
+                        </div>
+                        <div id="report-step-4" class="flex items-center gap-4 text-gray-600 transition-colors">
+                            <div class="step-dot w-3 h-3 rounded-full bg-gray-600 shadow-[0_0_8px_rgba(0,0,0,0.5)]"></div>
+                            <span class="text-sm font-semibold tracking-wide">Downloading Report</span>
+                        </div>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Current Status</p>
+                        <h4 id="report-status-text" class="text-lg font-bold text-white mb-2">Waiting...</h4>
+                        <p id="report-status-detail" class="text-sm text-gray-400 font-mono"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Reports Table -->
+            <div class="glass-panel p-6 rounded-xl shadow-lg border border-gray-700/60">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Recent Generated Reports</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="border-b border-gray-700 text-gray-400">
+                                <th class="pb-2.5">Date</th>
+                                <th class="pb-2.5">Area</th>
+                                <th class="pb-2.5">Filters</th>
+                                <th class="pb-2.5">Status</th>
+                                <th class="pb-2.5">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reports-history-tbody" class="divide-y divide-gray-800">
+                            <tr id="reports-placeholder">
+                                <td colspan="5" class="py-4 text-center text-gray-500 italic">No reports generated yet</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- ─── PANEL: LIVE DATA ──────────────────────────────────────────────── -->
+        <main id="panel-live-data" class="p-8 space-y-6 hidden">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Live Real Estate Feeds</h3>
+                    <p class="text-xs text-gray-400">Real-time data scraped from Property Finder every 5 minutes.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Sales Feed -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4 border-b border-gray-700 pb-2">🔴 Live Sales Data</h3>
+                    <div id="live-sales-feed" class="space-y-3 text-xs">
+                        <div class="text-gray-400 py-4 text-center animate-pulse">Fetching live sales...</div>
+                    </div>
+                </div>
+
+                <!-- Rentals Feed -->
+                <div class="glass-panel p-6 rounded-xl shadow-lg">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4 border-b border-gray-700 pb-2">🟢 Live Rental Data</h3>
+                    <div id="live-rentals-feed" class="space-y-3 text-xs">
+                        <div class="text-gray-400 py-4 text-center animate-pulse">Fetching live rentals...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
     </div>
 
     <!-- ─── JAVASCRIPT ENGINE ─────────────────────────────────────────────────── -->
@@ -1068,7 +1261,7 @@
 
         function switchTab(tabId) {
             // Update sidebar active buttons
-            const navIds = ['dashboard', 'locations', 'apartments', 'villas', 'property-types', 'daily-velocity', 'voice-ai', 'crm'];
+            const navIds = ['dashboard', 'locations', 'apartments', 'villas', 'property-types', 'daily-velocity', 'voice-ai', 'crm', 'ai-analyst', 'reports', 'live-data'];
             navIds.forEach(id => {
                 const btn = document.getElementById(`nav-${id}`);
                 const panel = document.getElementById(`panel-${id}`);
@@ -1089,7 +1282,10 @@
                 'property-types': 'Property Types & Majority',
                 'daily-velocity': 'Daily Velocity',
                 'voice-ai': 'Voice Agent',
-                'crm': 'All Transactions'
+                'crm': 'All Transactions',
+                'ai-analyst': 'AI Data Analyst',
+                'reports': 'DXB Interact Reports',
+                'live-data': 'Live Market Data'
             };
             document.getElementById('header-title').innerText = titles[tabId] || 'Overview';
 
@@ -1099,6 +1295,7 @@
             if (tabId === 'property-types') loadPropertyTypesData();
             if (tabId === 'daily-velocity') loadDailyVelocity();
             if (tabId === 'crm') loadCRMTransactions();
+            if (tabId === 'live-data') fetchScraperStatus();
         }
 
         async function fetchDashboardStats() {
@@ -1990,6 +2187,222 @@
         // Initialize on load
         window.addEventListener('DOMContentLoaded', () => {
             refreshAllData();
+        });
+
+        // ─── REPORTS TAB ─────────────────────────────────────────────────
+        const DXB_REPORT_API = 'http://localhost:8000';
+        let reportJobId = null;
+        let reportPollInterval = null;
+
+        async function generateReport() {
+            const area = document.getElementById('report-area').value;
+            const beds = document.getElementById('report-beds').value;
+            const salesRental = document.getElementById('report-type').value;
+            const status = document.getElementById('report-status').value;
+            const dateFrom = document.getElementById('report-date-from').value;
+            const dateTo = document.getElementById('report-date-to').value;
+
+            const btn = document.getElementById('btn-generate-report');
+            const statusCard = document.getElementById('report-status-card');
+            const statusText = document.getElementById('report-status-text');
+            const statusDetail = document.getElementById('report-status-detail');
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="animate-spin inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full mr-2"></span>Agent Running...';
+            statusCard.classList.remove('hidden');
+            
+            updateReportStep(1);
+            statusText.innerText = 'Dispatching Scraper Agent...';
+            statusDetail.innerText = 'Sending filter payload to automation engine...';
+
+            try {
+                const payload = { area };
+                if (beds && beds !== 'all') payload.beds = beds;
+                if (status && status !== 'all') payload.status = status;
+                if (salesRental) payload.sales_rental = salesRental;
+                if (dateFrom) payload.date_from = dateFrom;
+                if (dateTo) payload.date_to = dateTo;
+
+                const res = await fetch(`${DXB_REPORT_API}/api/download_report`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                reportJobId = data.job_id;
+
+                updateReportStep(2);
+                statusText.innerText = 'Agent Running on DXB Interact...';
+                statusDetail.innerText = `Job ID: ${reportJobId.substring(0, 8)}... Bypassing Cloudflare & navigating site...`;
+
+                // Poll for completion
+                reportPollInterval = setInterval(async () => {
+                    try {
+                        const statusRes = await fetch(`${DXB_REPORT_API}/api/job_status/${reportJobId}`);
+                        const job = await statusRes.json();
+
+                        if (job.status === 'processing') {
+                            updateReportStep(3);
+                            statusText.innerText = 'Applying Filters & Generating Report...';
+                            statusDetail.innerText = 'Bot is interacting with DXB Interact UI...';
+                        }
+
+                        if (job.status === 'completed') {
+                            clearInterval(reportPollInterval);
+                            updateReportStep(4);
+                            statusText.innerHTML = '<span class="text-emerald-400 font-bold">✓ Report Ready!</span>';
+                            statusDetail.innerHTML = `<a href="${DXB_REPORT_API}${job.download_url}" class="text-blue-400 hover:text-blue-300 underline font-semibold" target="_blank">⬇ Download ${job.file_name}</a>`;
+                            
+                            btn.disabled = false;
+                            btn.innerHTML = '⚡ Generate & Download Report';
+
+                            // Auto-trigger download
+                            window.open(`${DXB_REPORT_API}${job.download_url}`, '_blank');
+
+                            // Add to history
+                            addReportToHistory(area, beds, status, job.file_name, job.download_url);
+                        }
+
+                        if (job.status === 'failed') {
+                            clearInterval(reportPollInterval);
+                            statusText.innerHTML = '<span class="text-red-400 font-bold">✗ Generation Failed</span>';
+                            statusDetail.innerText = job.error || 'Agent encountered an error.';
+                            btn.disabled = false;
+                            btn.innerHTML = '⚡ Generate & Download Report';
+                        }
+                    } catch (e) {
+                        console.error('Poll error:', e);
+                    }
+                }, 3000);
+
+            } catch (err) {
+                statusText.innerHTML = '<span class="text-red-400">Connection Error</span>';
+                statusDetail.innerText = 'Ensure the DXB Report API is running on localhost:8000';
+                btn.disabled = false;
+                btn.innerHTML = '⚡ Generate & Download Report';
+            }
+        }
+
+        function updateReportStep(activeStep) {
+            for (let i = 1; i <= 4; i++) {
+                const stepEl = document.getElementById(`report-step-${i}`);
+                if (!stepEl) continue;
+                if (i < activeStep) {
+                    stepEl.classList.add('text-emerald-400');
+                    stepEl.classList.remove('text-gray-600', 'text-blue-400');
+                    stepEl.querySelector('.step-dot').classList.add('bg-emerald-400');
+                    stepEl.querySelector('.step-dot').classList.remove('bg-gray-600', 'bg-blue-400', 'animate-pulse');
+                } else if (i === activeStep) {
+                    stepEl.classList.add('text-blue-400');
+                    stepEl.classList.remove('text-gray-600', 'text-emerald-400');
+                    stepEl.querySelector('.step-dot').classList.add('bg-blue-400', 'animate-pulse');
+                    stepEl.querySelector('.step-dot').classList.remove('bg-gray-600', 'bg-emerald-400');
+                } else {
+                    stepEl.classList.add('text-gray-600');
+                    stepEl.classList.remove('text-blue-400', 'text-emerald-400');
+                    stepEl.querySelector('.step-dot').classList.add('bg-gray-600');
+                    stepEl.querySelector('.step-dot').classList.remove('bg-blue-400', 'bg-emerald-400', 'animate-pulse');
+                }
+            }
+        }
+
+        function addReportToHistory(area, beds, status, fileName, downloadUrl) {
+            const tbody = document.getElementById('reports-history-tbody');
+            const placeholder = document.getElementById('reports-placeholder');
+            if (placeholder) placeholder.remove();
+            
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-GB') + ' ' + now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+            const filtersStr = [beds !== 'all' ? beds + ' Bed' : '', status !== 'all' ? status : ''].filter(Boolean).join(', ') || 'Default';
+            
+            const row = document.createElement('tr');
+            row.className = 'border-b border-gray-800 hover:bg-white/5 transition';
+            row.innerHTML = `
+                <td class="py-3 text-gray-300">${dateStr}</td>
+                <td class="py-3 text-white font-medium">${area}</td>
+                <td class="py-3 text-gray-400">${filtersStr}</td>
+                <td class="py-3"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Completed</span></td>
+                <td class="py-3"><a href="${DXB_REPORT_API}${downloadUrl}" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs font-medium">⬇ ${fileName}</a></td>
+            `;
+            tbody.prepend(row);
+        }
+
+        // ─── AI ANALYST TAB ─────────────────────────────────────────────────
+        const chatInput = document.getElementById('ai-chat-input');
+        const chatHistory = document.getElementById('ai-chat-history');
+        const chatSubmit = document.getElementById('ai-chat-submit');
+
+        function addMessage(role, content, rawData = null, sqlQuery = null) {
+            const div = document.createElement('div');
+            if (role === 'user') {
+                div.className = 'ml-auto max-w-[80%] bg-blue-600 text-white rounded-xl rounded-tr-sm p-4 text-sm shadow-md';
+                div.innerText = content;
+            } else {
+                div.className = 'mr-auto max-w-[85%] bg-blue-900/30 border border-blue-500/40 text-blue-100 rounded-xl rounded-tl-sm p-4 text-sm shadow-md space-y-3';
+                let innerHtml = `<div class="leading-relaxed">${content}</div>`;
+                
+                if (sqlQuery) {
+                     innerHtml += `
+                     <div class="mt-3">
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="text-xs text-blue-400 hover:text-blue-300 font-mono font-semibold flex items-center gap-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> View SQL Query</button>
+                        <div class="hidden mt-2 p-3 bg-gray-950/80 rounded border border-gray-800 text-xs text-emerald-400 font-mono whitespace-pre-wrap overflow-x-auto">${sqlQuery}</div>
+                     </div>`;
+                }
+                
+                div.innerHTML = innerHtml;
+            }
+            chatHistory.appendChild(div);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+
+        async function sendAiMessage() {
+            const question = chatInput.value.trim();
+            if (!question) return;
+            
+            addMessage('user', question);
+            chatInput.value = '';
+            chatInput.disabled = true;
+            chatSubmit.disabled = true;
+            
+            // Add loading indicator
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = 'ai-loading-indicator';
+            loadingDiv.className = 'mr-auto bg-gray-800 text-gray-400 rounded-xl rounded-tl-sm px-4 py-3 text-sm flex items-center gap-2';
+            loadingDiv.innerHTML = '<span class="animate-spin inline-block w-4 h-4 border-2 border-gray-500 border-t-white rounded-full"></span> Querying Local Database...';
+            chatHistory.appendChild(loadingDiv);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            try {
+                const res = await fetch('/api/chat/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question })
+                });
+                
+                loadingDiv.remove();
+                
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                
+                const data = await res.json();
+                
+                if (data.status === 'success') {
+                    addMessage('ai', data.response, data.raw_data, data.sql_query);
+                } else {
+                    addMessage('ai', 'Error: ' + data.message);
+                }
+            } catch (e) {
+                loadingDiv.remove();
+                addMessage('ai', 'Connection error. Ensure the FastAPI server is running and Ollama is available.');
+            } finally {
+                chatInput.disabled = false;
+                chatSubmit.disabled = false;
+                chatInput.focus();
+            }
+        }
+
+        if (chatSubmit) chatSubmit.addEventListener('click', sendAiMessage);
+        if (chatInput) chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendAiMessage();
         });
     </script>
 </body>
