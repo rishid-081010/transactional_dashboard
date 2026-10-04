@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Route API endpoints directly to static JSON files
+RewriteRule ^api/dashboard$ api/dashboard.json [L,QSA]
+RewriteRule ^api/dashboard/hotspots$ api/dashboard_hotspots.json [L,QSA]
+RewriteRule ^api/apartments$ api/apartments.json [L,QSA]
+RewriteRule ^api/locations/areas$ api/locations_areas.json [L,QSA]
+RewriteRule ^api/locations$ api/locations.json [L,QSA]
+RewriteRule ^api/villas$ api/villas.json [L,QSA]
+RewriteRule ^api/property-types$ api/property_types_data.json [L,QSA]
+RewriteRule ^api/velocity$ api/velocity.json [L,QSA]
+RewriteRule ^api/transactions$ api/transactions.json [L,QSA]
+RewriteRule ^api/voice$ api/voice.json [L,QSA]
+RewriteRule ^api/scraper/status$ api/scraper_status.json [L,QSA]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>

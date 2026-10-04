@@ -1,0 +1,117 @@
+{
+  "kpis": {
+    "total_deals": 1513,
+    "total_volume": 5623213348.38,
+    "avg_deal": 3716598,
+    "median_deal": 2940000,
+    "median_sqft": 1850,
+    "median_space": 3400
+  },
+  "communities": [
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 127,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 127,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 125,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 95,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 93,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 80,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 63,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 63,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 62,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 61,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 37,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 37,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 32,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 28,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    },
+    {
+      "community": "Palm Jumeirah",
+      "villas_sold": 28,
+      "avg_price": 4500000,
+      "median_price": 3800000,
+      "total_inflow": 225000000
+    }
+  ]
+}

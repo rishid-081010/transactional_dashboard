@@ -1,0 +1,32 @@
+[
+  {
+    "asset_class": "Apartment",
+    "deals_closed": 14102,
+    "total_capital": 23540000000,
+    "avg_ticket": 1669596
+  },
+  {
+    "asset_class": "Villa",
+    "deals_closed": 1513,
+    "total_capital": 5620000000,
+    "avg_ticket": 3716598
+  },
+  {
+    "asset_class": "Land/Building",
+    "deals_closed": 1403,
+    "total_capital": 9690000000,
+    "avg_ticket": 6908303
+  },
+  {
+    "asset_class": "Commercial",
+    "deals_closed": 630,
+    "total_capital": 2120000000,
+    "avg_ticket": 3358621
+  },
+  {
+    "asset_class": "Land/Building",
+    "deals_closed": 3,
+    "total_capital": 1550000000,
+    "avg_ticket": 515550000
+  }
+]

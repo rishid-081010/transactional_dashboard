@@ -921,10 +921,10 @@
         }
 
         const formatMoney = (amount) => {
-    
+            if (!amount || isNaN(amount)) return 'AED 0';
             if (amount >= 1e9) return 'AED ' + (amount / 1e9).toFixed(2) + 'B';
             if (amount >= 1e6) return 'AED ' + (amount / 1e6).toFixed(2) + 'M';
-            return 'AED ' + amount.toLocaleString(undefined, {maximumFractionDigits: 0});
+            return 'AED ' + Number(amount).toLocaleString(undefined, {maximumFractionDigits: 0});
         };
 
         // SPA Navigation Logic
@@ -1039,6 +1039,207 @@
                 }, 300);
             }, 200);
         }
+
+        // ─── UNIVERSAL CLIENT-SIDE API INTERCEPTOR & FALLBACK DATA LAYER ────────
+        let allTransactionsCache = null;
+        async function getAllTransactions() {
+            if (!allTransactionsCache) {
+                try {
+                    const res = await originalFetch('api/all_transactions.json');
+                    allTransactionsCache = await res.json();
+                } catch (e) {
+                    console.warn('Could not load all_transactions.json:', e);
+                    allTransactionsCache = [];
+                }
+            }
+            return allTransactionsCache;
+        }
+
+        const originalFetch = window.fetch.bind(window);
+        window.fetch = async function(resource, init) {
+            const urlStr = typeof resource === 'string' ? resource : (resource?.url || '');
+            if (urlStr.startsWith('/api/') || urlStr.startsWith('api/')) {
+                // 1. Try direct live API endpoint
+                try {
+                    const liveRes = await originalFetch(resource, init);
+                    if (liveRes.ok) {
+                        return liveRes;
+                    }
+                } catch (netErr) {}
+
+                // 2. Intelligent client-side fallback
+                const cleanUrl = urlStr.split('?')[0].replace(/^\//, '');
+                const queryString = urlStr.includes('?') ? urlStr.split('?')[1] : '';
+                const params = new URLSearchParams(queryString);
+
+                // Handle dynamic /api/transactions
+                if (cleanUrl === 'api/transactions') {
+                    try {
+                        const allTx = await getAllTransactions();
+                        if (allTx && allTx.length > 0) {
+                            const page = parseInt(params.get('page') || '1');
+                            const limit = parseInt(params.get('limit') || '50');
+                            const search = (params.get('search') || '').toLowerCase().trim();
+                            const propType = (params.get('prop_type') || 'all').toLowerCase();
+                            const usage = (params.get('usage') || 'all').toLowerCase();
+                            const sort = params.get('sort') || 'date_desc';
+                            const priceTier = params.get('price_tier') || 'all';
+
+                            let filtered = allTx.map(row => ({
+                                date_time: `${row[0]} ${row[1]}`,
+                                date: row[0],
+                                community: row[3] || '',
+                                project: row[4] || '',
+                                type: row[5] || '',
+                                bedrooms: row[6] || '',
+                                stage: row[7] || '',
+                                price: Number(row[8]) || 0
+                            }));
+
+                            if (search) {
+                                filtered = filtered.filter(t => 
+                                    t.project.toLowerCase().includes(search) || 
+                                    t.community.toLowerCase().includes(search)
+                                );
+                            }
+                            if (propType !== 'all') {
+                                filtered = filtered.filter(t => t.type.toLowerCase().includes(propType));
+                            }
+                            if (usage !== 'all') {
+                                filtered = filtered.filter(t => t.stage.toLowerCase() === usage);
+                            }
+                            if (priceTier === 'under1m') {
+                                filtered = filtered.filter(t => t.price < 1000000);
+                            } else if (priceTier === '1m5m') {
+                                filtered = filtered.filter(t => t.price >= 1000000 && t.price < 5000000);
+                            } else if (priceTier === '5m10m') {
+                                filtered = filtered.filter(t => t.price >= 5000000 && t.price < 10000000);
+                            } else if (priceTier === 'above10m') {
+                                filtered = filtered.filter(t => t.price >= 10000000);
+                            }
+
+                            if (sort === 'price_desc') filtered.sort((a, b) => b.price - a.price);
+                            else if (sort === 'price_asc') filtered.sort((a, b) => a.price - b.price);
+                            else if (sort === 'date_asc') filtered.sort((a, b) => a.date_time.localeCompare(b.date_time));
+                            else filtered.sort((a, b) => b.date_time.localeCompare(a.date_time));
+
+                            const totalDeals = filtered.length;
+                            const totalVolume = filtered.reduce((s, t) => s + t.price, 0);
+                            const avgPrice = totalDeals ? Math.round(totalVolume / totalDeals) : 0;
+                            const offset = (page - 1) * limit;
+                            const pageData = filtered.slice(offset, offset + limit);
+
+                            return new Response(JSON.stringify({
+                                total: totalDeals,
+                                total_volume: totalVolume,
+                                avg_price: avgPrice,
+                                page,
+                                limit,
+                                data: pageData
+                            }), { headers: { 'Content-Type': 'application/json' } });
+                        }
+                    } catch (txErr) {
+                        console.warn('Error in client transactions filter:', txErr);
+                    }
+                }
+
+                // Handle dynamic /api/locations
+                if (cleanUrl === 'api/locations' && params.has('area')) {
+                    try {
+                        const areaQuery = params.get('area');
+                        const allTx = await getAllTransactions();
+                        const areaTx = (allTx || []).filter(r => (r[3] || '').toLowerCase() === areaQuery.toLowerCase());
+                        if (areaTx.length > 0) {
+                            const totalDeals = areaTx.length;
+                            const totalVol = areaTx.reduce((s, r) => s + (Number(r[8]) || 0), 0);
+                            const avgDeal = Math.round(totalVol / totalDeals);
+                            const sortedVals = areaTx.map(r => Number(r[8]) || 0).sort((a, b) => a - b);
+                            const medianDeal = sortedVals[Math.floor(totalDeals / 2)];
+                            
+                            const aptTx = areaTx.filter(r => r[5] === 'Apartment');
+                            const villaTx = areaTx.filter(r => r[5] === 'Villa');
+                            const aptVol = aptTx.reduce((s, r) => s + (Number(r[8]) || 0), 0);
+                            const villaVol = villaTx.reduce((s, r) => s + (Number(r[8]) || 0), 0);
+
+                            const bhkMap = {};
+                            aptTx.forEach(r => {
+                                const b = r[6] || 'Other';
+                                if (!bhkMap[b]) bhkMap[b] = { deals: 0, vol: 0, prices: [] };
+                                const p = Number(r[8]) || 0;
+                                bhkMap[b].deals++;
+                                bhkMap[b].vol += p;
+                                bhkMap[b].prices.push(p);
+                            });
+                            const bhkBreakdown = Object.keys(bhkMap).map(k => {
+                                const pArr = bhkMap[k].prices.sort((a,b) => a - b);
+                                return {
+                                    bhk_type: k.replace(' B/R', ''),
+                                    deals: bhkMap[k].deals,
+                                    avg_price: Math.round(bhkMap[k].vol / bhkMap[k].deals),
+                                    median_price: pArr[Math.floor(pArr.length / 2)]
+                                };
+                            });
+
+                            const projMap = {};
+                            areaTx.forEach(r => {
+                                const pr = r[4] || 'General Community';
+                                if (!projMap[pr]) projMap[pr] = { transactions: 0, vol: 0 };
+                                projMap[pr].transactions++;
+                                projMap[pr].vol += Number(r[8]) || 0;
+                            });
+                            const topProjects = Object.keys(projMap)
+                                .sort((a, b) => projMap[b].vol - projMap[a].vol)
+                                .slice(0, 5)
+                                .map(pr => ({ project_name: pr, transactions: projMap[pr].transactions, total_inflow: projMap[pr].vol }));
+
+                            let allAreasList = [];
+                            try {
+                                const locBaseRes = await originalFetch('api/locations.json');
+                                const locBase = await locBaseRes.json();
+                                allAreasList = locBase.all_areas || [];
+                            } catch (e) {}
+
+                            return new Response(JSON.stringify({
+                                kpis: {
+                                    total_deals: totalDeals,
+                                    total_volume: totalVol,
+                                    avg_deal: avgDeal,
+                                    median_deal: medianDeal,
+                                    villa_avg: villaTx.length ? Math.round(villaVol / villaTx.length) : 0,
+                                    villa_deals: villaTx.length,
+                                    apt_avg: aptTx.length ? Math.round(aptVol / aptTx.length) : 0,
+                                    apt_deals: aptTx.length
+                                },
+                                bhk_breakdown: bhkBreakdown,
+                                top_projects: topProjects,
+                                all_areas: allAreasList
+                            }), { headers: { 'Content-Type': 'application/json' } });
+                        }
+                    } catch (locErr) {
+                        console.warn('Error in client location filter:', locErr);
+                    }
+                }
+
+                // Map cleanUrls to static precomputed JSON files
+                const staticMap = {
+                    'api/dashboard': 'api/dashboard.json',
+                    'api/dashboard/hotspots': 'api/dashboard_hotspots.json',
+                    'api/apartments': 'api/apartments.json',
+                    'api/locations/areas': 'api/locations_areas.json',
+                    'api/locations': 'api/locations.json',
+                    'api/villas': 'api/villas.json',
+                    'api/property-types': 'api/property_types_data.json',
+                    'api/velocity': 'api/velocity.json',
+                    'api/transactions': 'api/transactions.json',
+                    'api/voice': 'api/voice.json',
+                    'api/scraper/status': 'api/scraper_status.json'
+                };
+
+                const targetFile = staticMap[cleanUrl] || (cleanUrl.endsWith('.json') ? cleanUrl : cleanUrl + '.json');
+                return originalFetch(targetFile);
+            }
+            return originalFetch(resource, init);
+        };
 
         async function fetchDashboardData() {
             try {

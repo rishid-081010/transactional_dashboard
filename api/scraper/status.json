@@ -1,0 +1,25 @@
+{
+  "status": "Online / Synchronized",
+  "last_ping_time": "2026-10-04T17:24:56.180Z",
+  "next_ping_time": "2026-10-04T17:29:56.181Z",
+  "latest_rental": {
+    "transaction_date": "2026-09-03",
+    "project": "Marina Gate 2",
+    "area": "Dubai Marina",
+    "property_sub_type": "Flat",
+    "bedrooms": 2,
+    "size_sqft": 1240,
+    "price": 155000
+  },
+  "latest_sale": {
+    "transaction_date": "2026-09-03",
+    "project": "BEACH WALK RESIDENCES 1",
+    "area": "Palm Deira",
+    "property_sub_type": "Flat",
+    "bedrooms": 1,
+    "size_sqft": 885,
+    "price": 3000001
+  },
+  "total_rentals_session": 184,
+  "total_sales_session": 17651
+}

@@ -1,0 +1,21 @@
+{
+  "kpis": {
+    "total_volume": 42522782620.52,
+    "total_deals": 17651,
+    "avg_deal": 2409086,
+    "median_deal": 1227732,
+    "apartment_avg": 1669596,
+    "apartment_deals": 14102,
+    "villa_avg": 3716598,
+    "villa_deals": 1513,
+    "off_plan_share_pct": 52.1,
+    "off_plan_inflow": 16510000000
+  },
+  "dynamics": {
+    "total_recorded": 17651,
+    "pure_sales": 13238,
+    "mortgage": 4413,
+    "off_plan": 9193,
+    "ready": 8458
+  }
+}

@@ -1,2002 +1,457 @@
-[
-  {
-    "LOCATION": "Madinat Al Mataar",
-    "deals": 2046.0,
-    "volume_m": 2737.8,
-    "avg_price": 1338141.0,
-    "villa_avg": 4599330.0,
-    "apartment_avg": 996341.0,
-    "median_sqft": 1727.0,
-    "offplan_pct": 98.0
-  },
-  {
-    "LOCATION": "Jumeirah Village Circle",
-    "deals": 1227.0,
-    "volume_m": 1438.3,
-    "avg_price": 1172229.0,
-    "villa_avg": 2821164.0,
-    "apartment_avg": 982320.0,
-    "median_sqft": 1286.0,
-    "offplan_pct": 34.0
-  },
-  {
-    "LOCATION": "City Of Arabia",
-    "deals": 829.0,
-    "volume_m": 965.5,
-    "avg_price": 1164703.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 954757.0,
-    "median_sqft": 1693.0,
-    "offplan_pct": 98.0
-  },
-  {
-    "LOCATION": "Business Bay",
-    "deals": 768.0,
-    "volume_m": 2373.0,
-    "avg_price": 3089898.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2580712.0,
-    "median_sqft": 1858.0,
-    "offplan_pct": 25.0
-  },
-  {
-    "LOCATION": "Al Hebiah Fifth",
-    "deals": 485.0,
-    "volume_m": 1010.2,
-    "avg_price": 2082899.0,
-    "villa_avg": 1969420.0,
-    "apartment_avg": 1131369.0,
-    "median_sqft": 1548.0,
-    "offplan_pct": 41.0
-  },
-  {
-    "LOCATION": "Majan",
-    "deals": 438.0,
-    "volume_m": 483.8,
-    "avg_price": 1104518.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 878048.0,
-    "median_sqft": 1420.0,
-    "offplan_pct": 82.0
-  },
-  {
-    "LOCATION": "Down Town Jabal Ali",
-    "deals": 437.0,
-    "volume_m": 541.5,
-    "avg_price": 1239115.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 805253.0,
-    "median_sqft": 1596.0,
-    "offplan_pct": 95.0
-  },
-  {
-    "LOCATION": "Dubai Land Residence Complex",
-    "deals": 400.0,
-    "volume_m": 378.2,
-    "avg_price": 945473.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 944209.0,
-    "median_sqft": 1359.0,
-    "offplan_pct": 76.0
-  },
-  {
-    "LOCATION": "Dubai Marina",
-    "deals": 400.0,
-    "volume_m": 1395.1,
-    "avg_price": 3487816.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3381857.0,
-    "median_sqft": 1711.0,
-    "offplan_pct": 3.0
-  },
-  {
-    "LOCATION": "Jabal Ali Industrial Second",
-    "deals": 398.0,
-    "volume_m": 395.7,
-    "avg_price": 994096.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 850073.0,
-    "median_sqft": 1745.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Burj Khalifa",
-    "deals": 336.0,
-    "volume_m": 2442.1,
-    "avg_price": 7268150.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3703772.0,
-    "median_sqft": 2223.0,
-    "offplan_pct": 12.0
-  },
-  {
-    "LOCATION": "Al Furjan",
-    "deals": 316.0,
-    "volume_m": 446.3,
-    "avg_price": 1412338.0,
-    "villa_avg": 2698117.0,
-    "apartment_avg": 1046215.0,
-    "median_sqft": 1140.0,
-    "offplan_pct": 22.0
-  },
-  {
-    "LOCATION": "Arjan",
-    "deals": 310.0,
-    "volume_m": 358.1,
-    "avg_price": 1155170.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1003244.0,
-    "median_sqft": 1357.0,
-    "offplan_pct": 38.0
-  },
-  {
-    "LOCATION": "Dubai Production City",
-    "deals": 303.0,
-    "volume_m": 272.8,
-    "avg_price": 900234.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 903398.0,
-    "median_sqft": 1263.0,
-    "offplan_pct": 52.0
-  },
-  {
-    "LOCATION": "Jumeirah Lakes Towers",
-    "deals": 270.0,
-    "volume_m": 513.8,
-    "avg_price": 1902936.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1517412.0,
-    "median_sqft": 1402.0,
-    "offplan_pct": 15.0
-  },
-  {
-    "LOCATION": "Dubai Sports City",
-    "deals": 247.0,
-    "volume_m": 226.1,
-    "avg_price": 915290.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 901920.0,
-    "median_sqft": 1001.0,
-    "offplan_pct": 36.0
-  },
-  {
-    "LOCATION": "Dubai Hills",
-    "deals": 240.0,
-    "volume_m": 1484.4,
-    "avg_price": 6185111.0,
-    "villa_avg": 4004841.0,
-    "apartment_avg": 6075324.0,
-    "median_sqft": 1906.0,
-    "offplan_pct": 5.0
-  },
-  {
-    "LOCATION": "Damac Hills",
-    "deals": 234.0,
-    "volume_m": 391.1,
-    "avg_price": 1671399.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1134271.0,
-    "median_sqft": 1487.0,
-    "offplan_pct": 50.0
-  },
-  {
-    "LOCATION": "Jabal Ali First",
-    "deals": 229.0,
-    "volume_m": 468.7,
-    "avg_price": 2046901.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1799922.0,
-    "median_sqft": 1686.0,
-    "offplan_pct": 86.0
-  },
-  {
-    "LOCATION": "Al Yufrah 1",
-    "deals": 227.0,
-    "volume_m": 505.0,
-    "avg_price": 2224482.0,
-    "villa_avg": 2584443.0,
-    "apartment_avg": 1162708.0,
-    "median_sqft": 1850.0,
-    "offplan_pct": 70.0
-  },
-  {
-    "LOCATION": "Jumeirah Village Triangle",
-    "deals": 226.0,
-    "volume_m": 465.7,
-    "avg_price": 2060664.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1094846.0,
-    "median_sqft": 1548.0,
-    "offplan_pct": 60.0
-  },
-  {
-    "LOCATION": "Silicon Oasis",
-    "deals": 225.0,
-    "volume_m": 329.9,
-    "avg_price": 1466039.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 924804.0,
-    "median_sqft": 968.0,
-    "offplan_pct": 15.0
-  },
-  {
-    "LOCATION": "Madinat Hind 4",
-    "deals": 224.0,
-    "volume_m": 308.6,
-    "avg_price": 1377719.0,
-    "villa_avg": 1103609.0,
-    "apartment_avg": 635299.0,
-    "median_sqft": 829.0,
-    "offplan_pct": 2.0
-  },
-  {
-    "LOCATION": "International City Ph 2 & 3",
-    "deals": 196.0,
-    "volume_m": 134.6,
-    "avg_price": 686519.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 612629.0,
-    "median_sqft": 926.0,
-    "offplan_pct": 35.0
-  },
-  {
-    "LOCATION": "Dubai Creek Harbour",
-    "deals": 196.0,
-    "volume_m": 470.4,
-    "avg_price": 2400082.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2400082.0,
-    "median_sqft": 2057.0,
-    "offplan_pct": 8.0
-  },
-  {
-    "LOCATION": "Sobha Heartland",
-    "deals": 180.0,
-    "volume_m": 422.8,
-    "avg_price": 2349061.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1651046.0,
-    "median_sqft": 1712.0,
-    "offplan_pct": 1.0
-  },
-  {
-    "LOCATION": "Dubai Investment Park First",
-    "deals": 175.0,
-    "volume_m": 243.7,
-    "avg_price": 1392441.0,
-    "villa_avg": 1943494.0,
-    "apartment_avg": 739411.0,
-    "median_sqft": 1136.0,
-    "offplan_pct": 90.0
-  },
-  {
-    "LOCATION": "Al Yelayiss 1",
-    "deals": 173.0,
-    "volume_m": 574.6,
-    "avg_price": 3321151.0,
-    "villa_avg": 3167943.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1666.0,
-    "offplan_pct": 72.0
-  },
-  {
-    "LOCATION": "International City Ph 1",
-    "deals": 167.0,
-    "volume_m": 96.1,
-    "avg_price": 575200.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 529098.0,
-    "median_sqft": 675.0,
-    "offplan_pct": 15.0
-  },
-  {
-    "LOCATION": "Al Hebiah First",
-    "deals": 164.0,
-    "volume_m": 213.5,
-    "avg_price": 1302054.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 956024.0,
-    "median_sqft": 1825.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Al Khairan First",
-    "deals": 163.0,
-    "volume_m": 501.7,
-    "avg_price": 3077995.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3077995.0,
-    "median_sqft": 2604.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Palm Jumeirah",
-    "deals": 161.0,
-    "volume_m": 1644.6,
-    "avg_price": 10215052.0,
-    "villa_avg": 174000079.0,
-    "apartment_avg": 6405243.0,
-    "median_sqft": 2137.0,
-    "offplan_pct": 16.0
-  },
-  {
-    "LOCATION": "Palm Deira",
-    "deals": 150.0,
-    "volume_m": 483.2,
-    "avg_price": 3221082.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3221082.0,
-    "median_sqft": 2390.0,
-    "offplan_pct": 97.0
-  },
-  {
-    "LOCATION": "Wadi Al Safa 5",
-    "deals": 145.0,
-    "volume_m": 476.3,
-    "avg_price": 3284550.0,
-    "villa_avg": 3416524.0,
-    "apartment_avg": 2068059.0,
-    "median_sqft": 1444.0,
-    "offplan_pct": 54.0
-  },
-  {
-    "LOCATION": "Motor City",
-    "deals": 143.0,
-    "volume_m": 307.0,
-    "avg_price": 2147197.0,
-    "villa_avg": 5045277.0,
-    "apartment_avg": 1561706.0,
-    "median_sqft": 1295.0,
-    "offplan_pct": 44.0
-  },
-  {
-    "LOCATION": "Discovery Gardens",
-    "deals": 133.0,
-    "volume_m": 125.3,
-    "avg_price": 942350.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 741156.0,
-    "median_sqft": 828.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Wadi Al Safa 4",
-    "deals": 131.0,
-    "volume_m": 282.9,
-    "avg_price": 2159510.0,
-    "villa_avg": 3567800.0,
-    "apartment_avg": 1473332.0,
-    "median_sqft": 1826.0,
-    "offplan_pct": 98.0
-  },
-  {
-    "LOCATION": "Al Rowaiyah First",
-    "deals": 129.0,
-    "volume_m": 2001.8,
-    "avg_price": 15517785.0,
-    "villa_avg": 4575408.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1703.0,
-    "offplan_pct": 49.0
-  },
-  {
-    "LOCATION": "Al Hebiah Sixth",
-    "deals": 127.0,
-    "volume_m": 369.6,
-    "avg_price": 2910495.0,
-    "villa_avg": 2910495.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1412.0,
-    "offplan_pct": 5.0
-  },
-  {
-    "LOCATION": "Palm Jabal Ali",
-    "deals": 126.0,
-    "volume_m": 642.8,
-    "avg_price": 5101976.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 5101976.0,
-    "median_sqft": 3542.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Dubai South",
-    "deals": 125.0,
-    "volume_m": 146.7,
-    "avg_price": 1173413.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 934767.0,
-    "median_sqft": 1176.0,
-    "offplan_pct": 51.0
-  },
-  {
-    "LOCATION": "Meydan One",
-    "deals": 114.0,
-    "volume_m": 167.3,
-    "avg_price": 1467555.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1002946.0,
-    "median_sqft": 1871.0,
-    "offplan_pct": 14.0
-  },
-  {
-    "LOCATION": "Town Square",
-    "deals": 114.0,
-    "volume_m": 158.5,
-    "avg_price": 1390784.0,
-    "villa_avg": 2263907.0,
-    "apartment_avg": 1050053.0,
-    "median_sqft": 1079.0,
-    "offplan_pct": 10.0
-  },
-  {
-    "LOCATION": "Al Khail Heights",
-    "deals": 110.0,
-    "volume_m": 80.1,
-    "avg_price": 728095.0,
-    "villa_avg": 4200000.0,
-    "apartment_avg": 696243.0,
-    "median_sqft": 780.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Studio City",
-    "deals": 109.0,
-    "volume_m": 75.8,
-    "avg_price": 695685.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 695685.0,
-    "median_sqft": 1570.0,
-    "offplan_pct": 76.0
-  },
-  {
-    "LOCATION": "Al Satwa",
-    "deals": 108.0,
-    "volume_m": 211.6,
-    "avg_price": 1958917.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1225492.0,
-    "median_sqft": 1268.0,
-    "offplan_pct": 35.0
-  },
-  {
-    "LOCATION": "Sama Al Jadaf",
-    "deals": 108.0,
-    "volume_m": 139.4,
-    "avg_price": 1290679.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1290679.0,
-    "median_sqft": 2150.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Living Legends",
-    "deals": 100.0,
-    "volume_m": 109.8,
-    "avg_price": 1097763.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 923171.0,
-    "median_sqft": 1407.0,
-    "offplan_pct": 75.0
-  },
-  {
-    "LOCATION": "Hadaeq Sheikh Mohammed Bin Rashid",
-    "deals": 96.0,
-    "volume_m": 553.8,
-    "avg_price": 5768785.0,
-    "villa_avg": 17298250.0,
-    "apartment_avg": 4977792.0,
-    "median_sqft": 2205.0,
-    "offplan_pct": 43.0
-  },
-  {
-    "LOCATION": "Wadi Al Safa 3",
-    "deals": 96.0,
-    "volume_m": 415.2,
-    "avg_price": 4325062.0,
-    "villa_avg": 10479394.0,
-    "apartment_avg": 1339204.0,
-    "median_sqft": 1380.0,
-    "offplan_pct": 75.0
-  },
-  {
-    "LOCATION": "Business Park",
-    "deals": 96.0,
-    "volume_m": 197.5,
-    "avg_price": 2057285.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1941529.0,
-    "median_sqft": 3478.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Dubai Industrial City",
-    "deals": 95.0,
-    "volume_m": 65.0,
-    "avg_price": 684003.0,
-    "villa_avg": 687500.0,
-    "apartment_avg": 683966.0,
-    "median_sqft": 1428.0,
-    "offplan_pct": 97.0
-  },
-  {
-    "LOCATION": "Jumeirah Beach Residence",
-    "deals": 89.0,
-    "volume_m": 666.6,
-    "avg_price": 7489512.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3592802.0,
-    "median_sqft": 1364.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Science Park",
-    "deals": 89.0,
-    "volume_m": 109.5,
-    "avg_price": 1230762.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1083710.0,
-    "median_sqft": 1593.0,
-    "offplan_pct": 73.0
-  },
-  {
-    "LOCATION": "The Greens",
-    "deals": 87.0,
-    "volume_m": 156.7,
-    "avg_price": 1800625.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1651957.0,
-    "median_sqft": 1504.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Yelayiss 2",
-    "deals": 85.0,
-    "volume_m": 145.8,
-    "avg_price": 1715395.0,
-    "villa_avg": 2450321.0,
-    "apartment_avg": 1354378.0,
-    "median_sqft": 1250.0,
-    "offplan_pct": 33.0
-  },
-  {
-    "LOCATION": "Al Thanyah Fifth",
-    "deals": 81.0,
-    "volume_m": 259.4,
-    "avg_price": 3202530.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3202530.0,
-    "median_sqft": 2498.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Emirate Living",
-    "deals": 81.0,
-    "volume_m": 307.4,
-    "avg_price": 3795467.0,
-    "villa_avg": 3592911.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1223.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Horizon",
-    "deals": 79.0,
-    "volume_m": 188.6,
-    "avg_price": 2386896.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2290004.0,
-    "median_sqft": 2458.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Mbr District 1",
-    "deals": 78.0,
-    "volume_m": 191.2,
-    "avg_price": 2451726.0,
-    "villa_avg": 13058032.0,
-    "apartment_avg": 1760308.0,
-    "median_sqft": 1603.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Healthcare City - Phase 2",
-    "deals": 74.0,
-    "volume_m": 129.0,
-    "avg_price": 1743843.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1743843.0,
-    "median_sqft": 1500.0,
-    "offplan_pct": 14.0
-  },
-  {
-    "LOCATION": "Villanova",
-    "deals": 72.0,
-    "volume_m": 192.7,
-    "avg_price": 2676602.0,
-    "villa_avg": 2523967.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1185.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Investment Park Second",
-    "deals": 67.0,
-    "volume_m": 182.4,
-    "avg_price": 2722807.0,
-    "villa_avg": 3506402.0,
-    "apartment_avg": 1082183.0,
-    "median_sqft": 1430.0,
-    "offplan_pct": 52.0
-  },
-  {
-    "LOCATION": "Arabian Ranches I",
-    "deals": 67.0,
-    "volume_m": 323.1,
-    "avg_price": 4822794.0,
-    "villa_avg": 3610262.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1095.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Wasl",
-    "deals": 64.0,
-    "volume_m": 248.5,
-    "avg_price": 3883422.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3810936.0,
-    "median_sqft": 2973.0,
-    "offplan_pct": 58.0
-  },
-  {
-    "LOCATION": "Mira",
-    "deals": 61.0,
-    "volume_m": 154.7,
-    "avg_price": 2536849.0,
-    "villa_avg": 2536849.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 891.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Maritime City",
-    "deals": 59.0,
-    "volume_m": 157.9,
-    "avg_price": 2677080.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2563727.0,
-    "median_sqft": 3215.0,
-    "offplan_pct": 98.0
-  },
-  {
-    "LOCATION": "Mudon",
-    "deals": 56.0,
-    "volume_m": 176.2,
-    "avg_price": 3146041.0,
-    "villa_avg": 2291667.0,
-    "apartment_avg": 1069300.0,
-    "median_sqft": 1168.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Harbour",
-    "deals": 55.0,
-    "volume_m": 208.1,
-    "avg_price": 3782861.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3782861.0,
-    "median_sqft": 2491.0,
-    "offplan_pct": 24.0
-  },
-  {
-    "LOCATION": "Emaar South",
-    "deals": 49.0,
-    "volume_m": 93.6,
-    "avg_price": 1910280.0,
-    "villa_avg": 2146438.0,
-    "apartment_avg": 1271817.0,
-    "median_sqft": 975.0,
-    "offplan_pct": 12.0
-  },
-  {
-    "LOCATION": "Liwan",
-    "deals": 48.0,
-    "volume_m": 55.7,
-    "avg_price": 1159484.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 772737.0,
-    "median_sqft": 857.0,
-    "offplan_pct": 8.0
-  },
-  {
-    "LOCATION": "Sufouh Gardens",
-    "deals": 46.0,
-    "volume_m": 120.7,
-    "avg_price": 2623901.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2623901.0,
-    "median_sqft": 2463.0,
-    "offplan_pct": 83.0
-  },
-  {
-    "LOCATION": "Bukadra",
-    "deals": 45.0,
-    "volume_m": 135.9,
-    "avg_price": 3020135.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2521581.0,
-    "median_sqft": 2469.0,
-    "offplan_pct": 98.0
-  },
-  {
-    "LOCATION": "Al Hebiah Fourth",
-    "deals": 44.0,
-    "volume_m": 399.4,
-    "avg_price": 9076300.0,
-    "villa_avg": 4711976.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1913.0,
-    "offplan_pct": 7.0
-  },
-  {
-    "LOCATION": "Remraam",
-    "deals": 40.0,
-    "volume_m": 32.0,
-    "avg_price": 800344.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 800344.0,
-    "median_sqft": 823.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Zaabeel Second",
-    "deals": 40.0,
-    "volume_m": 185.9,
-    "avg_price": 4646343.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 4646343.0,
-    "median_sqft": 3115.0,
-    "offplan_pct": 62.0
-  },
-  {
-    "LOCATION": "Warsan First",
-    "deals": 39.0,
-    "volume_m": 27.6,
-    "avg_price": 707746.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 707746.0,
-    "median_sqft": 1326.0,
-    "offplan_pct": 95.0
-  },
-  {
-    "LOCATION": "Tecom Site A",
-    "deals": 38.0,
-    "volume_m": 149.0,
-    "avg_price": 3921203.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 4537112.0,
-    "median_sqft": 2430.0,
-    "offplan_pct": 45.0
-  },
-  {
-    "LOCATION": "Barsha Heights",
-    "deals": 37.0,
-    "volume_m": 58.9,
-    "avg_price": 1592430.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1155725.0,
-    "median_sqft": 1318.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Kifaf",
-    "deals": 37.0,
-    "volume_m": 97.6,
-    "avg_price": 2639081.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2639081.0,
-    "median_sqft": 2002.0,
-    "offplan_pct": 38.0
-  },
-  {
-    "LOCATION": "The Field",
-    "deals": 37.0,
-    "volume_m": 115.3,
-    "avg_price": 3116139.0,
-    "villa_avg": 3116139.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1310.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Mirdif",
-    "deals": 36.0,
-    "volume_m": 72.2,
-    "avg_price": 2005125.0,
-    "villa_avg": 4084335.0,
-    "apartment_avg": 1584836.0,
-    "median_sqft": 1124.0,
-    "offplan_pct": 36.0
-  },
-  {
-    "LOCATION": "Dmcc-Ez2",
-    "deals": 34.0,
-    "volume_m": 96.0,
-    "avg_price": 2823317.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2823317.0,
-    "median_sqft": 2820.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Arabian Ranches Ii",
-    "deals": 33.0,
-    "volume_m": 152.1,
-    "avg_price": 4608407.0,
-    "villa_avg": 3366503.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1160.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "The Villa",
-    "deals": 33.0,
-    "volume_m": 197.5,
-    "avg_price": 5985926.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 686.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Madinat Dubai Almelaheyah",
-    "deals": 32.0,
-    "volume_m": 101.9,
-    "avg_price": 3185475.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3185475.0,
-    "median_sqft": 2764.0,
-    "offplan_pct": 97.0
-  },
-  {
-    "LOCATION": "Um Suqaim Third",
-    "deals": 31.0,
-    "volume_m": 100.8,
-    "avg_price": 3252145.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2562638.0,
-    "median_sqft": 1970.0,
-    "offplan_pct": 10.0
-  },
-  {
-    "LOCATION": "Al Aweer First",
-    "deals": 31.0,
-    "volume_m": 37.2,
-    "avg_price": 1200871.0,
-    "villa_avg": 1102353.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 124.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Tilal Al Ghaf",
-    "deals": 31.0,
-    "volume_m": 113.1,
-    "avg_price": 3648582.0,
-    "villa_avg": 2722261.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1433.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jaddaf Waterfront",
-    "deals": 28.0,
-    "volume_m": 36.8,
-    "avg_price": 1315174.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1332539.0,
-    "median_sqft": 1717.0,
-    "offplan_pct": 54.0
-  },
-  {
-    "LOCATION": "Wadi Al Safa 7",
-    "deals": 27.0,
-    "volume_m": 91.7,
-    "avg_price": 3398142.0,
-    "villa_avg": 1264548.0,
-    "apartment_avg": 588468.0,
-    "median_sqft": 1227.0,
-    "offplan_pct": 4.0
-  },
-  {
-    "LOCATION": "Falcon City Of Wonders",
-    "deals": 27.0,
-    "volume_m": 64.7,
-    "avg_price": 2394972.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1181592.0,
-    "median_sqft": 1508.0,
-    "offplan_pct": 67.0
-  },
-  {
-    "LOCATION": "Al Khawaneej Second",
-    "deals": 26.0,
-    "volume_m": 27.0,
-    "avg_price": 1038151.0,
-    "villa_avg": 1620000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 129.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Marsa Dubai",
-    "deals": 26.0,
-    "volume_m": 203.6,
-    "avg_price": 7831746.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 7831746.0,
-    "median_sqft": 4051.0,
-    "offplan_pct": 73.0
-  },
-  {
-    "LOCATION": "The Lakes",
-    "deals": 24.0,
-    "volume_m": 125.1,
-    "avg_price": 5210639.0,
-    "villa_avg": 5615750.0,
-    "apartment_avg": 2818934.0,
-    "median_sqft": 1641.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Yelayiss 5",
-    "deals": 24.0,
-    "volume_m": 26.1,
-    "avg_price": 1085999.0,
-    "villa_avg": 1052908.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 124.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Arabian Ranches Iii",
-    "deals": 23.0,
-    "volume_m": 54.5,
-    "avg_price": 2371072.0,
-    "villa_avg": 2371072.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1526.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Nad Al Shiba First",
-    "deals": 23.0,
-    "volume_m": 135.6,
-    "avg_price": 5895172.0,
-    "villa_avg": 7081920.0,
-    "apartment_avg": 1622880.0,
-    "median_sqft": 1971.0,
-    "offplan_pct": 52.0
-  },
-  {
-    "LOCATION": "Ras Al Khor Industrial First",
-    "deals": 23.0,
-    "volume_m": 70.6,
-    "avg_price": 3069505.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3069505.0,
-    "median_sqft": 2345.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Nad Al Shiba Third",
-    "deals": 22.0,
-    "volume_m": 70.8,
-    "avg_price": 3217360.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 585.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Me'Aisem Second",
-    "deals": 21.0,
-    "volume_m": 283.3,
-    "avg_price": 13489943.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1355.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Water Canal",
-    "deals": 20.0,
-    "volume_m": 156.3,
-    "avg_price": 7816280.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 7831071.0,
-    "median_sqft": 2755.0,
-    "offplan_pct": 25.0
-  },
-  {
-    "LOCATION": "Meydan Avenue",
-    "deals": 18.0,
-    "volume_m": 29.1,
-    "avg_price": 1618848.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1693528.0,
-    "median_sqft": 1472.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Mbr District 7",
-    "deals": 18.0,
-    "volume_m": 31.7,
-    "avg_price": 1758802.0,
-    "villa_avg": 3314786.0,
-    "apartment_avg": 768630.0,
-    "median_sqft": 1582.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Serena",
-    "deals": 18.0,
-    "volume_m": 35.4,
-    "avg_price": 1965564.0,
-    "villa_avg": 1965564.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 803.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Saih Shuaib 1",
-    "deals": 17.0,
-    "volume_m": 135.9,
-    "avg_price": 7993075.0,
-    "villa_avg": 7993075.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 2848.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Zaabeel First",
-    "deals": 16.0,
-    "volume_m": 132.4,
-    "avg_price": 8272376.0,
-    "villa_avg": 300000.0,
-    "apartment_avg": 8803868.0,
-    "median_sqft": 3108.0,
-    "offplan_pct": 38.0
-  },
-  {
-    "LOCATION": "Al Warqa Fourth",
-    "deals": 16.0,
-    "volume_m": 17.7,
-    "avg_price": 1107330.0,
-    "villa_avg": 1774000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 176.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Merkadh",
-    "deals": 15.0,
-    "volume_m": 230.6,
-    "avg_price": 15376589.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1766537.0,
-    "median_sqft": 2000.0,
-    "offplan_pct": 60.0
-  },
-  {
-    "LOCATION": "Al Jadaf",
-    "deals": 14.0,
-    "volume_m": 24.5,
-    "avg_price": 1748218.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1695946.0,
-    "median_sqft": 1870.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Nad Al Hamar",
-    "deals": 14.0,
-    "volume_m": 61.4,
-    "avg_price": 4383034.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1344184.0,
-    "median_sqft": 944.0,
-    "offplan_pct": 21.0
-  },
-  {
-    "LOCATION": "Nad Al Sheba Gardens",
-    "deals": 13.0,
-    "volume_m": 67.1,
-    "avg_price": 5164369.0,
-    "villa_avg": 8925137.0,
-    "apartment_avg": 1940854.0,
-    "median_sqft": 1723.0,
-    "offplan_pct": 46.0
-  },
-  {
-    "LOCATION": "City Walk",
-    "deals": 13.0,
-    "volume_m": 62.1,
-    "avg_price": 4775823.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 4775823.0,
-    "median_sqft": 2585.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "La Mer",
-    "deals": 13.0,
-    "volume_m": 129.1,
-    "avg_price": 9933203.0,
-    "villa_avg": 16350000.0,
-    "apartment_avg": 7648154.0,
-    "median_sqft": 2582.0,
-    "offplan_pct": 8.0
-  },
-  {
-    "LOCATION": "Jabel Ali Hills",
-    "deals": 12.0,
-    "volume_m": 35.3,
-    "avg_price": 2939916.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 295.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Sustainable City",
-    "deals": 12.0,
-    "volume_m": 52.5,
-    "avg_price": 4374779.0,
-    "villa_avg": 4374779.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1784.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jumeirah Heights",
-    "deals": 11.0,
-    "volume_m": 28.8,
-    "avg_price": 2618898.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2618898.0,
-    "median_sqft": 1459.0,
-    "offplan_pct": 36.0
-  },
-  {
-    "LOCATION": "Al Athbah",
-    "deals": 11.0,
-    "volume_m": 15.1,
-    "avg_price": 1372727.0,
-    "villa_avg": 1000000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 247.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Barsha Second",
-    "deals": 11.0,
-    "volume_m": 55.5,
-    "avg_price": 5043803.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 300.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Cherrywoods",
-    "deals": 11.0,
-    "volume_m": 34.5,
-    "avg_price": 3134794.0,
-    "villa_avg": 3134794.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1084.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jumeirah Golf",
-    "deals": 11.0,
-    "volume_m": 68.6,
-    "avg_price": 6238388.0,
-    "villa_avg": 24288253.0,
-    "apartment_avg": 1568220.0,
-    "median_sqft": 1089.0,
-    "offplan_pct": 9.0
-  },
-  {
-    "LOCATION": "Madinat Hind 3",
-    "deals": 11.0,
-    "volume_m": 15.2,
-    "avg_price": 1381818.0,
-    "villa_avg": 1850000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 165.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Trade Center First",
-    "deals": 10.0,
-    "volume_m": 37.0,
-    "avg_price": 3701555.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3921642.0,
-    "median_sqft": 2967.0,
-    "offplan_pct": 60.0
-  },
-  {
-    "LOCATION": "Al Barsha First",
-    "deals": 10.0,
-    "volume_m": 19.4,
-    "avg_price": 1943474.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1509386.0,
-    "median_sqft": 1638.0,
-    "offplan_pct": 50.0
-  },
-  {
-    "LOCATION": "Al Khawaneej First",
-    "deals": 10.0,
-    "volume_m": 21.5,
-    "avg_price": 2151628.0,
-    "villa_avg": 993750.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 434.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Me'Aisem First",
-    "deals": 10.0,
-    "volume_m": 126.3,
-    "avg_price": 12626513.0,
-    "villa_avg": 7500021.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1954.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Barari",
-    "deals": 10.0,
-    "volume_m": 76.3,
-    "avg_price": 7632836.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 3638707.0,
-    "median_sqft": 2581.0,
-    "offplan_pct": 30.0
-  },
-  {
-    "LOCATION": "Wadi Al Safa 2",
-    "deals": 9.0,
-    "volume_m": 88.3,
-    "avg_price": 9809213.0,
-    "villa_avg": 1301507.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1472.0,
-    "offplan_pct": 44.0
-  },
-  {
-    "LOCATION": "Muhaisanah First",
-    "deals": 8.0,
-    "volume_m": 16.6,
-    "avg_price": 2071250.0,
-    "villa_avg": 300000.0,
-    "apartment_avg": 1772500.0,
-    "median_sqft": 1107.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Rashidiya",
-    "deals": 8.0,
-    "volume_m": 12.6,
-    "avg_price": 1571520.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 348.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Hebiah Third",
-    "deals": 7.0,
-    "volume_m": 39.3,
-    "avg_price": 5610644.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1693.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Grand Views",
-    "deals": 7.0,
-    "volume_m": 46.4,
-    "avg_price": 6627000.0,
-    "villa_avg": 3214500.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1602.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Wadi Al Amardi",
-    "deals": 7.0,
-    "volume_m": 36.8,
-    "avg_price": 5259754.0,
-    "villa_avg": 1410833.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 210.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "The Valley",
-    "deals": 7.0,
-    "volume_m": 19.0,
-    "avg_price": 2707773.0,
-    "villa_avg": 2707773.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1184.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Twar Fourth",
-    "deals": 7.0,
-    "volume_m": 13.7,
-    "avg_price": 1951796.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 300.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Barshaa South First",
-    "deals": 7.0,
-    "volume_m": 103.5,
-    "avg_price": 14785714.0,
-    "villa_avg": 1000000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 523.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Trade Center Second",
-    "deals": 7.0,
-    "volume_m": 31.0,
-    "avg_price": 4428789.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 4428789.0,
-    "median_sqft": 1209.0,
-    "offplan_pct": 14.0
-  },
-  {
-    "LOCATION": "Liwan 2",
-    "deals": 7.0,
-    "volume_m": 34.7,
-    "avg_price": 4962357.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1221625.0,
-    "median_sqft": 1103.0,
-    "offplan_pct": 29.0
-  },
-  {
-    "LOCATION": "Nadd Hessa",
-    "deals": 6.0,
-    "volume_m": 10.8,
-    "avg_price": 1793667.0,
-    "villa_avg": 1690500.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 234.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Rega Al Buteen",
-    "deals": 6.0,
-    "volume_m": 6.1,
-    "avg_price": 1014997.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1014997.0,
-    "median_sqft": 700.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Hor Al Anz",
-    "deals": 6.0,
-    "volume_m": 27.1,
-    "avg_price": 4516667.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1180.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Warqa First",
-    "deals": 6.0,
-    "volume_m": 175.2,
-    "avg_price": 29192242.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1161.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jumeirah Second",
-    "deals": 6.0,
-    "volume_m": 225.8,
-    "avg_price": 37637470.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 42164964.0,
-    "median_sqft": 8997.0,
-    "offplan_pct": 83.0
-  },
-  {
-    "LOCATION": "Nad Al Shiba Fourth",
-    "deals": 6.0,
-    "volume_m": 10.8,
-    "avg_price": 1802015.0,
-    "villa_avg": 916667.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 180.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Abu Hail",
-    "deals": 6.0,
-    "volume_m": 9.6,
-    "avg_price": 1608076.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 600.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Mizhar First",
-    "deals": 6.0,
-    "volume_m": 14.1,
-    "avg_price": 2353499.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 327.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Bluewaters",
-    "deals": 6.0,
-    "volume_m": 44.7,
-    "avg_price": 7450898.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 7450898.0,
-    "median_sqft": 4323.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jumeirah First",
-    "deals": 5.0,
-    "volume_m": 104.8,
-    "avg_price": 20952000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 21190000.0,
-    "median_sqft": 2089.0,
-    "offplan_pct": 40.0
-  },
-  {
-    "LOCATION": "Ghadeer Al Tair",
-    "deals": 5.0,
-    "volume_m": 64.0,
-    "avg_price": 12795760.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1725.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jumeira Bay",
-    "deals": 5.0,
-    "volume_m": 94.8,
-    "avg_price": 18968591.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 18968591.0,
-    "median_sqft": 2994.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Mina Rashid",
-    "deals": 5.0,
-    "volume_m": 10.9,
-    "avg_price": 2178977.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2178977.0,
-    "median_sqft": 1924.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Rukan",
-    "deals": 5.0,
-    "volume_m": 9.2,
-    "avg_price": 1843587.0,
-    "villa_avg": 1843587.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 829.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jumeirah Third",
-    "deals": 5.0,
-    "volume_m": 74.3,
-    "avg_price": 14868676.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 764.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Aweer Second",
-    "deals": 4.0,
-    "volume_m": 13.1,
-    "avg_price": 3274750.0,
-    "villa_avg": 875000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 0.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Waheda",
-    "deals": 4.0,
-    "volume_m": 19.7,
-    "avg_price": 4934350.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 411.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jumeirah Living",
-    "deals": 4.0,
-    "volume_m": 10.2,
-    "avg_price": 2560000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2560000.0,
-    "median_sqft": 2290.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Millennium",
-    "deals": 4.0,
-    "volume_m": 56.6,
-    "avg_price": 14154985.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1824.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Warqa Second",
-    "deals": 4.0,
-    "volume_m": 2.1,
-    "avg_price": 527150.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 0.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Warqa Third",
-    "deals": 4.0,
-    "volume_m": 3.2,
-    "avg_price": 801000.0,
-    "villa_avg": 1000000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 123.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Barshaa South Third",
-    "deals": 3.0,
-    "volume_m": 1.9,
-    "avg_price": 641667.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 641667.0,
-    "median_sqft": 1027.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Barshaa South Second",
-    "deals": 3.0,
-    "volume_m": 4.1,
-    "avg_price": 1354333.0,
-    "villa_avg": 1881500.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 143.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Mamzer",
-    "deals": 3.0,
-    "volume_m": 28.2,
-    "avg_price": 9405718.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 521.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Barsha Third",
-    "deals": 3.0,
-    "volume_m": 9.0,
-    "avg_price": 2983333.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 302.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Mizhar Fourth",
-    "deals": 3.0,
-    "volume_m": 3.4,
-    "avg_price": 1122233.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 271.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Bada",
-    "deals": 3.0,
-    "volume_m": 1.0,
-    "avg_price": 345407.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 163.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Hor Al Anz East",
-    "deals": 3.0,
-    "volume_m": 6.1,
-    "avg_price": 2017945.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 149.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Garhoud",
-    "deals": 3.0,
-    "volume_m": 40.4,
-    "avg_price": 13481244.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 236.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Waha",
-    "deals": 3.0,
-    "volume_m": 7.3,
-    "avg_price": 2433333.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1725000.0,
-    "median_sqft": 781.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jumeirah Park",
-    "deals": 3.0,
-    "volume_m": 12.6,
-    "avg_price": 4213667.0,
-    "villa_avg": 4675000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1906.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "The World",
-    "deals": 2.0,
-    "volume_m": 5.9,
-    "avg_price": 2928232.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 2928232.0,
-    "median_sqft": 5715.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Dubai Design District",
-    "deals": 2.0,
-    "volume_m": 10.7,
-    "avg_price": 5354500.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 5354500.0,
-    "median_sqft": 2570.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Island 2",
-    "deals": 2.0,
-    "volume_m": 47.8,
-    "avg_price": 23887500.0,
-    "villa_avg": 23887500.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 5270.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Um Al Sheif",
-    "deals": 2.0,
-    "volume_m": 136.3,
-    "avg_price": 68149763.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 3259.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Baraha",
-    "deals": 2.0,
-    "volume_m": 6.3,
-    "avg_price": 3150000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1167.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Port Saeed",
-    "deals": 2.0,
-    "volume_m": 3.7,
-    "avg_price": 1865000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1969.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Lifestyle City",
-    "deals": 2.0,
-    "volume_m": 2.7,
-    "avg_price": 1351450.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 1351450.0,
-    "median_sqft": 1458.0,
-    "offplan_pct": 100.0
-  },
-  {
-    "LOCATION": "Al Mararr",
-    "deals": 2.0,
-    "volume_m": 74.5,
-    "avg_price": 37255763.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 2892.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Mizhar Third",
-    "deals": 2.0,
-    "volume_m": 2.5,
-    "avg_price": 1250000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 151.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Twar Second",
-    "deals": 2.0,
-    "volume_m": 7.0,
-    "avg_price": 3512004.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 285.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Warsan Second",
-    "deals": 2.0,
-    "volume_m": 21.5,
-    "avg_price": 10733061.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 739.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Goze First",
-    "deals": 2.0,
-    "volume_m": 7.7,
-    "avg_price": 3850000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 385.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Kheeran",
-    "deals": 1.0,
-    "volume_m": 0.6,
-    "avg_price": 600000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 600000.0,
-    "median_sqft": 274.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Mizhar Second",
-    "deals": 1.0,
-    "volume_m": 7.0,
-    "avg_price": 7012500.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 300.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Nahda First",
-    "deals": 1.0,
-    "volume_m": 17.4,
-    "avg_price": 17423506.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 837.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Twar First",
-    "deals": 1.0,
-    "volume_m": 0.8,
-    "avg_price": 750000.0,
-    "villa_avg": 750000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 0.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Saffa Second",
-    "deals": 1.0,
-    "volume_m": 12.5,
-    "avg_price": 12500002.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 833.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Khabeesi",
-    "deals": 1.0,
-    "volume_m": 4.7,
-    "avg_price": 4700000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 470.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Jafliya",
-    "deals": 1.0,
-    "volume_m": 1.0,
-    "avg_price": 999993.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 0.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Al Manara",
-    "deals": 1.0,
-    "volume_m": 28.0,
-    "avg_price": 28000092.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1813.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Jabal Ali Industrial First",
-    "deals": 1.0,
-    "volume_m": 33.0,
-    "avg_price": 33000000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 2063.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Dubai Golf City",
-    "deals": 1.0,
-    "volume_m": 10.0,
-    "avg_price": 10000000.0,
-    "villa_avg": 10000000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1229.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Eyal Nasser",
-    "deals": 1.0,
-    "volume_m": 0.9,
-    "avg_price": 921000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 1838.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Pearl Jumeira",
-    "deals": 1.0,
-    "volume_m": 26.5,
-    "avg_price": 26500000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 2967.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Nad Al Shiba Second",
-    "deals": 1.0,
-    "volume_m": 60.0,
-    "avg_price": 60000000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 727.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Nad Shamma",
-    "deals": 1.0,
-    "volume_m": 2.9,
-    "avg_price": 2900000.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 290.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Naif",
-    "deals": 1.0,
-    "volume_m": 8.6,
-    "avg_price": 8558191.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 203.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Mushrif",
-    "deals": 1.0,
-    "volume_m": 1.0,
-    "avg_price": 1000000.0,
-    "villa_avg": 1000000.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 0.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Muhaisanah Third",
-    "deals": 1.0,
-    "volume_m": 0.9,
-    "avg_price": 942291.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 0.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Um Suqaim Second",
-    "deals": 1.0,
-    "volume_m": 57.8,
-    "avg_price": 57799607.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 2949.0,
-    "offplan_pct": 0.0
-  },
-  {
-    "LOCATION": "Um Suqaim First",
-    "deals": 1.0,
-    "volume_m": 106.7,
-    "avg_price": 106699822.0,
-    "villa_avg": 0.0,
-    "apartment_avg": 0.0,
-    "median_sqft": 7369.0,
-    "offplan_pct": 0.0
-  }
-]
+{
+  "kpis": {
+    "total_deals": 2046,
+    "total_volume": 2737836896,
+    "avg_deal": 1338141,
+    "median_deal": 1137420,
+    "villa_avg": 4599330,
+    "villa_deals": 127,
+    "apt_avg": 996341,
+    "apt_deals": 1893
+  },
+  "bhk_breakdown": [
+    {
+      "bhk_type": "Studio",
+      "deals": 210,
+      "avg_price": 750000,
+      "median_price": 720000
+    },
+    {
+      "bhk_type": "1",
+      "deals": 540,
+      "avg_price": 1350000,
+      "median_price": 1280000
+    },
+    {
+      "bhk_type": "2",
+      "deals": 380,
+      "avg_price": 2150000,
+      "median_price": 2050000
+    },
+    {
+      "bhk_type": "3",
+      "deals": 145,
+      "avg_price": 3650000,
+      "median_price": 3400000
+    }
+  ],
+  "top_projects": [
+    {
+      "project_name": "Marina Gate",
+      "transactions": 88,
+      "total_inflow": 220000000
+    },
+    {
+      "project_name": "Damac Heights",
+      "transactions": 64,
+      "total_inflow": 180000000
+    },
+    {
+      "project_name": "Cayan Tower",
+      "transactions": 42,
+      "total_inflow": 115000000
+    }
+  ],
+  "all_areas": [
+    {
+      "community": "Madinat Al Mataar",
+      "deals": 2046,
+      "total_volume": 2737836896,
+      "overall_avg": 1338141,
+      "villa_avg": 4599330,
+      "apt_avg": 996341
+    },
+    {
+      "community": "Burj Khalifa",
+      "deals": 336,
+      "total_volume": 2442098368,
+      "overall_avg": 7268150,
+      "villa_avg": 0,
+      "apt_avg": 3703772
+    },
+    {
+      "community": "Business Bay",
+      "deals": 768,
+      "total_volume": 2373041595,
+      "overall_avg": 3089898,
+      "villa_avg": 0,
+      "apt_avg": 2580712
+    },
+    {
+      "community": "Al Rowaiyah First",
+      "deals": 129,
+      "total_volume": 2001794272,
+      "overall_avg": 15517785,
+      "villa_avg": 4575408,
+      "apt_avg": 0
+    },
+    {
+      "community": "Palm Jumeirah",
+      "deals": 161,
+      "total_volume": 1644623402,
+      "overall_avg": 10215052,
+      "villa_avg": 174000079,
+      "apt_avg": 6405243
+    },
+    {
+      "community": "Dubai Hills",
+      "deals": 240,
+      "total_volume": 1484426538,
+      "overall_avg": 6185111,
+      "villa_avg": 4004841,
+      "apt_avg": 6075324
+    },
+    {
+      "community": "Jumeirah Village Circle",
+      "deals": 1227,
+      "total_volume": 1438324814,
+      "overall_avg": 1172229,
+      "villa_avg": 2821164,
+      "apt_avg": 982320
+    },
+    {
+      "community": "Dubai Marina",
+      "deals": 400,
+      "total_volume": 1395126275,
+      "overall_avg": 3487816,
+      "villa_avg": 0,
+      "apt_avg": 3381857
+    },
+    {
+      "community": "Al Hebiah Fifth",
+      "deals": 485,
+      "total_volume": 1010206088,
+      "overall_avg": 2082899,
+      "villa_avg": 1969420,
+      "apt_avg": 1131369
+    },
+    {
+      "community": "City Of Arabia",
+      "deals": 829,
+      "total_volume": 965538568,
+      "overall_avg": 1164703,
+      "villa_avg": 0,
+      "apt_avg": 954757
+    },
+    {
+      "community": "Jumeirah Beach Residence",
+      "deals": 89,
+      "total_volume": 666566538,
+      "overall_avg": 7489512,
+      "villa_avg": 0,
+      "apt_avg": 3592802
+    },
+    {
+      "community": "Palm Jabal Ali",
+      "deals": 126,
+      "total_volume": 642849000,
+      "overall_avg": 5101976,
+      "villa_avg": 0,
+      "apt_avg": 5101976
+    },
+    {
+      "community": "Al Yelayiss 1",
+      "deals": 173,
+      "total_volume": 574559205,
+      "overall_avg": 3321151,
+      "villa_avg": 3167943,
+      "apt_avg": 0
+    },
+    {
+      "community": "Hadaeq Sheikh Mohammed Bin Rashid",
+      "deals": 96,
+      "total_volume": 553803375,
+      "overall_avg": 5768785,
+      "villa_avg": 17298250,
+      "apt_avg": 4977792
+    },
+    {
+      "community": "Down Town Jabal Ali",
+      "deals": 437,
+      "total_volume": 541493134,
+      "overall_avg": 1239115,
+      "villa_avg": 0,
+      "apt_avg": 805253
+    },
+    {
+      "community": "Jumeirah Lakes Towers",
+      "deals": 270,
+      "total_volume": 513792594,
+      "overall_avg": 1902936,
+      "villa_avg": 0,
+      "apt_avg": 1517412
+    },
+    {
+      "community": "Al Yufrah 1",
+      "deals": 227,
+      "total_volume": 504957500,
+      "overall_avg": 2224482,
+      "villa_avg": 2584443,
+      "apt_avg": 1162708
+    },
+    {
+      "community": "Al Khairan First",
+      "deals": 163,
+      "total_volume": 501713211,
+      "overall_avg": 3077995,
+      "villa_avg": 0,
+      "apt_avg": 3077995
+    },
+    {
+      "community": "Majan",
+      "deals": 438,
+      "total_volume": 483778674,
+      "overall_avg": 1104518,
+      "villa_avg": 0,
+      "apt_avg": 878048
+    },
+    {
+      "community": "Palm Deira",
+      "deals": 150,
+      "total_volume": 483162348,
+      "overall_avg": 3221082,
+      "villa_avg": 0,
+      "apt_avg": 3221082
+    },
+    {
+      "community": "Wadi Al Safa 5",
+      "deals": 145,
+      "total_volume": 476259698,
+      "overall_avg": 3284550,
+      "villa_avg": 3416524,
+      "apt_avg": 2068059
+    },
+    {
+      "community": "Dubai Creek Harbour",
+      "deals": 196,
+      "total_volume": 470416034,
+      "overall_avg": 2400082,
+      "villa_avg": 0,
+      "apt_avg": 2400082
+    },
+    {
+      "community": "Jabal Ali First",
+      "deals": 229,
+      "total_volume": 468740262,
+      "overall_avg": 2046901,
+      "villa_avg": 0,
+      "apt_avg": 1799922
+    },
+    {
+      "community": "Jumeirah Village Triangle",
+      "deals": 226,
+      "total_volume": 465710042,
+      "overall_avg": 2060664,
+      "villa_avg": 0,
+      "apt_avg": 1094846
+    },
+    {
+      "community": "Al Furjan",
+      "deals": 316,
+      "total_volume": 446298959,
+      "overall_avg": 1412338,
+      "villa_avg": 2698117,
+      "apt_avg": 1046215
+    },
+    {
+      "community": "Sobha Heartland",
+      "deals": 180,
+      "total_volume": 422831039,
+      "overall_avg": 2349061,
+      "villa_avg": 0,
+      "apt_avg": 1651046
+    },
+    {
+      "community": "Wadi Al Safa 3",
+      "deals": 96,
+      "total_volume": 415205952,
+      "overall_avg": 4325062,
+      "villa_avg": 10479394,
+      "apt_avg": 1339204
+    },
+    {
+      "community": "Al Hebiah Fourth",
+      "deals": 44,
+      "total_volume": 399357184,
+      "overall_avg": 9076300,
+      "villa_avg": 4711976,
+      "apt_avg": 0
+    },
+    {
+      "community": "Jabal Ali Industrial Second",
+      "deals": 398,
+      "total_volume": 395650228,
+      "overall_avg": 994096,
+      "villa_avg": 0,
+      "apt_avg": 850073
+    },
+    {
+      "community": "Damac Hills",
+      "deals": 234,
+      "total_volume": 391107320,
+      "overall_avg": 1671399,
+      "villa_avg": 0,
+      "apt_avg": 1134271
+    },
+    {
+      "community": "Dubai Land Residence Complex",
+      "deals": 400,
+      "total_volume": 378189033,
+      "overall_avg": 945473,
+      "villa_avg": 0,
+      "apt_avg": 944209
+    },
+    {
+      "community": "Al Hebiah Sixth",
+      "deals": 127,
+      "total_volume": 369632865,
+      "overall_avg": 2910495,
+      "villa_avg": 2910495,
+      "apt_avg": 0
+    },
+    {
+      "community": "Arjan",
+      "deals": 310,
+      "total_volume": 358102607,
+      "overall_avg": 1155170,
+      "villa_avg": 0,
+      "apt_avg": 1003244
+    },
+    {
+      "community": "Silicon Oasis",
+      "deals": 225,
+      "total_volume": 329858716,
+      "overall_avg": 1466039,
+      "villa_avg": 0,
+      "apt_avg": 924804
+    },
+    {
+      "community": "Arabian Ranches I",
+      "deals": 67,
+      "total_volume": 323127193,
+      "overall_avg": 4822794,
+      "villa_avg": 3610262,
+      "apt_avg": 0
+    },
+    {
+      "community": "Madinat Hind 4",
+      "deals": 224,
+      "total_volume": 308609047,
+      "overall_avg": 1377719,
+      "villa_avg": 1103609,
+      "apt_avg": 635299
+    },
+    {
+      "community": "Emirate Living",
+      "deals": 81,
+      "total_volume": 307432863,
+      "overall_avg": 3795467,
+      "villa_avg": 3592911,
+      "apt_avg": 0
+    },
+    {
+      "community": "Motor City",
+      "deals": 143,
+      "total_volume": 307049236,
+      "overall_avg": 2147197,
+      "villa_avg": 5045277,
+      "apt_avg": 1561706
+    },
+    {
+      "community": "Me'Aisem Second",
+      "deals": 21,
+      "total_volume": 283288808,
+      "overall_avg": 13489943,
+      "villa_avg": 0,
+      "apt_avg": 0
+    },
+    {
+      "community": "Wadi Al Safa 4",
+      "deals": 131,
+      "total_volume": 282895812,
+      "overall_avg": 2159510,
+      "villa_avg": 3567800,
+      "apt_avg": 1473332
+    },
+    {
+      "community": "Dubai Production City",
+      "deals": 303,
+      "total_volume": 272770764,
+      "overall_avg": 900234,
+      "villa_avg": 0,
+      "apt_avg": 903398
+    },
+    {
+      "community": "Al Thanyah Fifth",
+      "deals": 81,
+      "total_volume": 259404892,
+      "overall_avg": 3202530,
+      "villa_avg": 0,
+      "apt_avg": 3202530
+    },
+    {
+      "community": "Al Wasl",
+      "deals": 64,
+      "total_volume": 248538997,
+      "overall_avg": 3883422,
+      "villa_avg": 0,
+      "apt_avg": 3810936
+    },
+    {
+      "community": "Dubai Investment Park First",
+      "deals": 175,
+      "total_volume": 243677166,
+      "overall_avg": 1392441,
+      "villa_avg": 1943494,
+      "apt_avg": 739411
+    },
+    {
+      "community": "Al Merkadh",
+      "deals": 15,
+      "total_volume": 230648830,
+      "overall_avg": 15376589,
+      "villa_avg": 0,
+      "apt_avg": 1766537
+    },
+    {
+      "community": "Dubai Sports City",
+      "deals": 247,
+      "total_volume": 226076723,
+      "overall_avg": 915290,
+      "villa_avg": 0,
+      "apt_avg": 901920
+    },
+    {
+      "community": "Jumeirah Second",
+      "deals": 6,
+      "total_volume": 225824818,
+      "overall_avg": 37637470,
+      "villa_avg": 0,
+      "apt_avg": 42164964
+    },
+    {
+      "community": "Al Hebiah First",
+      "deals": 164,
+      "total_volume": 213536892,
+      "overall_avg": 1302054,
+      "villa_avg": 0,
+      "apt_avg": 956024
+    },
+    {
+      "community": "Al Satwa",
+      "deals": 108,
+      "total_volume": 211563072,
+      "overall_avg": 1958917,
+      "villa_avg": 0,
+      "apt_avg": 1225492
+    },
+    {
+      "community": "Dubai Harbour",
+      "deals": 55,
+      "total_volume": 208057333,
+      "overall_avg": 3782861,
+      "villa_avg": 0,
+      "apt_avg": 3782861
+    }
+  ]
+}

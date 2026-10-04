@@ -1,0 +1,58 @@
+[
+  {
+    "project_name": "Greenz By Danube",
+    "master_location": "Al Rowaiyah First",
+    "deals": 127,
+    "avg_ticket": 15353297,
+    "total_inflow": 1949900000
+  },
+  {
+    "project_name": "Palm Central Private Residences - Frond N",
+    "master_location": "Palm Jabal Ali",
+    "deals": 126,
+    "avg_ticket": 5101976,
+    "total_inflow": 642800000
+  },
+  {
+    "project_name": "EOME",
+    "master_location": "Palm Jumeirah",
+    "deals": 3,
+    "avg_ticket": 174000079,
+    "total_inflow": 522000000
+  },
+  {
+    "project_name": "Hayat 6",
+    "master_location": "Madinat Al Mataar",
+    "deals": 66,
+    "avg_ticket": 5619091,
+    "total_inflow": 370900000
+  },
+  {
+    "project_name": "Azizi Venice 15",
+    "master_location": "Madinat Al Mataar",
+    "deals": 422,
+    "avg_ticket": 839938,
+    "total_inflow": 354500000
+  },
+  {
+    "project_name": "Golf Fields",
+    "master_location": "Madinat Al Mataar",
+    "deals": 181,
+    "avg_ticket": 1916031,
+    "total_inflow": 346800000
+  },
+  {
+    "project_name": "Lumena Alta by Omniyat",
+    "master_location": "Business Bay",
+    "deals": 13,
+    "avg_ticket": 26448812,
+    "total_inflow": 343800000
+  },
+  {
+    "project_name": "Bugatti Residences by Binghatti",
+    "master_location": "Business Bay",
+    "deals": 10,
+    "avg_ticket": 29649010,
+    "total_inflow": 296500000
+  }
+]

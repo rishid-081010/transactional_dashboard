@@ -1,0 +1,72 @@
+{
+  "kpis": {
+    "total_deals": 14102,
+    "total_volume": 23544638911.84,
+    "avg_deal": 1669596,
+    "median_deal": 1058588,
+    "median_sqft": 1578,
+    "median_space": 1100
+  },
+  "locations": [
+    {
+      "area": "Madinat Al Mataar",
+      "deals": 1893,
+      "avg_ticket": 1500000,
+      "total_inflow": 2839500000
+    },
+    {
+      "area": "Jumeirah Village Circle",
+      "deals": 1166,
+      "avg_ticket": 1500000,
+      "total_inflow": 1749000000
+    },
+    {
+      "area": "City Of Arabia",
+      "deals": 828,
+      "avg_ticket": 1500000,
+      "total_inflow": 1242000000
+    },
+    {
+      "area": "Business Bay",
+      "deals": 583,
+      "avg_ticket": 1500000,
+      "total_inflow": 874500000
+    },
+    {
+      "area": "Majan",
+      "deals": 422,
+      "avg_ticket": 1500000,
+      "total_inflow": 633000000
+    },
+    {
+      "area": "Dubai Land Residence Complex",
+      "deals": 398,
+      "avg_ticket": 1500000,
+      "total_inflow": 597000000
+    },
+    {
+      "area": "Dubai Marina",
+      "deals": 385,
+      "avg_ticket": 1500000,
+      "total_inflow": 577500000
+    },
+    {
+      "area": "Jabal Ali Industrial Second",
+      "deals": 359,
+      "avg_ticket": 1500000,
+      "total_inflow": 538500000
+    },
+    {
+      "area": "Down Town Jabal Ali",
+      "deals": 356,
+      "avg_ticket": 1500000,
+      "total_inflow": 534000000
+    },
+    {
+      "area": "Burj Khalifa",
+      "deals": 331,
+      "avg_ticket": 1500000,
+      "total_inflow": 496500000
+    }
+  ]
+}

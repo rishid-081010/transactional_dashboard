@@ -1,0 +1,74 @@
+{
+  "kpis": {
+    "avg_daily_pace": 1251000000,
+    "avg_daily_deals": 519,
+    "peak_capital": 3200000000,
+    "peak_capital_date": "2026-08-28",
+    "weekday_avg": 1380000000,
+    "weekend_avg": 450000000
+  },
+  "top_days": [
+    {
+      "tx_date": "Aug 27, 2026",
+      "deals": 792,
+      "avg_ticket": "AED 4,300,283",
+      "volume": 1125000000
+    },
+    {
+      "tx_date": "Aug 05, 2026",
+      "deals": 844,
+      "avg_ticket": "AED 3,856,213",
+      "volume": 1125000000
+    },
+    {
+      "tx_date": "Sep 01, 2026",
+      "deals": 559,
+      "avg_ticket": "AED 3,887,030",
+      "volume": 1125000000
+    },
+    {
+      "tx_date": "Aug 06, 2026",
+      "deals": 857,
+      "avg_ticket": "AED 2,512,113",
+      "volume": 1125000000
+    },
+    {
+      "tx_date": "Aug 12, 2026",
+      "deals": 808,
+      "avg_ticket": "AED 2,549,093",
+      "volume": 1125000000
+    }
+  ],
+  "weekly_flow": [
+    {
+      "week_start": "Aug 1 - 2 (W1)",
+      "deals": 52,
+      "volume": 80000000
+    },
+    {
+      "week_start": "Aug 3 - 9 (W2)",
+      "deals": 4024,
+      "volume": 10260000000
+    },
+    {
+      "week_start": "Aug 10 - 16 (W3)",
+      "deals": 3743,
+      "volume": 8020000000
+    },
+    {
+      "week_start": "Aug 17 - 23 (W4)",
+      "deals": 3945,
+      "volume": 8780000000
+    },
+    {
+      "week_start": "Aug 24 - 30 (W5)",
+      "deals": 3121,
+      "volume": 8700000000
+    },
+    {
+      "week_start": "Aug 31 - Sep 3 (W6)",
+      "deals": 2766,
+      "volume": 6680000000
+    }
+  ]
+}

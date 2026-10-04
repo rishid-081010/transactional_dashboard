@@ -1,0 +1,459 @@
+{
+  "total": 17651,
+  "total_volume": 42522782620.52,
+  "avg_price": 2409086,
+  "page": 1,
+  "limit": 50,
+  "data": [
+    {
+      "date_time": "2026-09-03 17:57:58",
+      "community": "Palm Deira",
+      "project": "BEACH WALK RESIDENCES 1",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Ready",
+      "price": 3000001
+    },
+    {
+      "date_time": "2026-09-03 17:57:34",
+      "community": "Al Thanyah Fifth",
+      "project": "ELTIERA VIEWS",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 2075828
+    },
+    {
+      "date_time": "2026-09-03 17:57:20",
+      "community": "Palm Deira",
+      "project": "Floarea Breeze",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1899000
+    },
+    {
+      "date_time": "2026-09-03 17:55:53",
+      "community": "Madinat Al Mataar",
+      "project": "AZIZI VENICE 14",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 585000
+    },
+    {
+      "date_time": "2026-09-03 17:55:18",
+      "community": "Al Wasl",
+      "project": "DAMAC CITY 2",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 2863770
+    },
+    {
+      "date_time": "2026-09-03 17:53:24",
+      "community": "Madinat Al Mataar",
+      "project": "AZIZI VENICE 7",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 730000
+    },
+    {
+      "date_time": "2026-09-03 17:52:40",
+      "community": "Dubai Investment Park Second",
+      "project": "DAMAC RIVERSIDE VIEWS - CAPRI 1",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1373000
+    },
+    {
+      "date_time": "2026-09-03 17:51:42",
+      "community": "Jumeirah Village Circle",
+      "project": "HELVETIA RESIDENCES",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 1777728
+    },
+    {
+      "date_time": "2026-09-03 17:51:26",
+      "community": "Dubai Sports City",
+      "project": "AURELIA RESIDENCE",
+      "type": "Apartment",
+      "bedrooms": "3 B/R",
+      "stage": "Off-Plan",
+      "price": 2032478
+    },
+    {
+      "date_time": "2026-09-03 17:51:17",
+      "community": "Burj Khalifa",
+      "project": "Inaura Hotels & Residences",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 3670000
+    },
+    {
+      "date_time": "2026-09-03 17:50:38",
+      "community": "Dubai Industrial City",
+      "project": "Samana South Haven",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 954000
+    },
+    {
+      "date_time": "2026-09-03 17:49:35",
+      "community": "Madinat Al Mataar",
+      "project": "AZIZI VENICE 5",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1135000
+    },
+    {
+      "date_time": "2026-09-03 17:49:05",
+      "community": "Wadi Al Safa 5",
+      "project": "Arabian Ranches lll - Raya",
+      "type": "Villa",
+      "bedrooms": "4 B/R",
+      "stage": "Ready",
+      "price": 3680000
+    },
+    {
+      "date_time": "2026-09-03 17:47:57",
+      "community": "Damac Hills",
+      "project": "DAMAC DISTRICT",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1175000
+    },
+    {
+      "date_time": "2026-09-03 17:46:39",
+      "community": "Madinat Al Mataar",
+      "project": "AZIZI VENICE 7",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 730000
+    },
+    {
+      "date_time": "2026-09-03 17:46:19",
+      "community": "Al Yelayiss 1",
+      "project": "DAMAC ISLANDS 2 - BERMUDA",
+      "type": "Villa",
+      "bedrooms": "5 B/R",
+      "stage": "Off-Plan",
+      "price": 3764160
+    },
+    {
+      "date_time": "2026-09-03 17:44:21",
+      "community": "Burj Khalifa",
+      "project": "Inaura Hotels & Residences",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 7193200
+    },
+    {
+      "date_time": "2026-09-03 17:42:38",
+      "community": "Dubai Land Residence Complex",
+      "project": "GFS Coventry Gardens II",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 1350000
+    },
+    {
+      "date_time": "2026-09-03 17:42:07",
+      "community": "Madinat Al Mataar",
+      "project": "AZIZI VENICE 7",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 730000
+    },
+    {
+      "date_time": "2026-09-03 17:41:40",
+      "community": "Dubai Land Residence Complex",
+      "project": "Samana Boulevard Heights",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 671111
+    },
+    {
+      "date_time": "2026-09-03 17:40:28",
+      "community": "Damac Hills",
+      "project": "DAMAC DISTRICT",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1178880
+    },
+    {
+      "date_time": "2026-09-03 17:38:18",
+      "community": "Palm Deira",
+      "project": "Ocean Bay by Samana Developers",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 2291333
+    },
+    {
+      "date_time": "2026-09-03 17:36:14",
+      "community": "Damac Hills",
+      "project": "DAMAC HILLS - GOLF GREENS 1",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 2747000
+    },
+    {
+      "date_time": "2026-09-03 17:30:09",
+      "community": "Al Hebiah Fifth",
+      "project": "DAMAC LAGOONS - LAGOON VIEWS 13",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 654750
+    },
+    {
+      "date_time": "2026-09-03 17:30:01",
+      "community": "Dmcc-Ez2",
+      "project": "Sobha Central Phase I",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 3347598
+    },
+    {
+      "date_time": "2026-09-03 17:30:01",
+      "community": "Jumeirah Village Circle",
+      "project": "Binghatti Apex",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Ready",
+      "price": 1200000
+    },
+    {
+      "date_time": "2026-09-03 17:29:32",
+      "community": "Jumeirah Village Circle",
+      "project": "1WOOD RESIDENCE 2",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 777369
+    },
+    {
+      "date_time": "2026-09-03 17:27:35",
+      "community": "Al Hebiah Fifth",
+      "project": "DAMAC LAGOONS - LAGOON VIEWS 13",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 650870
+    },
+    {
+      "date_time": "2026-09-03 17:24:50",
+      "community": "Al Hebiah Fifth",
+      "project": "DAMAC LAGOONS - VALENCIA",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1138340
+    },
+    {
+      "date_time": "2026-09-03 17:24:33",
+      "community": "Jabal Ali First",
+      "project": "Sobha Central",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 3232580
+    },
+    {
+      "date_time": "2026-09-03 17:13:11",
+      "community": "Dubai Sports City",
+      "project": "MAG 777",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 730000
+    },
+    {
+      "date_time": "2026-09-03 17:12:37",
+      "community": "Villanova",
+      "project": "Villanova Amaranta 3",
+      "type": "Villa",
+      "bedrooms": "3 B/R",
+      "stage": "Ready",
+      "price": 2100000
+    },
+    {
+      "date_time": "2026-09-03 17:12:31",
+      "community": "Villanova",
+      "project": "Villanova Amaranta 3",
+      "type": "Villa",
+      "bedrooms": "3 B/R",
+      "stage": "Ready",
+      "price": 2650000
+    },
+    {
+      "date_time": "2026-09-03 17:11:11",
+      "community": "Al Yelayiss 2",
+      "project": "Kaya",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 845000
+    },
+    {
+      "date_time": "2026-09-03 17:10:39",
+      "community": "Dubai South",
+      "project": "ENRE RESIDENCE BY IMTIAZ",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1302974
+    },
+    {
+      "date_time": "2026-09-03 17:09:07",
+      "community": "Al Thanyah Fifth",
+      "project": "SERENIA DISTRICT - EAST",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 3442000
+    },
+    {
+      "date_time": "2026-09-03 17:08:19",
+      "community": "Al Thanyah Fifth",
+      "project": "SERENIA DISTRICT - EAST",
+      "type": "Apartment",
+      "bedrooms": "4 B/R",
+      "stage": "Off-Plan",
+      "price": 9549000
+    },
+    {
+      "date_time": "2026-09-03 17:08:09",
+      "community": "Wadi Al Safa 5",
+      "project": "Arabian Ranches lll - Raya",
+      "type": "Villa",
+      "bedrooms": "4 B/R",
+      "stage": "Ready",
+      "price": 4600000
+    },
+    {
+      "date_time": "2026-09-03 17:07:38",
+      "community": "Al Thanyah Fifth",
+      "project": "SERENIA DISTRICT - EAST",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 3712000
+    },
+    {
+      "date_time": "2026-09-03 17:07:11",
+      "community": "Jumeirah Village Circle",
+      "project": "J-Haus Residences",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1453506
+    },
+    {
+      "date_time": "2026-09-03 17:06:54",
+      "community": "Dubai Sports City",
+      "project": "MAG 777",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1258000
+    },
+    {
+      "date_time": "2026-09-03 17:06:47",
+      "community": "Dubai Marina",
+      "project": "SILVERENE",
+      "type": "Apartment",
+      "bedrooms": "3 B/R",
+      "stage": "Ready",
+      "price": 2900000
+    },
+    {
+      "date_time": "2026-09-03 17:06:39",
+      "community": "Dubai Marina",
+      "project": "SILVERENE",
+      "type": "Apartment",
+      "bedrooms": "3 B/R",
+      "stage": "Ready",
+      "price": 3625000
+    },
+    {
+      "date_time": "2026-09-03 17:04:56",
+      "community": "Madinat Al Mataar",
+      "project": "AZIZI VENICE 7",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 720000
+    },
+    {
+      "date_time": "2026-09-03 17:04:33",
+      "community": "Majan",
+      "project": "Binghatti Titania",
+      "type": "Apartment",
+      "bedrooms": "Studio",
+      "stage": "Off-Plan",
+      "price": 658939
+    },
+    {
+      "date_time": "2026-09-03 17:02:42",
+      "community": "Dubai Land Residence Complex",
+      "project": "GFS Coventry Gardens II",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1071000
+    },
+    {
+      "date_time": "2026-09-03 17:02:36",
+      "community": "Al Thanyah Fifth",
+      "project": "SERENIA DISTRICT - EAST",
+      "type": "Apartment",
+      "bedrooms": "2 B/R",
+      "stage": "Off-Plan",
+      "price": 3852000
+    },
+    {
+      "date_time": "2026-09-03 17:02:08",
+      "community": "Dubai South",
+      "project": "ENRE RESIDENCE BY IMTIAZ",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 1405867
+    },
+    {
+      "date_time": "2026-09-03 17:01:04",
+      "community": "Madinat Al Mataar",
+      "project": "AZIZI VENICE 8",
+      "type": "Apartment",
+      "bedrooms": "1 B/R",
+      "stage": "Off-Plan",
+      "price": 950000
+    },
+    {
+      "date_time": "2026-09-03 16:59:37",
+      "community": "Dubai Investment Park Second",
+      "project": "DAMAC RIVERSIDE - LUSH",
+      "type": "Villa",
+      "bedrooms": "4 B/R",
+      "stage": "Off-Plan",
+      "price": 2389000
+    }
+  ]
+}
