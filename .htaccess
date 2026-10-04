@@ -2,6 +2,9 @@
 RewriteEngine On
 RewriteBase /
 
+# Route Vapi SQL Webhook
+RewriteRule ^vapi-query$ vapi-query.php [L,QSA]
+
 # Route API endpoints directly to static JSON files
 RewriteRule ^api/dashboard$ api/dashboard.json [L,QSA]
 RewriteRule ^api/dashboard/hotspots$ api/dashboard_hotspots.json [L,QSA]
