@@ -10,6 +10,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
+$raw_input = file_get_contents('php://input');
+$log_entry = date('Y-m-d H:i:s') . " | IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . " | METHOD: " . ($_SERVER['REQUEST_METHOD'] ?? 'GET') . " | URI: " . ($_SERVER['REQUEST_URI'] ?? '') . " | BODY: " . substr($raw_input, 0, 500) . "\n";
+@file_put_contents(__DIR__ . '/data/webhook_log.txt', $log_entry, FILE_APPEND);
+
+if (isset($_GET['view_log'])) {
+    header('Content-Type: text/plain');
+    echo file_exists(__DIR__ . '/data/webhook_log.txt') ? file_get_contents(__DIR__ . '/data/webhook_log.txt') : 'No logs yet.';
+    exit;
+}
+
 $db_path = __DIR__ . '/data/transactions.db';
 if (!file_exists($db_path)) {
     echo json_encode([
