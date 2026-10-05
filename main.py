@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 load_dotenv()
 logger = logging.getLogger("DXB_API")
 
+from fastapi import Request
 app = FastAPI(
     title="Asquared AI - Dubai Real Estate Analytics",
     description="Executive Real Estate Intelligence Dashboard & Voice AI Engine",
@@ -590,3 +591,46 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
+
+@app.post('/api/vapi-query')
+async def handle_vapi_query(request: Request):
+    import sqlite3
+    import json
+    import traceback
+    try:
+        payload = await request.json()
+        tool_calls = payload.get('message', {}).get('toolCalls', [])
+        responses = []
+        
+        conn = sqlite3.connect('data/transactions.db')
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        
+        for call in tool_calls:
+            call_id = call.get('id')
+            args = call.get('function', {}).get('arguments', {})
+            if isinstance(args, str):
+                try: args = json.loads(args)
+                except: pass
+                    
+            sql_query = args.get('sql_query')
+            if not sql_query:
+                responses.append({'toolCallId': call_id, 'result': 'Error: Missing sql_query'})
+                continue
+            
+            try:
+                cursor.execute(sql_query)
+                rows = cursor.fetchall()
+                responses.append({
+                    'toolCallId': call_id,
+                    'result': json.dumps([dict(row) for row in rows], default=str)
+                })
+            except Exception as e:
+                responses.append({'toolCallId': call_id, 'result': f'SQL Error: {str(e)}'})
+                
+        conn.close()
+        return {'results': responses}
+    except Exception as e:
+        traceback.print_exc()
+        return {'results': [{'toolCallId': 'error', 'result': str(e)}]}
